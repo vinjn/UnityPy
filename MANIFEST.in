@@ -1,3 +1,0 @@
-include UnityPy/*
-
-recursive-include UnityPy/lib *.dll *.lib *.so *.dylib
