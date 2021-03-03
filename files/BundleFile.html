@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>UnityPy.files.BundleFile API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>UnityPy.files.BundleFile</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from . import File
+from ..helpers import CompressionHelper
+from ..streams import EndianBinaryReader, EndianBinaryWriter
+
+from collections import namedtuple
+
+BlockInfo = namedtuple(&#34;BlockInfo&#34;, &#34;uncompressedSize compressedSize flags&#34;)
+DirectoryInfoFS = namedtuple(&#34;DirectoryInfoFS&#34;, &#34;offset size flags path&#34;)
+
+
+class BundleFile(File.File):
+    format: int
+    is_changed: bool
+    signature: str
+    version_engine: str
+    version_player: str
+    
+    def __init__(self, reader: EndianBinaryReader, parent: File):
+        super().__init__(parent=parent)
+        signature = self.signature = reader.read_string_to_null()
+        self.version = reader.read_u_int()
+        self.version_player = reader.read_string_to_null()
+        self.version_engine = reader.read_string_to_null()
+        
+        if signature == &#34;UnityArchive&#34;:
+            raise NotImplemented(&#34;BundleFile - UnityArchive&#34;)
+        elif signature in [&#34;UnityWeb&#34;, &#34;UnityRaw&#34;]:
+            m_DirectoryInfo, blocksReader = self.read_web_raw(reader)
+        elif signature == &#34;UnityFS&#34;:
+            m_DirectoryInfo, blocksReader = self.read_fs(reader)
+        else:
+            raise NotImplemented(f&#34;Unknown Bundle signature: {signature}&#34;)
+        
+        self.read_files(blocksReader, m_DirectoryInfo)
+    
+    def read_web_raw(self, reader: EndianBinaryReader):
+        # def read_header_and_blocks_info(self, reader:EndianBinaryReader):
+        version = self.version
+        if version &gt;= 4:
+            _hash = reader.read_bytes(16)
+            crc = reader.read_u_int()
+        
+        minimumStreamedBytes = reader.read_u_int()
+        headerSize = reader.read_u_int()
+        numberOfLevelsToDownloadBeforeStreaming = reader.read_u_int()
+        levelCount = reader.read_int()
+        reader.Position += 4 * 2 * (levelCount - 1)
+        
+        compressedSize = reader.read_u_int()
+        uncompressedSize = reader.read_u_int()
+        flags = True
+        
+        if version &gt;= 2:
+            completeFileSize = reader.read_u_int()
+        
+        if version &gt;= 3:
+            fileInfoHeaderSize = reader.read_u_int()
+        
+        reader.Position = headerSize
+        
+        uncompressedBytes = reader.read_bytes(compressedSize)
+        if flags:
+            uncompressedBytes = CompressionHelper.decompress_lzma(uncompressedBytes)
+        
+        blocksReader = EndianBinaryReader(uncompressedBytes, offset=headerSize)
+        nodesCount = blocksReader.read_int()
+        m_DirectoryInfo = [
+            File.DirectoryInfo(
+                blocksReader.read_string_to_null(),  # path
+                blocksReader.read_u_int(),  # offset
+                blocksReader.read_u_int(),  # size
+            )
+            for _ in range(nodesCount)
+        ]
+        
+        return m_DirectoryInfo, blocksReader
+    
+    def read_fs(self, reader: EndianBinaryReader):
+        version = self.version
+        size = reader.read_long()
+        
+        # header
+        compressedSize = reader.read_u_int()
+        uncompressedSize = reader.read_u_int()
+        flags = reader.read_u_int()
+        
+        if self.version &gt;= 7:
+            reader.align_stream(16)
+        
+        _position = reader.Position
+        if flags &amp; 0x80 != 0:  # kArchiveBlocksInfoAtTheEnd
+            reader.Position = reader.Length - compressedSize
+            blocksInfoBytes = reader.read_bytes(compressedSize)
+            reader.Position = _position
+        else:  # 0x40 kArchiveBlocksAndDirectoryInfoCombined
+            blocksInfoBytes = reader.read_bytes(compressedSize)
+        
+        switch = flags &amp; 0x3F
+        
+        if switch == 1:  # LZMA
+            blocksInfoBytes = CompressionHelper.decompress_lzma(blocksInfoBytes)
+        elif switch in [2, 3]:  # LZ4, LZ4HC
+            blocksInfoBytes = CompressionHelper.decompress_lz4(
+                blocksInfoBytes, uncompressedSize
+            )
+        # elif switch == 4: #LZHAM:
+        
+        blocksInfoReader = EndianBinaryReader(blocksInfoBytes, offset=_position)
+        
+        uncompressedDataHash = blocksInfoReader.read_bytes(16)
+        blocksInfoCount = blocksInfoReader.read_int()
+        
+        m_BlocksInfo = [
+            BlockInfo(
+                blocksInfoReader.read_u_int(),  # uncompressedSize
+                blocksInfoReader.read_u_int(),  # compressedSize
+                blocksInfoReader.read_u_short(),  # flags
+            )
+            for _ in range(blocksInfoCount)
+        ]
+        
+        nodesCount = blocksInfoReader.read_int()
+        m_DirectoryInfo = [
+            DirectoryInfoFS(
+                blocksInfoReader.read_long(),  # offset
+                blocksInfoReader.read_long(),  # size
+                blocksInfoReader.read_u_int(),  # flags
+                blocksInfoReader.read_string_to_null(),  # path
+            )
+            for _ in range(nodesCount)
+        ]
+        
+        # def read_blocks(reader : EndianBinaryReader, blocksStream):
+        def decompress_block(blockInfo):
+            switch = blockInfo.flags &amp; 0x3F  # kStorageBlockCompressionTypeMask
+            if switch == 1:  # LZMA
+                return CompressionHelper.decompress_lzma(
+                    reader.read_bytes(blockInfo.compressedSize)
+                )
+            elif switch in [2, 3]:  # LZ4, LZ4HC
+                return CompressionHelper.decompress_lz4(
+                    reader.read_bytes(blockInfo.compressedSize),
+                    blockInfo.uncompressedSize,
+                )
+            # elif switch == 4: #LZHAM:
+            else:  # no compression
+                return reader.read_bytes(blockInfo.uncompressedSize)
+        
+        blocksReader = EndianBinaryReader(
+            b&#34;&#34;.join(decompress_block(blockInfo) for blockInfo in m_BlocksInfo),
+            offset=(blocksInfoReader.real_offset())
+        )
+        
+        return m_DirectoryInfo, blocksReader
+    
+    def save(self, packer=&#34;none&#34;):
+        # file_header
+        #     signature    (string_to_null)
+        #     format        (int)
+        #     version_player    (string_to_null)
+        #     version_engine    (string_to_null)
+        writer = EndianBinaryWriter()
+        
+        writer.write_string_to_null(self.signature)
+        writer.write_u_int(self.version)
+        writer.write_string_to_null(self.version_player)
+        writer.write_string_to_null(self.version_engine)
+        
+        if self.signature == &#34;UnityArchive&#34;:
+            raise NotImplemented(&#34;BundleFile - UnityArchive&#34;)
+        elif self.signature in [&#34;UnityWeb&#34;, &#34;UnityRaw&#34;]:
+            raise NotImplemented(&#34;Saving Unity Web and Raw bundles isn&#39;t supported yet&#34;)
+            # self.save_web_raw(writer)
+        elif self.signature == &#34;UnityFS&#34;:
+            if not packer or packer == &#34;none&#34;:
+                self.save_fs(writer)
+            elif packer == &#34;lz4&#34;:
+                self.save_fs(writer, block_info_flag=194, data_flag=2)
+            else:
+                raise NotImplemented(&#34;UnityFS - Packer:&#34;, packer)
+        return writer.bytes
+    
+    def save_fs(self, writer: EndianBinaryWriter, block_info_flag=64, data_flag=64):
+        # header
+        # compressed blockinfo (block details &amp; directionary)
+        # compressed assets
+        
+        # 0b1000000 / 0b11000000 | 64 / 192 - uncompressed
+        # 0b11000010 | 194 - lz4
+        # block_info_flag
+        
+        # 0 / 0b1000000 | 0 / 64 - uncompressed
+        # 0b1   | 1 - lzma
+        # 0b10  | 2 - lz4
+        # 0b11  | 3 - lz4hc [not implemented]
+        # 0b100 | 4 - lzham [not implemented]
+        # data_flag
+        
+        # header:
+        #     bundle_size        (long)
+        #     compressed_size    (int)
+        #     uncompressed_size    (int)
+        #     flag                (int)
+        #     ?padding?            (bool)
+        #   This will be written at the end,
+        #   because the size can only be calculated after the data compression,
+        
+        # block_info:
+        #     *flag &amp; 0x80 ? at the end : right after header
+        #     *decompression via flag &amp; 0x3F
+        #     *read compressed_size -&gt; uncompressed_size
+        #     0x10 offset
+        #     *read blocks infos of the data stream
+        #     count            (int)
+        #     (
+        #         uncompressed_size(uint)
+        #         compressed_size (uint)
+        #         flag(short)
+        #     )
+        #     *decompression via info.flag &amp; 0x3F
+        
+        #     *afterwards the file positions
+        #     file_count        (int)
+        #     (
+        #         offset    (long)
+        #         size        (long)
+        #         flag        (int)
+        #         name        (string_to_null)
+        #     )
+        
+        # file list &amp; file data
+        # prep nodes and build up block data
+        data_writer = EndianBinaryWriter()
+        files = [
+            (
+                name,
+                f.flags,
+                data_writer.write_bytes(
+                    f.bytes if isinstance(f, EndianBinaryReader) else f.save()
+                ),
+            )
+            for name, f in self.files.items()
+        ]
+        
+        file_data = data_writer.bytes
+        data_writer.dispose()
+        uncompressed_data_size = len(file_data)
+        
+        # compress the data
+        switch = data_flag &amp; 0x3F
+        if switch == 1:  # LZMA
+            file_data = CompressionHelper.compress_lzma(file_data)
+        elif switch in [2, 3]:  # LZ4, LZ4HC
+            file_data = CompressionHelper.compress_lz4(file_data)
+        elif switch == 4:  # LZHAM
+            raise NotImplementedError
+        # else no compression - data stays the same
+        compressed_data_size = len(file_data)
+        
+        # write the block_info
+        # uncompressedDataHash
+        block_writer = EndianBinaryWriter(b&#34;\x00&#34; * 0x10)
+        # data block info
+        # block count
+        block_writer.write_int(1)
+        # uncompressed size
+        block_writer.write_u_int(uncompressed_data_size)
+        # compressed size
+        block_writer.write_u_int(compressed_data_size)
+        # flag
+        block_writer.write_u_short(data_flag)
+        
+        # file block info
+        # file count
+        block_writer.write_int(len(files))
+        offset = 0
+        for f_name, f_flag, f_len in files:
+            # offset
+            block_writer.write_long(offset)
+            # size
+            block_writer.write_long(f_len)
+            offset += f_len
+            # flag
+            block_writer.write_u_int(f_flag)
+            # name
+            block_writer.write_string_to_null(f_name)
+        
+        # compress the block data
+        block_data = block_writer.bytes
+        block_writer.dispose()
+        
+        uncompressed_block_data_size = len(block_data)
+        
+        switch = block_info_flag &amp; 0x3F
+        if switch == 1:  # LZMA
+            block_data = CompressionHelper.compress_lzma(block_data)
+        elif switch in [2, 3]:  # LZ4, LZ4HC
+            block_data = CompressionHelper.compress_lz4(block_data)
+        elif switch == 4:  # LZHAM
+            raise NotImplementedError
+        
+        compressed_block_data_size = len(block_data)
+        
+        # write the header info
+        ## file size
+        writer.write_long(
+            writer.Length
+            + 8
+            + 4
+            + 4
+            + 4
+            + (8 if self.version &gt;= 7 else 0)
+            + compressed_block_data_size
+            + compressed_data_size
+        )
+        # compressed blockInfoBytes size
+        writer.write_u_int(compressed_block_data_size)
+        # uncompressed size
+        writer.write_u_int(uncompressed_block_data_size)
+        # compression flag
+        writer.write_u_int(block_info_flag)
+        
+        if self.version &gt;= 7:
+            # UnityFS\x00 - 8
+            # size 8
+            # comp sizes 4+4
+            # flag 4
+            # sum : 28 -&gt; +8 alignment
+            writer.align_stream(16)
+        
+        if (block_info_flag &amp; 0x80) != 0:  # at end of file
+            writer.write(file_data)
+            writer.write(block_data)
+        else:
+            writer.write(block_data)
+            writer.write(file_data)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="UnityPy.files.BundleFile.BlockInfo"><code class="flex name class">
+<span>class <span class="ident">BlockInfo</span></span>
+<span>(</span><span>uncompressedSize, compressedSize, flags)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>BlockInfo(uncompressedSize, compressedSize, flags)</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>builtins.tuple</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="UnityPy.files.BundleFile.BlockInfo.compressedSize"><code class="name">var <span class="ident">compressedSize</span></code></dt>
+<dd>
+<div class="desc"><p>Alias for field number 1</p></div>
+</dd>
+<dt id="UnityPy.files.BundleFile.BlockInfo.flags"><code class="name">var <span class="ident">flags</span></code></dt>
+<dd>
+<div class="desc"><p>Alias for field number 2</p></div>
+</dd>
+<dt id="UnityPy.files.BundleFile.BlockInfo.uncompressedSize"><code class="name">var <span class="ident">uncompressedSize</span></code></dt>
+<dd>
+<div class="desc"><p>Alias for field number 0</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.files.BundleFile.BundleFile"><code class="flex name class">
+<span>class <span class="ident">BundleFile</span></span>
+<span>(</span><span>reader: <a title="UnityPy.streams.EndianBinaryReader.EndianBinaryReader" href="../streams/EndianBinaryReader.html#UnityPy.streams.EndianBinaryReader.EndianBinaryReader">EndianBinaryReader</a>, parent: <module '<a title="UnityPy.files.File" href="File.html">UnityPy.files.File</a>' from 'E:\\Projects\\python\\<a title="UnityPy" href="../index.html">UnityPy</a>\\<a title="UnityPy" href="../index.html">UnityPy</a>\\files\\File.py'>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BundleFile(File.File):
+    format: int
+    is_changed: bool
+    signature: str
+    version_engine: str
+    version_player: str
+    
+    def __init__(self, reader: EndianBinaryReader, parent: File):
+        super().__init__(parent=parent)
+        signature = self.signature = reader.read_string_to_null()
+        self.version = reader.read_u_int()
+        self.version_player = reader.read_string_to_null()
+        self.version_engine = reader.read_string_to_null()
+        
+        if signature == &#34;UnityArchive&#34;:
+            raise NotImplemented(&#34;BundleFile - UnityArchive&#34;)
+        elif signature in [&#34;UnityWeb&#34;, &#34;UnityRaw&#34;]:
+            m_DirectoryInfo, blocksReader = self.read_web_raw(reader)
+        elif signature == &#34;UnityFS&#34;:
+            m_DirectoryInfo, blocksReader = self.read_fs(reader)
+        else:
+            raise NotImplemented(f&#34;Unknown Bundle signature: {signature}&#34;)
+        
+        self.read_files(blocksReader, m_DirectoryInfo)
+    
+    def read_web_raw(self, reader: EndianBinaryReader):
+        # def read_header_and_blocks_info(self, reader:EndianBinaryReader):
+        version = self.version
+        if version &gt;= 4:
+            _hash = reader.read_bytes(16)
+            crc = reader.read_u_int()
+        
+        minimumStreamedBytes = reader.read_u_int()
+        headerSize = reader.read_u_int()
+        numberOfLevelsToDownloadBeforeStreaming = reader.read_u_int()
+        levelCount = reader.read_int()
+        reader.Position += 4 * 2 * (levelCount - 1)
+        
+        compressedSize = reader.read_u_int()
+        uncompressedSize = reader.read_u_int()
+        flags = True
+        
+        if version &gt;= 2:
+            completeFileSize = reader.read_u_int()
+        
+        if version &gt;= 3:
+            fileInfoHeaderSize = reader.read_u_int()
+        
+        reader.Position = headerSize
+        
+        uncompressedBytes = reader.read_bytes(compressedSize)
+        if flags:
+            uncompressedBytes = CompressionHelper.decompress_lzma(uncompressedBytes)
+        
+        blocksReader = EndianBinaryReader(uncompressedBytes, offset=headerSize)
+        nodesCount = blocksReader.read_int()
+        m_DirectoryInfo = [
+            File.DirectoryInfo(
+                blocksReader.read_string_to_null(),  # path
+                blocksReader.read_u_int(),  # offset
+                blocksReader.read_u_int(),  # size
+            )
+            for _ in range(nodesCount)
+        ]
+        
+        return m_DirectoryInfo, blocksReader
+    
+    def read_fs(self, reader: EndianBinaryReader):
+        version = self.version
+        size = reader.read_long()
+        
+        # header
+        compressedSize = reader.read_u_int()
+        uncompressedSize = reader.read_u_int()
+        flags = reader.read_u_int()
+        
+        if self.version &gt;= 7:
+            reader.align_stream(16)
+        
+        _position = reader.Position
+        if flags &amp; 0x80 != 0:  # kArchiveBlocksInfoAtTheEnd
+            reader.Position = reader.Length - compressedSize
+            blocksInfoBytes = reader.read_bytes(compressedSize)
+            reader.Position = _position
+        else:  # 0x40 kArchiveBlocksAndDirectoryInfoCombined
+            blocksInfoBytes = reader.read_bytes(compressedSize)
+        
+        switch = flags &amp; 0x3F
+        
+        if switch == 1:  # LZMA
+            blocksInfoBytes = CompressionHelper.decompress_lzma(blocksInfoBytes)
+        elif switch in [2, 3]:  # LZ4, LZ4HC
+            blocksInfoBytes = CompressionHelper.decompress_lz4(
+                blocksInfoBytes, uncompressedSize
+            )
+        # elif switch == 4: #LZHAM:
+        
+        blocksInfoReader = EndianBinaryReader(blocksInfoBytes, offset=_position)
+        
+        uncompressedDataHash = blocksInfoReader.read_bytes(16)
+        blocksInfoCount = blocksInfoReader.read_int()
+        
+        m_BlocksInfo = [
+            BlockInfo(
+                blocksInfoReader.read_u_int(),  # uncompressedSize
+                blocksInfoReader.read_u_int(),  # compressedSize
+                blocksInfoReader.read_u_short(),  # flags
+            )
+            for _ in range(blocksInfoCount)
+        ]
+        
+        nodesCount = blocksInfoReader.read_int()
+        m_DirectoryInfo = [
+            DirectoryInfoFS(
+                blocksInfoReader.read_long(),  # offset
+                blocksInfoReader.read_long(),  # size
+                blocksInfoReader.read_u_int(),  # flags
+                blocksInfoReader.read_string_to_null(),  # path
+            )
+            for _ in range(nodesCount)
+        ]
+        
+        # def read_blocks(reader : EndianBinaryReader, blocksStream):
+        def decompress_block(blockInfo):
+            switch = blockInfo.flags &amp; 0x3F  # kStorageBlockCompressionTypeMask
+            if switch == 1:  # LZMA
+                return CompressionHelper.decompress_lzma(
+                    reader.read_bytes(blockInfo.compressedSize)
+                )
+            elif switch in [2, 3]:  # LZ4, LZ4HC
+                return CompressionHelper.decompress_lz4(
+                    reader.read_bytes(blockInfo.compressedSize),
+                    blockInfo.uncompressedSize,
+                )
+            # elif switch == 4: #LZHAM:
+            else:  # no compression
+                return reader.read_bytes(blockInfo.uncompressedSize)
+        
+        blocksReader = EndianBinaryReader(
+            b&#34;&#34;.join(decompress_block(blockInfo) for blockInfo in m_BlocksInfo),
+            offset=(blocksInfoReader.real_offset())
+        )
+        
+        return m_DirectoryInfo, blocksReader
+    
+    def save(self, packer=&#34;none&#34;):
+        # file_header
+        #     signature    (string_to_null)
+        #     format        (int)
+        #     version_player    (string_to_null)
+        #     version_engine    (string_to_null)
+        writer = EndianBinaryWriter()
+        
+        writer.write_string_to_null(self.signature)
+        writer.write_u_int(self.version)
+        writer.write_string_to_null(self.version_player)
+        writer.write_string_to_null(self.version_engine)
+        
+        if self.signature == &#34;UnityArchive&#34;:
+            raise NotImplemented(&#34;BundleFile - UnityArchive&#34;)
+        elif self.signature in [&#34;UnityWeb&#34;, &#34;UnityRaw&#34;]:
+            raise NotImplemented(&#34;Saving Unity Web and Raw bundles isn&#39;t supported yet&#34;)
+            # self.save_web_raw(writer)
+        elif self.signature == &#34;UnityFS&#34;:
+            if not packer or packer == &#34;none&#34;:
+                self.save_fs(writer)
+            elif packer == &#34;lz4&#34;:
+                self.save_fs(writer, block_info_flag=194, data_flag=2)
+            else:
+                raise NotImplemented(&#34;UnityFS - Packer:&#34;, packer)
+        return writer.bytes
+    
+    def save_fs(self, writer: EndianBinaryWriter, block_info_flag=64, data_flag=64):
+        # header
+        # compressed blockinfo (block details &amp; directionary)
+        # compressed assets
+        
+        # 0b1000000 / 0b11000000 | 64 / 192 - uncompressed
+        # 0b11000010 | 194 - lz4
+        # block_info_flag
+        
+        # 0 / 0b1000000 | 0 / 64 - uncompressed
+        # 0b1   | 1 - lzma
+        # 0b10  | 2 - lz4
+        # 0b11  | 3 - lz4hc [not implemented]
+        # 0b100 | 4 - lzham [not implemented]
+        # data_flag
+        
+        # header:
+        #     bundle_size        (long)
+        #     compressed_size    (int)
+        #     uncompressed_size    (int)
+        #     flag                (int)
+        #     ?padding?            (bool)
+        #   This will be written at the end,
+        #   because the size can only be calculated after the data compression,
+        
+        # block_info:
+        #     *flag &amp; 0x80 ? at the end : right after header
+        #     *decompression via flag &amp; 0x3F
+        #     *read compressed_size -&gt; uncompressed_size
+        #     0x10 offset
+        #     *read blocks infos of the data stream
+        #     count            (int)
+        #     (
+        #         uncompressed_size(uint)
+        #         compressed_size (uint)
+        #         flag(short)
+        #     )
+        #     *decompression via info.flag &amp; 0x3F
+        
+        #     *afterwards the file positions
+        #     file_count        (int)
+        #     (
+        #         offset    (long)
+        #         size        (long)
+        #         flag        (int)
+        #         name        (string_to_null)
+        #     )
+        
+        # file list &amp; file data
+        # prep nodes and build up block data
+        data_writer = EndianBinaryWriter()
+        files = [
+            (
+                name,
+                f.flags,
+                data_writer.write_bytes(
+                    f.bytes if isinstance(f, EndianBinaryReader) else f.save()
+                ),
+            )
+            for name, f in self.files.items()
+        ]
+        
+        file_data = data_writer.bytes
+        data_writer.dispose()
+        uncompressed_data_size = len(file_data)
+        
+        # compress the data
+        switch = data_flag &amp; 0x3F
+        if switch == 1:  # LZMA
+            file_data = CompressionHelper.compress_lzma(file_data)
+        elif switch in [2, 3]:  # LZ4, LZ4HC
+            file_data = CompressionHelper.compress_lz4(file_data)
+        elif switch == 4:  # LZHAM
+            raise NotImplementedError
+        # else no compression - data stays the same
+        compressed_data_size = len(file_data)
+        
+        # write the block_info
+        # uncompressedDataHash
+        block_writer = EndianBinaryWriter(b&#34;\x00&#34; * 0x10)
+        # data block info
+        # block count
+        block_writer.write_int(1)
+        # uncompressed size
+        block_writer.write_u_int(uncompressed_data_size)
+        # compressed size
+        block_writer.write_u_int(compressed_data_size)
+        # flag
+        block_writer.write_u_short(data_flag)
+        
+        # file block info
+        # file count
+        block_writer.write_int(len(files))
+        offset = 0
+        for f_name, f_flag, f_len in files:
+            # offset
+            block_writer.write_long(offset)
+            # size
+            block_writer.write_long(f_len)
+            offset += f_len
+            # flag
+            block_writer.write_u_int(f_flag)
+            # name
+            block_writer.write_string_to_null(f_name)
+        
+        # compress the block data
+        block_data = block_writer.bytes
+        block_writer.dispose()
+        
+        uncompressed_block_data_size = len(block_data)
+        
+        switch = block_info_flag &amp; 0x3F
+        if switch == 1:  # LZMA
+            block_data = CompressionHelper.compress_lzma(block_data)
+        elif switch in [2, 3]:  # LZ4, LZ4HC
+            block_data = CompressionHelper.compress_lz4(block_data)
+        elif switch == 4:  # LZHAM
+            raise NotImplementedError
+        
+        compressed_block_data_size = len(block_data)
+        
+        # write the header info
+        ## file size
+        writer.write_long(
+            writer.Length
+            + 8
+            + 4
+            + 4
+            + 4
+            + (8 if self.version &gt;= 7 else 0)
+            + compressed_block_data_size
+            + compressed_data_size
+        )
+        # compressed blockInfoBytes size
+        writer.write_u_int(compressed_block_data_size)
+        # uncompressed size
+        writer.write_u_int(uncompressed_block_data_size)
+        # compression flag
+        writer.write_u_int(block_info_flag)
+        
+        if self.version &gt;= 7:
+            # UnityFS\x00 - 8
+            # size 8
+            # comp sizes 4+4
+            # flag 4
+            # sum : 28 -&gt; +8 alignment
+            writer.align_stream(16)
+        
+        if (block_info_flag &amp; 0x80) != 0:  # at end of file
+            writer.write(file_data)
+            writer.write(block_data)
+        else:
+            writer.write(block_data)
+            writer.write(file_data)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="UnityPy.files.File.File" href="File.html#UnityPy.files.File.File">File</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.files.BundleFile.BundleFile.format"><code class="name">var <span class="ident">format</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.BundleFile.BundleFile.is_changed"><code class="name">var <span class="ident">is_changed</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.BundleFile.BundleFile.signature"><code class="name">var <span class="ident">signature</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.BundleFile.BundleFile.version_engine"><code class="name">var <span class="ident">version_engine</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.BundleFile.BundleFile.version_player"><code class="name">var <span class="ident">version_player</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.files.BundleFile.BundleFile.read_fs"><code class="name flex">
+<span>def <span class="ident">read_fs</span></span>(<span>self, reader: <a title="UnityPy.streams.EndianBinaryReader.EndianBinaryReader" href="../streams/EndianBinaryReader.html#UnityPy.streams.EndianBinaryReader.EndianBinaryReader">EndianBinaryReader</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_fs(self, reader: EndianBinaryReader):
+    version = self.version
+    size = reader.read_long()
+    
+    # header
+    compressedSize = reader.read_u_int()
+    uncompressedSize = reader.read_u_int()
+    flags = reader.read_u_int()
+    
+    if self.version &gt;= 7:
+        reader.align_stream(16)
+    
+    _position = reader.Position
+    if flags &amp; 0x80 != 0:  # kArchiveBlocksInfoAtTheEnd
+        reader.Position = reader.Length - compressedSize
+        blocksInfoBytes = reader.read_bytes(compressedSize)
+        reader.Position = _position
+    else:  # 0x40 kArchiveBlocksAndDirectoryInfoCombined
+        blocksInfoBytes = reader.read_bytes(compressedSize)
+    
+    switch = flags &amp; 0x3F
+    
+    if switch == 1:  # LZMA
+        blocksInfoBytes = CompressionHelper.decompress_lzma(blocksInfoBytes)
+    elif switch in [2, 3]:  # LZ4, LZ4HC
+        blocksInfoBytes = CompressionHelper.decompress_lz4(
+            blocksInfoBytes, uncompressedSize
+        )
+    # elif switch == 4: #LZHAM:
+    
+    blocksInfoReader = EndianBinaryReader(blocksInfoBytes, offset=_position)
+    
+    uncompressedDataHash = blocksInfoReader.read_bytes(16)
+    blocksInfoCount = blocksInfoReader.read_int()
+    
+    m_BlocksInfo = [
+        BlockInfo(
+            blocksInfoReader.read_u_int(),  # uncompressedSize
+            blocksInfoReader.read_u_int(),  # compressedSize
+            blocksInfoReader.read_u_short(),  # flags
+        )
+        for _ in range(blocksInfoCount)
+    ]
+    
+    nodesCount = blocksInfoReader.read_int()
+    m_DirectoryInfo = [
+        DirectoryInfoFS(
+            blocksInfoReader.read_long(),  # offset
+            blocksInfoReader.read_long(),  # size
+            blocksInfoReader.read_u_int(),  # flags
+            blocksInfoReader.read_string_to_null(),  # path
+        )
+        for _ in range(nodesCount)
+    ]
+    
+    # def read_blocks(reader : EndianBinaryReader, blocksStream):
+    def decompress_block(blockInfo):
+        switch = blockInfo.flags &amp; 0x3F  # kStorageBlockCompressionTypeMask
+        if switch == 1:  # LZMA
+            return CompressionHelper.decompress_lzma(
+                reader.read_bytes(blockInfo.compressedSize)
+            )
+        elif switch in [2, 3]:  # LZ4, LZ4HC
+            return CompressionHelper.decompress_lz4(
+                reader.read_bytes(blockInfo.compressedSize),
+                blockInfo.uncompressedSize,
+            )
+        # elif switch == 4: #LZHAM:
+        else:  # no compression
+            return reader.read_bytes(blockInfo.uncompressedSize)
+    
+    blocksReader = EndianBinaryReader(
+        b&#34;&#34;.join(decompress_block(blockInfo) for blockInfo in m_BlocksInfo),
+        offset=(blocksInfoReader.real_offset())
+    )
+    
+    return m_DirectoryInfo, blocksReader</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.BundleFile.BundleFile.read_web_raw"><code class="name flex">
+<span>def <span class="ident">read_web_raw</span></span>(<span>self, reader: <a title="UnityPy.streams.EndianBinaryReader.EndianBinaryReader" href="../streams/EndianBinaryReader.html#UnityPy.streams.EndianBinaryReader.EndianBinaryReader">EndianBinaryReader</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_web_raw(self, reader: EndianBinaryReader):
+    # def read_header_and_blocks_info(self, reader:EndianBinaryReader):
+    version = self.version
+    if version &gt;= 4:
+        _hash = reader.read_bytes(16)
+        crc = reader.read_u_int()
+    
+    minimumStreamedBytes = reader.read_u_int()
+    headerSize = reader.read_u_int()
+    numberOfLevelsToDownloadBeforeStreaming = reader.read_u_int()
+    levelCount = reader.read_int()
+    reader.Position += 4 * 2 * (levelCount - 1)
+    
+    compressedSize = reader.read_u_int()
+    uncompressedSize = reader.read_u_int()
+    flags = True
+    
+    if version &gt;= 2:
+        completeFileSize = reader.read_u_int()
+    
+    if version &gt;= 3:
+        fileInfoHeaderSize = reader.read_u_int()
+    
+    reader.Position = headerSize
+    
+    uncompressedBytes = reader.read_bytes(compressedSize)
+    if flags:
+        uncompressedBytes = CompressionHelper.decompress_lzma(uncompressedBytes)
+    
+    blocksReader = EndianBinaryReader(uncompressedBytes, offset=headerSize)
+    nodesCount = blocksReader.read_int()
+    m_DirectoryInfo = [
+        File.DirectoryInfo(
+            blocksReader.read_string_to_null(),  # path
+            blocksReader.read_u_int(),  # offset
+            blocksReader.read_u_int(),  # size
+        )
+        for _ in range(nodesCount)
+    ]
+    
+    return m_DirectoryInfo, blocksReader</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.BundleFile.BundleFile.save"><code class="name flex">
+<span>def <span class="ident">save</span></span>(<span>self, packer='none')</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save(self, packer=&#34;none&#34;):
+    # file_header
+    #     signature    (string_to_null)
+    #     format        (int)
+    #     version_player    (string_to_null)
+    #     version_engine    (string_to_null)
+    writer = EndianBinaryWriter()
+    
+    writer.write_string_to_null(self.signature)
+    writer.write_u_int(self.version)
+    writer.write_string_to_null(self.version_player)
+    writer.write_string_to_null(self.version_engine)
+    
+    if self.signature == &#34;UnityArchive&#34;:
+        raise NotImplemented(&#34;BundleFile - UnityArchive&#34;)
+    elif self.signature in [&#34;UnityWeb&#34;, &#34;UnityRaw&#34;]:
+        raise NotImplemented(&#34;Saving Unity Web and Raw bundles isn&#39;t supported yet&#34;)
+        # self.save_web_raw(writer)
+    elif self.signature == &#34;UnityFS&#34;:
+        if not packer or packer == &#34;none&#34;:
+            self.save_fs(writer)
+        elif packer == &#34;lz4&#34;:
+            self.save_fs(writer, block_info_flag=194, data_flag=2)
+        else:
+            raise NotImplemented(&#34;UnityFS - Packer:&#34;, packer)
+    return writer.bytes</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.BundleFile.BundleFile.save_fs"><code class="name flex">
+<span>def <span class="ident">save_fs</span></span>(<span>self, writer: <a title="UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter" href="../streams/EndianBinaryWriter.html#UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter">EndianBinaryWriter</a>, block_info_flag=64, data_flag=64)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_fs(self, writer: EndianBinaryWriter, block_info_flag=64, data_flag=64):
+    # header
+    # compressed blockinfo (block details &amp; directionary)
+    # compressed assets
+    
+    # 0b1000000 / 0b11000000 | 64 / 192 - uncompressed
+    # 0b11000010 | 194 - lz4
+    # block_info_flag
+    
+    # 0 / 0b1000000 | 0 / 64 - uncompressed
+    # 0b1   | 1 - lzma
+    # 0b10  | 2 - lz4
+    # 0b11  | 3 - lz4hc [not implemented]
+    # 0b100 | 4 - lzham [not implemented]
+    # data_flag
+    
+    # header:
+    #     bundle_size        (long)
+    #     compressed_size    (int)
+    #     uncompressed_size    (int)
+    #     flag                (int)
+    #     ?padding?            (bool)
+    #   This will be written at the end,
+    #   because the size can only be calculated after the data compression,
+    
+    # block_info:
+    #     *flag &amp; 0x80 ? at the end : right after header
+    #     *decompression via flag &amp; 0x3F
+    #     *read compressed_size -&gt; uncompressed_size
+    #     0x10 offset
+    #     *read blocks infos of the data stream
+    #     count            (int)
+    #     (
+    #         uncompressed_size(uint)
+    #         compressed_size (uint)
+    #         flag(short)
+    #     )
+    #     *decompression via info.flag &amp; 0x3F
+    
+    #     *afterwards the file positions
+    #     file_count        (int)
+    #     (
+    #         offset    (long)
+    #         size        (long)
+    #         flag        (int)
+    #         name        (string_to_null)
+    #     )
+    
+    # file list &amp; file data
+    # prep nodes and build up block data
+    data_writer = EndianBinaryWriter()
+    files = [
+        (
+            name,
+            f.flags,
+            data_writer.write_bytes(
+                f.bytes if isinstance(f, EndianBinaryReader) else f.save()
+            ),
+        )
+        for name, f in self.files.items()
+    ]
+    
+    file_data = data_writer.bytes
+    data_writer.dispose()
+    uncompressed_data_size = len(file_data)
+    
+    # compress the data
+    switch = data_flag &amp; 0x3F
+    if switch == 1:  # LZMA
+        file_data = CompressionHelper.compress_lzma(file_data)
+    elif switch in [2, 3]:  # LZ4, LZ4HC
+        file_data = CompressionHelper.compress_lz4(file_data)
+    elif switch == 4:  # LZHAM
+        raise NotImplementedError
+    # else no compression - data stays the same
+    compressed_data_size = len(file_data)
+    
+    # write the block_info
+    # uncompressedDataHash
+    block_writer = EndianBinaryWriter(b&#34;\x00&#34; * 0x10)
+    # data block info
+    # block count
+    block_writer.write_int(1)
+    # uncompressed size
+    block_writer.write_u_int(uncompressed_data_size)
+    # compressed size
+    block_writer.write_u_int(compressed_data_size)
+    # flag
+    block_writer.write_u_short(data_flag)
+    
+    # file block info
+    # file count
+    block_writer.write_int(len(files))
+    offset = 0
+    for f_name, f_flag, f_len in files:
+        # offset
+        block_writer.write_long(offset)
+        # size
+        block_writer.write_long(f_len)
+        offset += f_len
+        # flag
+        block_writer.write_u_int(f_flag)
+        # name
+        block_writer.write_string_to_null(f_name)
+    
+    # compress the block data
+    block_data = block_writer.bytes
+    block_writer.dispose()
+    
+    uncompressed_block_data_size = len(block_data)
+    
+    switch = block_info_flag &amp; 0x3F
+    if switch == 1:  # LZMA
+        block_data = CompressionHelper.compress_lzma(block_data)
+    elif switch in [2, 3]:  # LZ4, LZ4HC
+        block_data = CompressionHelper.compress_lz4(block_data)
+    elif switch == 4:  # LZHAM
+        raise NotImplementedError
+    
+    compressed_block_data_size = len(block_data)
+    
+    # write the header info
+    ## file size
+    writer.write_long(
+        writer.Length
+        + 8
+        + 4
+        + 4
+        + 4
+        + (8 if self.version &gt;= 7 else 0)
+        + compressed_block_data_size
+        + compressed_data_size
+    )
+    # compressed blockInfoBytes size
+    writer.write_u_int(compressed_block_data_size)
+    # uncompressed size
+    writer.write_u_int(uncompressed_block_data_size)
+    # compression flag
+    writer.write_u_int(block_info_flag)
+    
+    if self.version &gt;= 7:
+        # UnityFS\x00 - 8
+        # size 8
+        # comp sizes 4+4
+        # flag 4
+        # sum : 28 -&gt; +8 alignment
+        writer.align_stream(16)
+    
+    if (block_info_flag &amp; 0x80) != 0:  # at end of file
+        writer.write(file_data)
+        writer.write(block_data)
+    else:
+        writer.write(block_data)
+        writer.write(file_data)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.files.BundleFile.DirectoryInfoFS"><code class="flex name class">
+<span>class <span class="ident">DirectoryInfoFS</span></span>
+<span>(</span><span>offset, size, flags, path)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>DirectoryInfoFS(offset, size, flags, path)</p></div>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>builtins.tuple</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="UnityPy.files.BundleFile.DirectoryInfoFS.flags"><code class="name">var <span class="ident">flags</span></code></dt>
+<dd>
+<div class="desc"><p>Alias for field number 2</p></div>
+</dd>
+<dt id="UnityPy.files.BundleFile.DirectoryInfoFS.offset"><code class="name">var <span class="ident">offset</span></code></dt>
+<dd>
+<div class="desc"><p>Alias for field number 0</p></div>
+</dd>
+<dt id="UnityPy.files.BundleFile.DirectoryInfoFS.path"><code class="name">var <span class="ident">path</span></code></dt>
+<dd>
+<div class="desc"><p>Alias for field number 3</p></div>
+</dd>
+<dt id="UnityPy.files.BundleFile.DirectoryInfoFS.size"><code class="name">var <span class="ident">size</span></code></dt>
+<dd>
+<div class="desc"><p>Alias for field number 1</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="UnityPy.files" href="index.html">UnityPy.files</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="UnityPy.files.BundleFile.BlockInfo" href="#UnityPy.files.BundleFile.BlockInfo">BlockInfo</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.files.BundleFile.BlockInfo.compressedSize" href="#UnityPy.files.BundleFile.BlockInfo.compressedSize">compressedSize</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.BlockInfo.flags" href="#UnityPy.files.BundleFile.BlockInfo.flags">flags</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.BlockInfo.uncompressedSize" href="#UnityPy.files.BundleFile.BlockInfo.uncompressedSize">uncompressedSize</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.files.BundleFile.BundleFile" href="#UnityPy.files.BundleFile.BundleFile">BundleFile</a></code></h4>
+<ul class="two-column">
+<li><code><a title="UnityPy.files.BundleFile.BundleFile.format" href="#UnityPy.files.BundleFile.BundleFile.format">format</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.BundleFile.is_changed" href="#UnityPy.files.BundleFile.BundleFile.is_changed">is_changed</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.BundleFile.read_fs" href="#UnityPy.files.BundleFile.BundleFile.read_fs">read_fs</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.BundleFile.read_web_raw" href="#UnityPy.files.BundleFile.BundleFile.read_web_raw">read_web_raw</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.BundleFile.save" href="#UnityPy.files.BundleFile.BundleFile.save">save</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.BundleFile.save_fs" href="#UnityPy.files.BundleFile.BundleFile.save_fs">save_fs</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.BundleFile.signature" href="#UnityPy.files.BundleFile.BundleFile.signature">signature</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.BundleFile.version_engine" href="#UnityPy.files.BundleFile.BundleFile.version_engine">version_engine</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.BundleFile.version_player" href="#UnityPy.files.BundleFile.BundleFile.version_player">version_player</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.files.BundleFile.DirectoryInfoFS" href="#UnityPy.files.BundleFile.DirectoryInfoFS">DirectoryInfoFS</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.files.BundleFile.DirectoryInfoFS.flags" href="#UnityPy.files.BundleFile.DirectoryInfoFS.flags">flags</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.DirectoryInfoFS.offset" href="#UnityPy.files.BundleFile.DirectoryInfoFS.offset">offset</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.DirectoryInfoFS.path" href="#UnityPy.files.BundleFile.DirectoryInfoFS.path">path</a></code></li>
+<li><code><a title="UnityPy.files.BundleFile.DirectoryInfoFS.size" href="#UnityPy.files.BundleFile.DirectoryInfoFS.size">size</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

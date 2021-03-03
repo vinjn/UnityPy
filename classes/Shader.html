@@ -1,0 +1,1851 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>UnityPy.classes.Shader API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>UnityPy.classes.Shader</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from enum import IntEnum
+
+from .NamedObject import NamedObject
+
+
+class Shader(NamedObject):
+    def __init__(self, reader):
+        super().__init__(reader=reader)
+        version = reader.version
+        if version &gt;= (5, 5):  # 5.5 and up
+            self.m_ParsedForm = SerializedShader(reader)
+            self.platforms = [
+                ShaderCompilerPlatform(x) for x in reader.read_u_int_array()
+            ]
+
+            if version &gt;= (2019, 3):  # 2019.3 and up
+                offsets = reader.read_u_int_array_array()[0]
+                compressedLengths = reader.read_u_int_array_array()[0]
+                decompressedLengths = reader.read_u_int_array_array()[0]
+            else:
+                self.offsets = reader.read_u_int_array()
+                self.compressedLengths = reader.read_u_int_array()
+                self.decompressedLengths = reader.read_u_int_array()
+            self.compressedBlob = reader.read_bytes(reader.read_int())
+        else:
+            self.m_Script = reader.read_bytes(reader.read_int())
+            reader.align_stream()
+            self.m_PathName = reader.read_aligned_string()
+            if version &gt;= (5, 3):  # 5.3 - 5.4
+                self.decompressedSize = reader.read_u_int()
+                self.m_SubProgramBlob = reader.read_bytes(reader.read_int())
+
+
+class StructParameter:
+    def __init__(self, reader):
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        self.m_ArraySize = reader.read_int()
+        self.m_StructSize = reader.read_int()
+
+        numVectorParams = reader.read_int()
+        self.m_VectorParams = [VectorParameter(
+            reader) for _ in range(numVectorParams)]
+
+        numMatrixParams = reader.read_int()
+        self.m_MatrixParams = [MatrixParameter(
+            reader) for _ in range(numMatrixParams)]
+
+
+class SamplerParameter:
+    def __init__(self, reader):
+        self.sampler = reader.read_u_int()
+        self.bindPoint = reader.read_int()
+
+
+class TextureDimension(IntEnum):
+    kTexDimUnknown = (-1,)
+    kTexDimNone = (0,)
+    kTexDimAny = (1,)
+    kTexDim2D = (2,)
+    kTexDim3D = (3,)
+    kTexDimCUBE = (4,)
+    kTexDim2DArray = (5,)
+    kTexDimCubeArray = (6,)
+    kTexDimForce32Bit = (2147483647,)
+
+
+class SerializedTextureProperty:
+    def __init__(self, reader):
+        self.m_DefaultName = reader.read_aligned_string()
+        self.m_TexDim = TextureDimension(reader.read_int())
+
+
+class SerializedPropertyType(IntEnum):
+    kColor = (0,)
+    kVector = (1,)
+    kFloat = (2,)
+    kRange = (3,)
+    kTexture = (4,)
+
+
+class SerializedProperty:
+    def __init__(self, reader):
+        self.m_Name = reader.read_aligned_string()
+        self.m_Description = reader.read_aligned_string()
+        self.m_Attributes = reader.read_string_array()
+        self.m_Type = SerializedPropertyType(reader.read_int())
+        self.m_Flags = reader.read_u_int()
+        self.m_DefValue = reader.read_float_array(4)
+        self.m_DefTexture = SerializedTextureProperty(reader)
+
+
+class SerializedProperties:
+    def __init__(self, reader):
+        numProps = reader.read_int()
+        self.m_Props = [SerializedProperty(reader) for _ in range(numProps)]
+
+
+class SerializedShaderFloatValue:
+    def __init__(self, reader):
+        self.val = reader.read_float()
+        self.name = reader.read_aligned_string()
+
+
+class SerializedShaderRTBlendState:
+    def __init__(self, reader):
+        self.srcBlend = SerializedShaderFloatValue(reader)
+        self.destBlend = SerializedShaderFloatValue(reader)
+        self.srcBlendAlpha = SerializedShaderFloatValue(reader)
+        self.destBlendAlpha = SerializedShaderFloatValue(reader)
+        self.blendOp = SerializedShaderFloatValue(reader)
+        self.blendOpAlpha = SerializedShaderFloatValue(reader)
+        self.colMask = SerializedShaderFloatValue(reader)
+
+
+class SerializedStencilOp:
+    def __init__(self, reader):
+        self.pass_ = SerializedShaderFloatValue(reader)
+        self.fail = SerializedShaderFloatValue(reader)
+        self.zFail = SerializedShaderFloatValue(reader)
+        self.comp = SerializedShaderFloatValue(reader)
+
+
+class SerializedShaderVectorValue:
+    def __init__(self, reader):
+        self.x = SerializedShaderFloatValue(reader)
+        self.y = SerializedShaderFloatValue(reader)
+        self.z = SerializedShaderFloatValue(reader)
+        self.w = SerializedShaderFloatValue(reader)
+        self.name = reader.read_aligned_string()
+
+
+class FogMode(IntEnum):
+    kFogUnknown = (-1,)
+    kFogDisabled = (0,)
+    kFogLinear = (1,)
+    kFogExp = (2,)
+    kFogExp2 = (3,)
+
+
+class SerializedShaderState:
+    def __init__(self, reader):
+        version = reader.version
+
+        self.m_Name = reader.read_aligned_string()
+        self.rtBlend = [SerializedShaderRTBlendState(reader) for _ in range(8)]
+        self.rtSeparateBlend = reader.read_boolean()
+        reader.align_stream()
+        if version &gt;= (2017, 2):  # 2017.2 and up
+            self.zClip = SerializedShaderFloatValue(reader)
+        self.zTest = SerializedShaderFloatValue(reader)
+        self.zWrite = SerializedShaderFloatValue(reader)
+        self.culling = SerializedShaderFloatValue(reader)
+        if version &gt;= (2020,):  # 2020.1 and up
+            self.conservative = SerializedShaderFloatValue(reader)
+        self.offsetFactor = SerializedShaderFloatValue(reader)
+        self.offsetUnits = SerializedShaderFloatValue(reader)
+        self.alphaToMask = SerializedShaderFloatValue(reader)
+        self.stencilOp = SerializedStencilOp(reader)
+        self.stencilOpFront = SerializedStencilOp(reader)
+        self.stencilOpBack = SerializedStencilOp(reader)
+        self.stencilReadMask = SerializedShaderFloatValue(reader)
+        self.stencilWriteMask = SerializedShaderFloatValue(reader)
+        self.stencilRef = SerializedShaderFloatValue(reader)
+        self.fogStart = SerializedShaderFloatValue(reader)
+        self.fogEnd = SerializedShaderFloatValue(reader)
+        self.fogDensity = SerializedShaderFloatValue(reader)
+        self.fogColor = SerializedShaderVectorValue(reader)
+        self.fogMode = FogMode(reader.read_int())
+        self.gpuProgramID = reader.read_int()
+        self.m_Tags = SerializedTagMap(reader)
+        self.m_LOD = reader.read_int()
+        self.lighting = reader.read_boolean()
+        reader.align_stream()
+
+
+class ShaderBindChannel:
+    def __init__(self, reader):
+        self.source = reader.read_byte()
+        self.target = reader.read_byte()
+
+
+class ParserBindChannels:
+    def __init__(self, reader):
+        numChannels = reader.read_int()
+        self.m_Channels = [ShaderBindChannel(
+            reader) for _ in range(numChannels)]
+        reader.align_stream()
+        self.m_SourceMap = reader.read_u_int()
+
+
+class VectorParameter:
+    def __init__(self, reader):
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        self.m_ArraySize = reader.read_int()
+        self.m_Type = reader.read_byte()
+        self.m_Dim = reader.read_byte()
+        reader.align_stream()
+
+
+class MatrixParameter:
+    def __init__(self, reader):
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        self.m_ArraySize = reader.read_int()
+        self.m_Type = reader.read_byte()
+        self.m_RowCount = reader.read_byte()
+        reader.align_stream()
+
+
+class TextureParameter:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        self.m_SamplerIndex = reader.read_int()
+        if version &gt;= (2017, 3):  # 2017.3 and up
+            self.m_MultiSampled = reader.read_boolean()
+        self.m_Dim = reader.read_byte()
+        reader.align_stream()
+
+
+class BufferBinding:
+    def __init__(self, reader):
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        if reader.version &gt;= (2020,):  # 2020.1 and up
+            m_ArraySize = reader.read_int()
+
+
+class ConstantBuffer:
+    def __init__(self, reader):
+        version = reader.version
+
+        self.m_NameIndex = reader.read_int()
+
+        numMatrixParams = reader.read_int()
+        self.m_MatrixParams = [MatrixParameter(
+            reader) for _ in range(numMatrixParams)]
+
+        numVectorParams = reader.read_int()
+        self.m_VectorParams = [VectorParameter(
+            reader) for _ in range(numVectorParams)]
+        if version &gt;= (2017, 3):  # 2017.3 and up
+            numStructParams = reader.read_int()
+            self.m_StructParams = [
+                StructParameter(reader) for _ in range(numStructParams)
+            ]
+        self.m_Size = reader.read_int()
+
+
+class UAVParameter:
+    def __init__(self, reader):
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        self.m_OriginalIndex = reader.read_int()
+
+
+class ShaderGpuProgramType(IntEnum):
+    kShaderGpuProgramUnknown = (0,)
+    kShaderGpuProgramGLLegacy = (1,)
+    kShaderGpuProgramGLES31AEP = (2,)
+    kShaderGpuProgramGLES31 = (3,)
+    kShaderGpuProgramGLES3 = (4,)
+    kShaderGpuProgramGLES = (5,)
+    kShaderGpuProgramGLCore32 = (6,)
+    kShaderGpuProgramGLCore41 = (7,)
+    kShaderGpuProgramGLCore43 = (8,)
+    kShaderGpuProgramDX9VertexSM20 = (9,)
+    kShaderGpuProgramDX9VertexSM30 = (10,)
+    kShaderGpuProgramDX9PixelSM20 = (11,)
+    kShaderGpuProgramDX9PixelSM30 = (12,)
+    kShaderGpuProgramDX10Level9Vertex = (13,)
+    kShaderGpuProgramDX10Level9Pixel = (14,)
+    kShaderGpuProgramDX11VertexSM40 = (15,)
+    kShaderGpuProgramDX11VertexSM50 = (16,)
+    kShaderGpuProgramDX11PixelSM40 = (17,)
+    kShaderGpuProgramDX11PixelSM50 = (18,)
+    kShaderGpuProgramDX11GeometrySM40 = (19,)
+    kShaderGpuProgramDX11GeometrySM50 = (20,)
+    kShaderGpuProgramDX11HullSM50 = (21,)
+    kShaderGpuProgramDX11DomainSM50 = (22,)
+    kShaderGpuProgramMetalVS = (23,)
+    kShaderGpuProgramMetalFS = (24,)
+    kShaderGpuProgramSPIRV = (25,)
+    kShaderGpuProgramConsole = (26,)
+
+
+class SerializedSubProgram:
+    def __init__(self, reader):
+        version = reader.version
+
+        self.m_BlobIndex = reader.read_u_int()
+        self.m_Channels = ParserBindChannels(reader)
+
+        if version &gt;= (2019,):  # 2019 and up
+            self.m_GlobalKeywordIndices = reader.read_u_short_array()
+            reader.align_stream()
+            self.m_LocalKeywordIndices = reader.read_u_short_array()
+            reader.align_stream()
+        else:
+            self.m_KeywordIndices = reader.read_u_short_array()
+            if version &gt;= (2017,):  # 2017 and up
+                reader.align_stream()
+
+        self.m_ShaderHardwareTier = reader.read_byte()
+        self.m_GpuProgramType = ShaderGpuProgramType(reader.read_byte())
+        reader.align_stream()
+
+        numVectorParams = reader.read_int()
+        self.m_VectorParams = [VectorParameter(
+            reader) for _ in range(numVectorParams)]
+
+        numMatrixParams = reader.read_int()
+        self.m_MatrixParams = [MatrixParameter(
+            reader) for _ in range(numMatrixParams)]
+
+        numTextureParams = reader.read_int()
+        self.m_TextureParams = [
+            TextureParameter(reader) for _ in range(numTextureParams)
+        ]
+
+        numBufferParams = reader.read_int()
+        self.m_BufferParams = [BufferBinding(
+            reader) for _ in range(numBufferParams)]
+
+        numConstantBuffers = reader.read_int()
+        self.m_ConstantBuffers = [
+            ConstantBuffer(reader) for _ in range(numConstantBuffers)
+        ]
+
+        numConstantBufferBindings = reader.read_int()
+        self.m_ConstantBufferBindings = [
+            BufferBinding(reader) for _ in range(numConstantBufferBindings)
+        ]
+
+        numUAVParams = reader.read_int()
+        self.m_UAVParams = [UAVParameter(reader) for _ in range(numUAVParams)]
+
+        if version &gt;= (2017,):  # 2017 and up
+            numSamplers = reader.read_int()
+            self.m_Samplers = [SamplerParameter(
+                reader) for _ in range(numSamplers)]
+        if version &gt;= (2017, 2):  # 2017.2 and up
+            self.m_ShaderRequirements = reader.read_int()
+
+
+class SerializedProgram:
+    def __init__(self, reader):
+        numSubPrograms = reader.read_int()
+        self.m_SubPrograms = [
+            SerializedSubProgram(reader) for _ in range(numSubPrograms)
+        ]
+
+
+class PassType(IntEnum):
+    kPassTypeNormal = (0,)
+    kPassTypeUse = (1,)
+    kPassTypeGrab = 2
+
+
+class SerializedPass:
+    def __init__(self, reader):
+        version = reader.version
+
+        if version &gt;= (2020, 2):  # 2020.2 and up
+            numEditorDataHash = reader.read_int()
+            m_EditorDataHash = [
+                reader.read_bytes(16)  # Hash128(reader)
+                for _ in range(numEditorDataHash)
+            ]
+            reader.align_stream()
+            m_Platforms = reader.read_byte_array()
+            reader.align_stream()
+            m_LocalKeywordMask = reader.read_u_short_array()
+            reader.align_stream()
+            m_GlobalKeywordMask = reader.read_u_short_array()
+            reader.align_stream()
+
+        numIndices = reader.read_int()
+        self.m_NameIndices = {}
+        for _ in range(numIndices):
+            key = reader.read_aligned_string()
+            self.m_NameIndices[key] = reader.read_int()
+        self.m_Type = PassType(reader.read_int())
+        self.m_State = SerializedShaderState(reader)
+        self.m_ProgramMask = reader.read_u_int()
+        self.progVertex = SerializedProgram(reader)
+        self.progFragment = SerializedProgram(reader)
+        self.progGeometry = SerializedProgram(reader)
+        self.progHull = SerializedProgram(reader)
+        self.progDomain = SerializedProgram(reader)
+        if version &gt;= (2019, 3):  # 2019.3 and up
+            self.progRayTracing = SerializedProgram(reader)
+        self.m_HasInstancingVariant = reader.read_boolean()
+        if version &gt;= (2018,):  # 2018 and up
+            self.m_HasProceduralInstancingVariant = reader.read_boolean()
+        reader.align_stream()
+        self.m_UseName = reader.read_aligned_string()
+        self.m_Name = reader.read_aligned_string()
+        self.m_TextureName = reader.read_aligned_string()
+        self.m_Tags = SerializedTagMap(reader)
+
+
+class SerializedTagMap:
+    def __init__(self, reader):
+        numTags = reader.read_int()
+        self.tags = {}
+        for _ in range(numTags):
+            key = reader.read_aligned_string()
+            self.tags[key] = reader.read_aligned_string()
+
+
+class SerializedSubShader:
+    def __init__(self, reader):
+        numPasses = reader.read_int()
+        self.m_Passes = [SerializedPass(reader) for _ in range(numPasses)]
+        self.m_Tags = SerializedTagMap(reader)
+        self.m_LOD = reader.read_int()
+
+
+class SerializedShaderDependency:
+    def __init__(self, reader):
+        self.from_ = reader.read_aligned_string()
+        self.to = reader.read_aligned_string()
+
+
+class SerializedShader:
+    def __init__(self, reader):
+        self.m_PropInfo = SerializedProperties(reader)
+        numSubShaders = reader.read_int()
+        self.m_SubShaders = [SerializedSubShader(
+            reader) for _ in range(numSubShaders)]
+        self.m_Name = reader.read_aligned_string()
+        self.m_CustomEditorName = reader.read_aligned_string()
+        self.m_FallbackName = reader.read_aligned_string()
+        numDependencies = reader.read_int()
+        self.m_Dependencies = [
+            SerializedShaderDependency(reader) for _ in range(numDependencies)
+        ]
+        self.m_DisableNoSubshadersMessage = reader.read_boolean()
+        reader.align_stream()
+
+
+class ShaderCompilerPlatform(IntEnum):
+    kShaderCompPlatformNone = (-1,)
+    kShaderCompPlatformGL = (0,)
+    kShaderCompPlatformD3D9 = (1,)
+    kShaderCompPlatformXbox360 = (2,)
+    kShaderCompPlatformPS3 = (3,)
+    kShaderCompPlatformD3D11 = (4,)
+    kShaderCompPlatformGLES20 = (5,)
+    kShaderCompPlatformNaCl = (6,)
+    kShaderCompPlatformFlash = (7,)
+    kShaderCompPlatformD3D11_9x = (8,)
+    kShaderCompPlatformGLES3Plus = (9,)
+    kShaderCompPlatformPSP2 = (10,)
+    kShaderCompPlatformPS4 = (11,)
+    kShaderCompPlatformXboxOne = (12,)
+    kShaderCompPlatformPSM = (13,)
+    kShaderCompPlatformMetal = (14,)
+    kShaderCompPlatformOpenGLCore = (15,)
+    kShaderCompPlatformN3DS = (16,)
+    kShaderCompPlatformWiiU = (17,)
+    kShaderCompPlatformVulkan = (18,)
+    kShaderCompPlatformSwitch = (19,)
+    kShaderCompPlatformXboxOneD3D12 = (20,)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="UnityPy.classes.Shader.BufferBinding"><code class="flex name class">
+<span>class <span class="ident">BufferBinding</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BufferBinding:
+    def __init__(self, reader):
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        if reader.version &gt;= (2020,):  # 2020.1 and up
+            m_ArraySize = reader.read_int()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.ConstantBuffer"><code class="flex name class">
+<span>class <span class="ident">ConstantBuffer</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ConstantBuffer:
+    def __init__(self, reader):
+        version = reader.version
+
+        self.m_NameIndex = reader.read_int()
+
+        numMatrixParams = reader.read_int()
+        self.m_MatrixParams = [MatrixParameter(
+            reader) for _ in range(numMatrixParams)]
+
+        numVectorParams = reader.read_int()
+        self.m_VectorParams = [VectorParameter(
+            reader) for _ in range(numVectorParams)]
+        if version &gt;= (2017, 3):  # 2017.3 and up
+            numStructParams = reader.read_int()
+            self.m_StructParams = [
+                StructParameter(reader) for _ in range(numStructParams)
+            ]
+        self.m_Size = reader.read_int()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.FogMode"><code class="flex name class">
+<span>class <span class="ident">FogMode</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FogMode(IntEnum):
+    kFogUnknown = (-1,)
+    kFogDisabled = (0,)
+    kFogLinear = (1,)
+    kFogExp = (2,)
+    kFogExp2 = (3,)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.IntEnum</li>
+<li>builtins.int</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.classes.Shader.FogMode.kFogDisabled"><code class="name">var <span class="ident">kFogDisabled</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.FogMode.kFogExp"><code class="name">var <span class="ident">kFogExp</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.FogMode.kFogExp2"><code class="name">var <span class="ident">kFogExp2</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.FogMode.kFogLinear"><code class="name">var <span class="ident">kFogLinear</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.FogMode.kFogUnknown"><code class="name">var <span class="ident">kFogUnknown</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.Shader.MatrixParameter"><code class="flex name class">
+<span>class <span class="ident">MatrixParameter</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MatrixParameter:
+    def __init__(self, reader):
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        self.m_ArraySize = reader.read_int()
+        self.m_Type = reader.read_byte()
+        self.m_RowCount = reader.read_byte()
+        reader.align_stream()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.ParserBindChannels"><code class="flex name class">
+<span>class <span class="ident">ParserBindChannels</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ParserBindChannels:
+    def __init__(self, reader):
+        numChannels = reader.read_int()
+        self.m_Channels = [ShaderBindChannel(
+            reader) for _ in range(numChannels)]
+        reader.align_stream()
+        self.m_SourceMap = reader.read_u_int()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.PassType"><code class="flex name class">
+<span>class <span class="ident">PassType</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PassType(IntEnum):
+    kPassTypeNormal = (0,)
+    kPassTypeUse = (1,)
+    kPassTypeGrab = 2</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.IntEnum</li>
+<li>builtins.int</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.classes.Shader.PassType.kPassTypeGrab"><code class="name">var <span class="ident">kPassTypeGrab</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.PassType.kPassTypeNormal"><code class="name">var <span class="ident">kPassTypeNormal</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.PassType.kPassTypeUse"><code class="name">var <span class="ident">kPassTypeUse</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.Shader.SamplerParameter"><code class="flex name class">
+<span>class <span class="ident">SamplerParameter</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SamplerParameter:
+    def __init__(self, reader):
+        self.sampler = reader.read_u_int()
+        self.bindPoint = reader.read_int()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedPass"><code class="flex name class">
+<span>class <span class="ident">SerializedPass</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedPass:
+    def __init__(self, reader):
+        version = reader.version
+
+        if version &gt;= (2020, 2):  # 2020.2 and up
+            numEditorDataHash = reader.read_int()
+            m_EditorDataHash = [
+                reader.read_bytes(16)  # Hash128(reader)
+                for _ in range(numEditorDataHash)
+            ]
+            reader.align_stream()
+            m_Platforms = reader.read_byte_array()
+            reader.align_stream()
+            m_LocalKeywordMask = reader.read_u_short_array()
+            reader.align_stream()
+            m_GlobalKeywordMask = reader.read_u_short_array()
+            reader.align_stream()
+
+        numIndices = reader.read_int()
+        self.m_NameIndices = {}
+        for _ in range(numIndices):
+            key = reader.read_aligned_string()
+            self.m_NameIndices[key] = reader.read_int()
+        self.m_Type = PassType(reader.read_int())
+        self.m_State = SerializedShaderState(reader)
+        self.m_ProgramMask = reader.read_u_int()
+        self.progVertex = SerializedProgram(reader)
+        self.progFragment = SerializedProgram(reader)
+        self.progGeometry = SerializedProgram(reader)
+        self.progHull = SerializedProgram(reader)
+        self.progDomain = SerializedProgram(reader)
+        if version &gt;= (2019, 3):  # 2019.3 and up
+            self.progRayTracing = SerializedProgram(reader)
+        self.m_HasInstancingVariant = reader.read_boolean()
+        if version &gt;= (2018,):  # 2018 and up
+            self.m_HasProceduralInstancingVariant = reader.read_boolean()
+        reader.align_stream()
+        self.m_UseName = reader.read_aligned_string()
+        self.m_Name = reader.read_aligned_string()
+        self.m_TextureName = reader.read_aligned_string()
+        self.m_Tags = SerializedTagMap(reader)</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedProgram"><code class="flex name class">
+<span>class <span class="ident">SerializedProgram</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedProgram:
+    def __init__(self, reader):
+        numSubPrograms = reader.read_int()
+        self.m_SubPrograms = [
+            SerializedSubProgram(reader) for _ in range(numSubPrograms)
+        ]</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedProperties"><code class="flex name class">
+<span>class <span class="ident">SerializedProperties</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedProperties:
+    def __init__(self, reader):
+        numProps = reader.read_int()
+        self.m_Props = [SerializedProperty(reader) for _ in range(numProps)]</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedProperty"><code class="flex name class">
+<span>class <span class="ident">SerializedProperty</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedProperty:
+    def __init__(self, reader):
+        self.m_Name = reader.read_aligned_string()
+        self.m_Description = reader.read_aligned_string()
+        self.m_Attributes = reader.read_string_array()
+        self.m_Type = SerializedPropertyType(reader.read_int())
+        self.m_Flags = reader.read_u_int()
+        self.m_DefValue = reader.read_float_array(4)
+        self.m_DefTexture = SerializedTextureProperty(reader)</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedPropertyType"><code class="flex name class">
+<span>class <span class="ident">SerializedPropertyType</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedPropertyType(IntEnum):
+    kColor = (0,)
+    kVector = (1,)
+    kFloat = (2,)
+    kRange = (3,)
+    kTexture = (4,)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.IntEnum</li>
+<li>builtins.int</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.classes.Shader.SerializedPropertyType.kColor"><code class="name">var <span class="ident">kColor</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedPropertyType.kFloat"><code class="name">var <span class="ident">kFloat</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedPropertyType.kRange"><code class="name">var <span class="ident">kRange</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedPropertyType.kTexture"><code class="name">var <span class="ident">kTexture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedPropertyType.kVector"><code class="name">var <span class="ident">kVector</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedShader"><code class="flex name class">
+<span>class <span class="ident">SerializedShader</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedShader:
+    def __init__(self, reader):
+        self.m_PropInfo = SerializedProperties(reader)
+        numSubShaders = reader.read_int()
+        self.m_SubShaders = [SerializedSubShader(
+            reader) for _ in range(numSubShaders)]
+        self.m_Name = reader.read_aligned_string()
+        self.m_CustomEditorName = reader.read_aligned_string()
+        self.m_FallbackName = reader.read_aligned_string()
+        numDependencies = reader.read_int()
+        self.m_Dependencies = [
+            SerializedShaderDependency(reader) for _ in range(numDependencies)
+        ]
+        self.m_DisableNoSubshadersMessage = reader.read_boolean()
+        reader.align_stream()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedShaderDependency"><code class="flex name class">
+<span>class <span class="ident">SerializedShaderDependency</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedShaderDependency:
+    def __init__(self, reader):
+        self.from_ = reader.read_aligned_string()
+        self.to = reader.read_aligned_string()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedShaderFloatValue"><code class="flex name class">
+<span>class <span class="ident">SerializedShaderFloatValue</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedShaderFloatValue:
+    def __init__(self, reader):
+        self.val = reader.read_float()
+        self.name = reader.read_aligned_string()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedShaderRTBlendState"><code class="flex name class">
+<span>class <span class="ident">SerializedShaderRTBlendState</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedShaderRTBlendState:
+    def __init__(self, reader):
+        self.srcBlend = SerializedShaderFloatValue(reader)
+        self.destBlend = SerializedShaderFloatValue(reader)
+        self.srcBlendAlpha = SerializedShaderFloatValue(reader)
+        self.destBlendAlpha = SerializedShaderFloatValue(reader)
+        self.blendOp = SerializedShaderFloatValue(reader)
+        self.blendOpAlpha = SerializedShaderFloatValue(reader)
+        self.colMask = SerializedShaderFloatValue(reader)</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedShaderState"><code class="flex name class">
+<span>class <span class="ident">SerializedShaderState</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedShaderState:
+    def __init__(self, reader):
+        version = reader.version
+
+        self.m_Name = reader.read_aligned_string()
+        self.rtBlend = [SerializedShaderRTBlendState(reader) for _ in range(8)]
+        self.rtSeparateBlend = reader.read_boolean()
+        reader.align_stream()
+        if version &gt;= (2017, 2):  # 2017.2 and up
+            self.zClip = SerializedShaderFloatValue(reader)
+        self.zTest = SerializedShaderFloatValue(reader)
+        self.zWrite = SerializedShaderFloatValue(reader)
+        self.culling = SerializedShaderFloatValue(reader)
+        if version &gt;= (2020,):  # 2020.1 and up
+            self.conservative = SerializedShaderFloatValue(reader)
+        self.offsetFactor = SerializedShaderFloatValue(reader)
+        self.offsetUnits = SerializedShaderFloatValue(reader)
+        self.alphaToMask = SerializedShaderFloatValue(reader)
+        self.stencilOp = SerializedStencilOp(reader)
+        self.stencilOpFront = SerializedStencilOp(reader)
+        self.stencilOpBack = SerializedStencilOp(reader)
+        self.stencilReadMask = SerializedShaderFloatValue(reader)
+        self.stencilWriteMask = SerializedShaderFloatValue(reader)
+        self.stencilRef = SerializedShaderFloatValue(reader)
+        self.fogStart = SerializedShaderFloatValue(reader)
+        self.fogEnd = SerializedShaderFloatValue(reader)
+        self.fogDensity = SerializedShaderFloatValue(reader)
+        self.fogColor = SerializedShaderVectorValue(reader)
+        self.fogMode = FogMode(reader.read_int())
+        self.gpuProgramID = reader.read_int()
+        self.m_Tags = SerializedTagMap(reader)
+        self.m_LOD = reader.read_int()
+        self.lighting = reader.read_boolean()
+        reader.align_stream()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedShaderVectorValue"><code class="flex name class">
+<span>class <span class="ident">SerializedShaderVectorValue</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedShaderVectorValue:
+    def __init__(self, reader):
+        self.x = SerializedShaderFloatValue(reader)
+        self.y = SerializedShaderFloatValue(reader)
+        self.z = SerializedShaderFloatValue(reader)
+        self.w = SerializedShaderFloatValue(reader)
+        self.name = reader.read_aligned_string()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedStencilOp"><code class="flex name class">
+<span>class <span class="ident">SerializedStencilOp</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedStencilOp:
+    def __init__(self, reader):
+        self.pass_ = SerializedShaderFloatValue(reader)
+        self.fail = SerializedShaderFloatValue(reader)
+        self.zFail = SerializedShaderFloatValue(reader)
+        self.comp = SerializedShaderFloatValue(reader)</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedSubProgram"><code class="flex name class">
+<span>class <span class="ident">SerializedSubProgram</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedSubProgram:
+    def __init__(self, reader):
+        version = reader.version
+
+        self.m_BlobIndex = reader.read_u_int()
+        self.m_Channels = ParserBindChannels(reader)
+
+        if version &gt;= (2019,):  # 2019 and up
+            self.m_GlobalKeywordIndices = reader.read_u_short_array()
+            reader.align_stream()
+            self.m_LocalKeywordIndices = reader.read_u_short_array()
+            reader.align_stream()
+        else:
+            self.m_KeywordIndices = reader.read_u_short_array()
+            if version &gt;= (2017,):  # 2017 and up
+                reader.align_stream()
+
+        self.m_ShaderHardwareTier = reader.read_byte()
+        self.m_GpuProgramType = ShaderGpuProgramType(reader.read_byte())
+        reader.align_stream()
+
+        numVectorParams = reader.read_int()
+        self.m_VectorParams = [VectorParameter(
+            reader) for _ in range(numVectorParams)]
+
+        numMatrixParams = reader.read_int()
+        self.m_MatrixParams = [MatrixParameter(
+            reader) for _ in range(numMatrixParams)]
+
+        numTextureParams = reader.read_int()
+        self.m_TextureParams = [
+            TextureParameter(reader) for _ in range(numTextureParams)
+        ]
+
+        numBufferParams = reader.read_int()
+        self.m_BufferParams = [BufferBinding(
+            reader) for _ in range(numBufferParams)]
+
+        numConstantBuffers = reader.read_int()
+        self.m_ConstantBuffers = [
+            ConstantBuffer(reader) for _ in range(numConstantBuffers)
+        ]
+
+        numConstantBufferBindings = reader.read_int()
+        self.m_ConstantBufferBindings = [
+            BufferBinding(reader) for _ in range(numConstantBufferBindings)
+        ]
+
+        numUAVParams = reader.read_int()
+        self.m_UAVParams = [UAVParameter(reader) for _ in range(numUAVParams)]
+
+        if version &gt;= (2017,):  # 2017 and up
+            numSamplers = reader.read_int()
+            self.m_Samplers = [SamplerParameter(
+                reader) for _ in range(numSamplers)]
+        if version &gt;= (2017, 2):  # 2017.2 and up
+            self.m_ShaderRequirements = reader.read_int()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedSubShader"><code class="flex name class">
+<span>class <span class="ident">SerializedSubShader</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedSubShader:
+    def __init__(self, reader):
+        numPasses = reader.read_int()
+        self.m_Passes = [SerializedPass(reader) for _ in range(numPasses)]
+        self.m_Tags = SerializedTagMap(reader)
+        self.m_LOD = reader.read_int()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedTagMap"><code class="flex name class">
+<span>class <span class="ident">SerializedTagMap</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedTagMap:
+    def __init__(self, reader):
+        numTags = reader.read_int()
+        self.tags = {}
+        for _ in range(numTags):
+            key = reader.read_aligned_string()
+            self.tags[key] = reader.read_aligned_string()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.SerializedTextureProperty"><code class="flex name class">
+<span>class <span class="ident">SerializedTextureProperty</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedTextureProperty:
+    def __init__(self, reader):
+        self.m_DefaultName = reader.read_aligned_string()
+        self.m_TexDim = TextureDimension(reader.read_int())</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.Shader"><code class="flex name class">
+<span>class <span class="ident">Shader</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Shader(NamedObject):
+    def __init__(self, reader):
+        super().__init__(reader=reader)
+        version = reader.version
+        if version &gt;= (5, 5):  # 5.5 and up
+            self.m_ParsedForm = SerializedShader(reader)
+            self.platforms = [
+                ShaderCompilerPlatform(x) for x in reader.read_u_int_array()
+            ]
+
+            if version &gt;= (2019, 3):  # 2019.3 and up
+                offsets = reader.read_u_int_array_array()[0]
+                compressedLengths = reader.read_u_int_array_array()[0]
+                decompressedLengths = reader.read_u_int_array_array()[0]
+            else:
+                self.offsets = reader.read_u_int_array()
+                self.compressedLengths = reader.read_u_int_array()
+                self.decompressedLengths = reader.read_u_int_array()
+            self.compressedBlob = reader.read_bytes(reader.read_int())
+        else:
+            self.m_Script = reader.read_bytes(reader.read_int())
+            reader.align_stream()
+            self.m_PathName = reader.read_aligned_string()
+            if version &gt;= (5, 3):  # 5.3 - 5.4
+                self.decompressedSize = reader.read_u_int()
+                self.m_SubProgramBlob = reader.read_bytes(reader.read_int())</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="UnityPy.classes.NamedObject.NamedObject" href="NamedObject.html#UnityPy.classes.NamedObject.NamedObject">NamedObject</a></li>
+<li><a title="UnityPy.classes.EditorExtension.EditorExtension" href="EditorExtension.html#UnityPy.classes.EditorExtension.EditorExtension">EditorExtension</a></li>
+<li><a title="UnityPy.classes.Object.Object" href="Object.html#UnityPy.classes.Object.Object">Object</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.classes.Shader.Shader.type_tree"><code class="name">var <span class="ident">type_tree</span> : dict</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderBindChannel"><code class="flex name class">
+<span>class <span class="ident">ShaderBindChannel</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ShaderBindChannel:
+    def __init__(self, reader):
+        self.source = reader.read_byte()
+        self.target = reader.read_byte()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform"><code class="flex name class">
+<span>class <span class="ident">ShaderCompilerPlatform</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ShaderCompilerPlatform(IntEnum):
+    kShaderCompPlatformNone = (-1,)
+    kShaderCompPlatformGL = (0,)
+    kShaderCompPlatformD3D9 = (1,)
+    kShaderCompPlatformXbox360 = (2,)
+    kShaderCompPlatformPS3 = (3,)
+    kShaderCompPlatformD3D11 = (4,)
+    kShaderCompPlatformGLES20 = (5,)
+    kShaderCompPlatformNaCl = (6,)
+    kShaderCompPlatformFlash = (7,)
+    kShaderCompPlatformD3D11_9x = (8,)
+    kShaderCompPlatformGLES3Plus = (9,)
+    kShaderCompPlatformPSP2 = (10,)
+    kShaderCompPlatformPS4 = (11,)
+    kShaderCompPlatformXboxOne = (12,)
+    kShaderCompPlatformPSM = (13,)
+    kShaderCompPlatformMetal = (14,)
+    kShaderCompPlatformOpenGLCore = (15,)
+    kShaderCompPlatformN3DS = (16,)
+    kShaderCompPlatformWiiU = (17,)
+    kShaderCompPlatformVulkan = (18,)
+    kShaderCompPlatformSwitch = (19,)
+    kShaderCompPlatformXboxOneD3D12 = (20,)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.IntEnum</li>
+<li>builtins.int</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformD3D11"><code class="name">var <span class="ident">kShaderCompPlatformD3D11</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformD3D11_9x"><code class="name">var <span class="ident">kShaderCompPlatformD3D11_9x</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformD3D9"><code class="name">var <span class="ident">kShaderCompPlatformD3D9</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformFlash"><code class="name">var <span class="ident">kShaderCompPlatformFlash</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformGL"><code class="name">var <span class="ident">kShaderCompPlatformGL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformGLES20"><code class="name">var <span class="ident">kShaderCompPlatformGLES20</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformGLES3Plus"><code class="name">var <span class="ident">kShaderCompPlatformGLES3Plus</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformMetal"><code class="name">var <span class="ident">kShaderCompPlatformMetal</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformN3DS"><code class="name">var <span class="ident">kShaderCompPlatformN3DS</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformNaCl"><code class="name">var <span class="ident">kShaderCompPlatformNaCl</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformNone"><code class="name">var <span class="ident">kShaderCompPlatformNone</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformOpenGLCore"><code class="name">var <span class="ident">kShaderCompPlatformOpenGLCore</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPS3"><code class="name">var <span class="ident">kShaderCompPlatformPS3</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPS4"><code class="name">var <span class="ident">kShaderCompPlatformPS4</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPSM"><code class="name">var <span class="ident">kShaderCompPlatformPSM</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPSP2"><code class="name">var <span class="ident">kShaderCompPlatformPSP2</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformSwitch"><code class="name">var <span class="ident">kShaderCompPlatformSwitch</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformVulkan"><code class="name">var <span class="ident">kShaderCompPlatformVulkan</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformWiiU"><code class="name">var <span class="ident">kShaderCompPlatformWiiU</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformXbox360"><code class="name">var <span class="ident">kShaderCompPlatformXbox360</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformXboxOne"><code class="name">var <span class="ident">kShaderCompPlatformXboxOne</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformXboxOneD3D12"><code class="name">var <span class="ident">kShaderCompPlatformXboxOneD3D12</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType"><code class="flex name class">
+<span>class <span class="ident">ShaderGpuProgramType</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ShaderGpuProgramType(IntEnum):
+    kShaderGpuProgramUnknown = (0,)
+    kShaderGpuProgramGLLegacy = (1,)
+    kShaderGpuProgramGLES31AEP = (2,)
+    kShaderGpuProgramGLES31 = (3,)
+    kShaderGpuProgramGLES3 = (4,)
+    kShaderGpuProgramGLES = (5,)
+    kShaderGpuProgramGLCore32 = (6,)
+    kShaderGpuProgramGLCore41 = (7,)
+    kShaderGpuProgramGLCore43 = (8,)
+    kShaderGpuProgramDX9VertexSM20 = (9,)
+    kShaderGpuProgramDX9VertexSM30 = (10,)
+    kShaderGpuProgramDX9PixelSM20 = (11,)
+    kShaderGpuProgramDX9PixelSM30 = (12,)
+    kShaderGpuProgramDX10Level9Vertex = (13,)
+    kShaderGpuProgramDX10Level9Pixel = (14,)
+    kShaderGpuProgramDX11VertexSM40 = (15,)
+    kShaderGpuProgramDX11VertexSM50 = (16,)
+    kShaderGpuProgramDX11PixelSM40 = (17,)
+    kShaderGpuProgramDX11PixelSM50 = (18,)
+    kShaderGpuProgramDX11GeometrySM40 = (19,)
+    kShaderGpuProgramDX11GeometrySM50 = (20,)
+    kShaderGpuProgramDX11HullSM50 = (21,)
+    kShaderGpuProgramDX11DomainSM50 = (22,)
+    kShaderGpuProgramMetalVS = (23,)
+    kShaderGpuProgramMetalFS = (24,)
+    kShaderGpuProgramSPIRV = (25,)
+    kShaderGpuProgramConsole = (26,)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.IntEnum</li>
+<li>builtins.int</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramConsole"><code class="name">var <span class="ident">kShaderGpuProgramConsole</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX10Level9Pixel"><code class="name">var <span class="ident">kShaderGpuProgramDX10Level9Pixel</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX10Level9Vertex"><code class="name">var <span class="ident">kShaderGpuProgramDX10Level9Vertex</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11DomainSM50"><code class="name">var <span class="ident">kShaderGpuProgramDX11DomainSM50</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11GeometrySM40"><code class="name">var <span class="ident">kShaderGpuProgramDX11GeometrySM40</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11GeometrySM50"><code class="name">var <span class="ident">kShaderGpuProgramDX11GeometrySM50</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11HullSM50"><code class="name">var <span class="ident">kShaderGpuProgramDX11HullSM50</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11PixelSM40"><code class="name">var <span class="ident">kShaderGpuProgramDX11PixelSM40</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11PixelSM50"><code class="name">var <span class="ident">kShaderGpuProgramDX11PixelSM50</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11VertexSM40"><code class="name">var <span class="ident">kShaderGpuProgramDX11VertexSM40</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11VertexSM50"><code class="name">var <span class="ident">kShaderGpuProgramDX11VertexSM50</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9PixelSM20"><code class="name">var <span class="ident">kShaderGpuProgramDX9PixelSM20</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9PixelSM30"><code class="name">var <span class="ident">kShaderGpuProgramDX9PixelSM30</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9VertexSM20"><code class="name">var <span class="ident">kShaderGpuProgramDX9VertexSM20</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9VertexSM30"><code class="name">var <span class="ident">kShaderGpuProgramDX9VertexSM30</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLCore32"><code class="name">var <span class="ident">kShaderGpuProgramGLCore32</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLCore41"><code class="name">var <span class="ident">kShaderGpuProgramGLCore41</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLCore43"><code class="name">var <span class="ident">kShaderGpuProgramGLCore43</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES"><code class="name">var <span class="ident">kShaderGpuProgramGLES</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES3"><code class="name">var <span class="ident">kShaderGpuProgramGLES3</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES31"><code class="name">var <span class="ident">kShaderGpuProgramGLES31</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES31AEP"><code class="name">var <span class="ident">kShaderGpuProgramGLES31AEP</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLLegacy"><code class="name">var <span class="ident">kShaderGpuProgramGLLegacy</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramMetalFS"><code class="name">var <span class="ident">kShaderGpuProgramMetalFS</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramMetalVS"><code class="name">var <span class="ident">kShaderGpuProgramMetalVS</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramSPIRV"><code class="name">var <span class="ident">kShaderGpuProgramSPIRV</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramUnknown"><code class="name">var <span class="ident">kShaderGpuProgramUnknown</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.Shader.StructParameter"><code class="flex name class">
+<span>class <span class="ident">StructParameter</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StructParameter:
+    def __init__(self, reader):
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        self.m_ArraySize = reader.read_int()
+        self.m_StructSize = reader.read_int()
+
+        numVectorParams = reader.read_int()
+        self.m_VectorParams = [VectorParameter(
+            reader) for _ in range(numVectorParams)]
+
+        numMatrixParams = reader.read_int()
+        self.m_MatrixParams = [MatrixParameter(
+            reader) for _ in range(numMatrixParams)]</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.TextureDimension"><code class="flex name class">
+<span>class <span class="ident">TextureDimension</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TextureDimension(IntEnum):
+    kTexDimUnknown = (-1,)
+    kTexDimNone = (0,)
+    kTexDimAny = (1,)
+    kTexDim2D = (2,)
+    kTexDim3D = (3,)
+    kTexDimCUBE = (4,)
+    kTexDim2DArray = (5,)
+    kTexDimCubeArray = (6,)
+    kTexDimForce32Bit = (2147483647,)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.IntEnum</li>
+<li>builtins.int</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.classes.Shader.TextureDimension.kTexDim2D"><code class="name">var <span class="ident">kTexDim2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.TextureDimension.kTexDim2DArray"><code class="name">var <span class="ident">kTexDim2DArray</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.TextureDimension.kTexDim3D"><code class="name">var <span class="ident">kTexDim3D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.TextureDimension.kTexDimAny"><code class="name">var <span class="ident">kTexDimAny</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.TextureDimension.kTexDimCUBE"><code class="name">var <span class="ident">kTexDimCUBE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.TextureDimension.kTexDimCubeArray"><code class="name">var <span class="ident">kTexDimCubeArray</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.TextureDimension.kTexDimForce32Bit"><code class="name">var <span class="ident">kTexDimForce32Bit</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.TextureDimension.kTexDimNone"><code class="name">var <span class="ident">kTexDimNone</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.Shader.TextureDimension.kTexDimUnknown"><code class="name">var <span class="ident">kTexDimUnknown</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.Shader.TextureParameter"><code class="flex name class">
+<span>class <span class="ident">TextureParameter</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TextureParameter:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        self.m_SamplerIndex = reader.read_int()
+        if version &gt;= (2017, 3):  # 2017.3 and up
+            self.m_MultiSampled = reader.read_boolean()
+        self.m_Dim = reader.read_byte()
+        reader.align_stream()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.UAVParameter"><code class="flex name class">
+<span>class <span class="ident">UAVParameter</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class UAVParameter:
+    def __init__(self, reader):
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        self.m_OriginalIndex = reader.read_int()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.Shader.VectorParameter"><code class="flex name class">
+<span>class <span class="ident">VectorParameter</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class VectorParameter:
+    def __init__(self, reader):
+        self.m_NameIndex = reader.read_int()
+        self.m_Index = reader.read_int()
+        self.m_ArraySize = reader.read_int()
+        self.m_Type = reader.read_byte()
+        self.m_Dim = reader.read_byte()
+        reader.align_stream()</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="UnityPy.classes" href="index.html">UnityPy.classes</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.BufferBinding" href="#UnityPy.classes.Shader.BufferBinding">BufferBinding</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.ConstantBuffer" href="#UnityPy.classes.Shader.ConstantBuffer">ConstantBuffer</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.FogMode" href="#UnityPy.classes.Shader.FogMode">FogMode</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.Shader.FogMode.kFogDisabled" href="#UnityPy.classes.Shader.FogMode.kFogDisabled">kFogDisabled</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.FogMode.kFogExp" href="#UnityPy.classes.Shader.FogMode.kFogExp">kFogExp</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.FogMode.kFogExp2" href="#UnityPy.classes.Shader.FogMode.kFogExp2">kFogExp2</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.FogMode.kFogLinear" href="#UnityPy.classes.Shader.FogMode.kFogLinear">kFogLinear</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.FogMode.kFogUnknown" href="#UnityPy.classes.Shader.FogMode.kFogUnknown">kFogUnknown</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.MatrixParameter" href="#UnityPy.classes.Shader.MatrixParameter">MatrixParameter</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.ParserBindChannels" href="#UnityPy.classes.Shader.ParserBindChannels">ParserBindChannels</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.PassType" href="#UnityPy.classes.Shader.PassType">PassType</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.Shader.PassType.kPassTypeGrab" href="#UnityPy.classes.Shader.PassType.kPassTypeGrab">kPassTypeGrab</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.PassType.kPassTypeNormal" href="#UnityPy.classes.Shader.PassType.kPassTypeNormal">kPassTypeNormal</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.PassType.kPassTypeUse" href="#UnityPy.classes.Shader.PassType.kPassTypeUse">kPassTypeUse</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SamplerParameter" href="#UnityPy.classes.Shader.SamplerParameter">SamplerParameter</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedPass" href="#UnityPy.classes.Shader.SerializedPass">SerializedPass</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedProgram" href="#UnityPy.classes.Shader.SerializedProgram">SerializedProgram</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedProperties" href="#UnityPy.classes.Shader.SerializedProperties">SerializedProperties</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedProperty" href="#UnityPy.classes.Shader.SerializedProperty">SerializedProperty</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedPropertyType" href="#UnityPy.classes.Shader.SerializedPropertyType">SerializedPropertyType</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.Shader.SerializedPropertyType.kColor" href="#UnityPy.classes.Shader.SerializedPropertyType.kColor">kColor</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.SerializedPropertyType.kFloat" href="#UnityPy.classes.Shader.SerializedPropertyType.kFloat">kFloat</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.SerializedPropertyType.kRange" href="#UnityPy.classes.Shader.SerializedPropertyType.kRange">kRange</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.SerializedPropertyType.kTexture" href="#UnityPy.classes.Shader.SerializedPropertyType.kTexture">kTexture</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.SerializedPropertyType.kVector" href="#UnityPy.classes.Shader.SerializedPropertyType.kVector">kVector</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedShader" href="#UnityPy.classes.Shader.SerializedShader">SerializedShader</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedShaderDependency" href="#UnityPy.classes.Shader.SerializedShaderDependency">SerializedShaderDependency</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedShaderFloatValue" href="#UnityPy.classes.Shader.SerializedShaderFloatValue">SerializedShaderFloatValue</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedShaderRTBlendState" href="#UnityPy.classes.Shader.SerializedShaderRTBlendState">SerializedShaderRTBlendState</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedShaderState" href="#UnityPy.classes.Shader.SerializedShaderState">SerializedShaderState</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedShaderVectorValue" href="#UnityPy.classes.Shader.SerializedShaderVectorValue">SerializedShaderVectorValue</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedStencilOp" href="#UnityPy.classes.Shader.SerializedStencilOp">SerializedStencilOp</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedSubProgram" href="#UnityPy.classes.Shader.SerializedSubProgram">SerializedSubProgram</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedSubShader" href="#UnityPy.classes.Shader.SerializedSubShader">SerializedSubShader</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedTagMap" href="#UnityPy.classes.Shader.SerializedTagMap">SerializedTagMap</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.SerializedTextureProperty" href="#UnityPy.classes.Shader.SerializedTextureProperty">SerializedTextureProperty</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.Shader" href="#UnityPy.classes.Shader.Shader">Shader</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.Shader.Shader.type_tree" href="#UnityPy.classes.Shader.Shader.type_tree">type_tree</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.ShaderBindChannel" href="#UnityPy.classes.Shader.ShaderBindChannel">ShaderBindChannel</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform" href="#UnityPy.classes.Shader.ShaderCompilerPlatform">ShaderCompilerPlatform</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformD3D11" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformD3D11">kShaderCompPlatformD3D11</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformD3D11_9x" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformD3D11_9x">kShaderCompPlatformD3D11_9x</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformD3D9" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformD3D9">kShaderCompPlatformD3D9</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformFlash" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformFlash">kShaderCompPlatformFlash</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformGL" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformGL">kShaderCompPlatformGL</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformGLES20" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformGLES20">kShaderCompPlatformGLES20</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformGLES3Plus" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformGLES3Plus">kShaderCompPlatformGLES3Plus</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformMetal" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformMetal">kShaderCompPlatformMetal</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformN3DS" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformN3DS">kShaderCompPlatformN3DS</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformNaCl" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformNaCl">kShaderCompPlatformNaCl</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformNone" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformNone">kShaderCompPlatformNone</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformOpenGLCore" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformOpenGLCore">kShaderCompPlatformOpenGLCore</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPS3" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPS3">kShaderCompPlatformPS3</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPS4" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPS4">kShaderCompPlatformPS4</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPSM" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPSM">kShaderCompPlatformPSM</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPSP2" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformPSP2">kShaderCompPlatformPSP2</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformSwitch" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformSwitch">kShaderCompPlatformSwitch</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformVulkan" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformVulkan">kShaderCompPlatformVulkan</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformWiiU" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformWiiU">kShaderCompPlatformWiiU</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformXbox360" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformXbox360">kShaderCompPlatformXbox360</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformXboxOne" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformXboxOne">kShaderCompPlatformXboxOne</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformXboxOneD3D12" href="#UnityPy.classes.Shader.ShaderCompilerPlatform.kShaderCompPlatformXboxOneD3D12">kShaderCompPlatformXboxOneD3D12</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType" href="#UnityPy.classes.Shader.ShaderGpuProgramType">ShaderGpuProgramType</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramConsole" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramConsole">kShaderGpuProgramConsole</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX10Level9Pixel" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX10Level9Pixel">kShaderGpuProgramDX10Level9Pixel</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX10Level9Vertex" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX10Level9Vertex">kShaderGpuProgramDX10Level9Vertex</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11DomainSM50" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11DomainSM50">kShaderGpuProgramDX11DomainSM50</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11GeometrySM40" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11GeometrySM40">kShaderGpuProgramDX11GeometrySM40</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11GeometrySM50" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11GeometrySM50">kShaderGpuProgramDX11GeometrySM50</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11HullSM50" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11HullSM50">kShaderGpuProgramDX11HullSM50</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11PixelSM40" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11PixelSM40">kShaderGpuProgramDX11PixelSM40</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11PixelSM50" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11PixelSM50">kShaderGpuProgramDX11PixelSM50</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11VertexSM40" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11VertexSM40">kShaderGpuProgramDX11VertexSM40</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11VertexSM50" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX11VertexSM50">kShaderGpuProgramDX11VertexSM50</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9PixelSM20" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9PixelSM20">kShaderGpuProgramDX9PixelSM20</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9PixelSM30" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9PixelSM30">kShaderGpuProgramDX9PixelSM30</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9VertexSM20" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9VertexSM20">kShaderGpuProgramDX9VertexSM20</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9VertexSM30" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramDX9VertexSM30">kShaderGpuProgramDX9VertexSM30</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLCore32" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLCore32">kShaderGpuProgramGLCore32</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLCore41" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLCore41">kShaderGpuProgramGLCore41</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLCore43" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLCore43">kShaderGpuProgramGLCore43</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES">kShaderGpuProgramGLES</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES3" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES3">kShaderGpuProgramGLES3</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES31" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES31">kShaderGpuProgramGLES31</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES31AEP" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLES31AEP">kShaderGpuProgramGLES31AEP</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLLegacy" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramGLLegacy">kShaderGpuProgramGLLegacy</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramMetalFS" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramMetalFS">kShaderGpuProgramMetalFS</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramMetalVS" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramMetalVS">kShaderGpuProgramMetalVS</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramSPIRV" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramSPIRV">kShaderGpuProgramSPIRV</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramUnknown" href="#UnityPy.classes.Shader.ShaderGpuProgramType.kShaderGpuProgramUnknown">kShaderGpuProgramUnknown</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.StructParameter" href="#UnityPy.classes.Shader.StructParameter">StructParameter</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.TextureDimension" href="#UnityPy.classes.Shader.TextureDimension">TextureDimension</a></code></h4>
+<ul class="two-column">
+<li><code><a title="UnityPy.classes.Shader.TextureDimension.kTexDim2D" href="#UnityPy.classes.Shader.TextureDimension.kTexDim2D">kTexDim2D</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.TextureDimension.kTexDim2DArray" href="#UnityPy.classes.Shader.TextureDimension.kTexDim2DArray">kTexDim2DArray</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.TextureDimension.kTexDim3D" href="#UnityPy.classes.Shader.TextureDimension.kTexDim3D">kTexDim3D</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.TextureDimension.kTexDimAny" href="#UnityPy.classes.Shader.TextureDimension.kTexDimAny">kTexDimAny</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.TextureDimension.kTexDimCUBE" href="#UnityPy.classes.Shader.TextureDimension.kTexDimCUBE">kTexDimCUBE</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.TextureDimension.kTexDimCubeArray" href="#UnityPy.classes.Shader.TextureDimension.kTexDimCubeArray">kTexDimCubeArray</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.TextureDimension.kTexDimForce32Bit" href="#UnityPy.classes.Shader.TextureDimension.kTexDimForce32Bit">kTexDimForce32Bit</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.TextureDimension.kTexDimNone" href="#UnityPy.classes.Shader.TextureDimension.kTexDimNone">kTexDimNone</a></code></li>
+<li><code><a title="UnityPy.classes.Shader.TextureDimension.kTexDimUnknown" href="#UnityPy.classes.Shader.TextureDimension.kTexDimUnknown">kTexDimUnknown</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.TextureParameter" href="#UnityPy.classes.Shader.TextureParameter">TextureParameter</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.UAVParameter" href="#UnityPy.classes.Shader.UAVParameter">UAVParameter</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.Shader.VectorParameter" href="#UnityPy.classes.Shader.VectorParameter">VectorParameter</a></code></h4>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

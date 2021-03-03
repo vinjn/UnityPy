@@ -1,0 +1,2067 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>UnityPy.enums.ClassIDType API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>UnityPy.enums.ClassIDType</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from enum import IntEnum
+
+
+class ClassIDType(IntEnum):
+    UnknownType = (-1,)
+    Object = (0,)
+    GameObject = (1,)
+    Component = (2,)
+    LevelGameManager = (3,)
+    Transform = (4,)
+    TimeManager = (5,)
+    GlobalGameManager = (6,)
+    Behaviour = (8,)
+    GameManager = (9,)
+    AudioManager = (11,)
+    ParticleAnimator = (12,)
+    InputManager = (13,)
+    EllipsoidParticleEmitter = (15,)
+    Pipeline = (17,)
+    EditorExtension = (18,)
+    Physics2DSettings = (19,)
+    Camera = (20,)
+    Material = (21,)
+    MeshRenderer = (23,)
+    Renderer = (25,)
+    ParticleRenderer = (26,)
+    Texture = (27,)
+    Texture2D = (28,)
+    SceneSettings = (29,)
+    GraphicsSettings = (30,)
+    MeshFilter = (33,)
+    OcclusionPortal = (41,)
+    Mesh = (43,)
+    Skybox = (45,)
+    QualitySettings = (47,)
+    Shader = (48,)
+    TextAsset = (49,)
+    Rigidbody2D = (50,)
+    Physics2DManager = (51,)
+    Collider2D = (53,)
+    Rigidbody = (54,)
+    PhysicsManager = (55,)
+    Collider = (56,)
+    Joint = (57,)
+    CircleCollider2D = (58,)
+    HingeJoint = (59,)
+    PolygonCollider2D = (60,)
+    BoxCollider2D = (61,)
+    PhysicsMaterial2D = (62,)
+    MeshCollider = (64,)
+    BoxCollider = (65,)
+    SpriteCollider2D = (66,)
+    EdgeCollider2D = (68,)
+    CapsuleCollider2D = (70,)
+    ComputeShader = (72,)
+    AnimationClip = (74,)
+    ConstantForce = (75,)
+    WorldParticleCollider = (76,)
+    TagManager = (78,)
+    AudioListener = (81,)
+    AudioSource = (82,)
+    AudioClip = (83,)
+    RenderTexture = (84,)
+    CustomRenderTexture = (86,)
+    MeshParticleEmitter = (87,)
+    ParticleEmitter = (88,)
+    Cubemap = (89,)
+    Avatar = (90,)
+    AnimatorController = (91,)
+    GUILayer = (92,)
+    RuntimeAnimatorController = (93,)
+    ScriptMapper = (94,)
+    Animator = (95,)
+    TrailRenderer = (96,)
+    DelayedCallManager = (98,)
+    TextMesh = (102,)
+    RenderSettings = (104,)
+    Light = (108,)
+    CGProgram = (109,)
+    BaseAnimationTrack = (110,)
+    Animation = (111,)
+    MonoBehaviour = (114,)
+    MonoScript = (115,)
+    MonoManager = (116,)
+    Texture3D = (117,)
+    NewAnimationTrack = (118,)
+    Projector = (119,)
+    LineRenderer = (120,)
+    Flare = (121,)
+    Halo = (122,)
+    LensFlare = (123,)
+    FlareLayer = (124,)
+    HaloLayer = (125,)
+    NavMeshAreas = (126,)
+    HaloManager = (127,)
+    Font = (128,)
+    PlayerSettings = (129,)
+    NamedObject = (130,)
+    GUITexture = (131,)
+    GUIText = (132,)
+    GUIElement = (133,)
+    PhysicMaterial = (134,)
+    SphereCollider = (135,)
+    CapsuleCollider = (136,)
+    SkinnedMeshRenderer = (137,)
+    FixedJoint = (138,)
+    RaycastCollider = (140,)
+    BuildSettings = (141,)
+    AssetBundle = (142,)
+    CharacterController = (143,)
+    CharacterJoint = (144,)
+    SpringJoint = (145,)
+    WheelCollider = (146,)
+    ResourceManager = (147,)
+    NetworkView = (148,)
+    NetworkManager = (149,)
+    PreloadData = (150,)
+    MovieTexture = (152,)
+    ConfigurableJoint = (153,)
+    TerrainCollider = (154,)
+    MasterServerInterface = (155,)
+    TerrainData = (156,)
+    LightmapSettings = (157,)
+    WebCamTexture = (158,)
+    EditorSettings = (159,)
+    InteractiveCloth = (160,)
+    ClothRenderer = (161,)
+    EditorUserSettings = (162,)
+    SkinnedCloth = (163,)
+    AudioReverbFilter = (164,)
+    AudioHighPassFilter = (165,)
+    AudioChorusFilter = (166,)
+    AudioReverbZone = (167,)
+    AudioEchoFilter = (168,)
+    AudioLowPassFilter = (169,)
+    AudioDistortionFilter = (170,)
+    SparseTexture = (171,)
+    AudioBehaviour = (180,)
+    AudioFilter = (181,)
+    WindZone = (182,)
+    Cloth = (183,)
+    SubstanceArchive = (184,)
+    ProceduralMaterial = (185,)
+    ProceduralTexture = (186,)
+    Texture2DArray = (187,)
+    CubemapArray = (188,)
+    OffMeshLink = (191,)
+    OcclusionArea = (192,)
+    Tree = (193,)
+    NavMeshObsolete = (194,)
+    NavMeshAgent = (195,)
+    NavMeshSettings = (196,)
+    LightProbesLegacy = (197,)
+    ParticleSystem = (198,)
+    ParticleSystemRenderer = (199,)
+    ShaderVariantCollection = (200,)
+    LODGroup = (205,)
+    BlendTree = (206,)
+    Motion = (207,)
+    NavMeshObstacle = (208,)
+    TerrainInstance = (210,)
+    SpriteRenderer = (212,)
+    Sprite = (213,)
+    CachedSpriteAtlas = (214,)
+    ReflectionProbe = (215,)
+    ReflectionProbes = (216,)
+    Terrain = (218,)
+    LightProbeGroup = (220,)
+    AnimatorOverrideController = (221,)
+    CanvasRenderer = (222,)
+    Canvas = (223,)
+    RectTransform = (224,)
+    CanvasGroup = (225,)
+    BillboardAsset = (226,)
+    BillboardRenderer = (227,)
+    SpeedTreeWindAsset = (228,)
+    AnchoredJoint2D = (229,)
+    Joint2D = (230,)
+    SpringJoint2D = (231,)
+    DistanceJoint2D = (232,)
+    HingeJoint2D = (233,)
+    SliderJoint2D = (234,)
+    WheelJoint2D = (235,)
+    ClusterInputManager = (236,)
+    BaseVideoTexture = (237,)
+    NavMeshData = (238,)
+    AudioMixer = (240,)
+    AudioMixerController = (241,)
+    AudioMixerGroupController = (243,)
+    AudioMixerEffectController = (244,)
+    AudioMixerSnapshotController = (245,)
+    PhysicsUpdateBehaviour2D = (246,)
+    ConstantForce2D = (247,)
+    Effector2D = (248,)
+    AreaEffector2D = (249,)
+    PointEffector2D = (250,)
+    PlatformEffector2D = (251,)
+    SurfaceEffector2D = (252,)
+    BuoyancyEffector2D = (253,)
+    RelativeJoint2D = (254,)
+    FixedJoint2D = (255,)
+    FrictionJoint2D = (256,)
+    TargetJoint2D = (257,)
+    LightProbes = (258,)
+    LightProbeProxyVolume = (259,)
+    SampleClip = (271,)
+    AudioMixerSnapshot = (272,)
+    AudioMixerGroup = (273,)
+    NScreenBridge = (280,)
+    AssetBundleManifest = (290,)
+    UnityAdsManager = (292,)
+    RuntimeInitializeOnLoadManager = (300,)
+    CloudWebServicesManager = (301,)
+    UnityAnalyticsManager = (303,)
+    CrashReportManager = (304,)
+    PerformanceReportingManager = (305,)
+    UnityConnectSettings = (310,)
+    AvatarMask = (319,)
+    VideoPlayer = (328,)
+    VideoClip = (329,)
+    OcclusionCullingData = (363,)
+    # kLargestRuntimeClassID = 364
+    SmallestEditorClassID = (1000,)
+    Prefab = (1001,)
+    EditorExtensionImpl = (1002,)
+    AssetImporter = (1003,)
+    AssetDatabase = (1004,)
+    Mesh3DSImporter = (1005,)
+    TextureImporter = (1006,)
+    ShaderImporter = (1007,)
+    ComputeShaderImporter = (1008,)
+    AudioImporter = (1020,)
+    HierarchyState = (1026,)
+    GUIDSerializer = (1027,)
+    AssetMetaData = (1028,)
+    DefaultAsset = (1029,)
+    DefaultImporter = (1030,)
+    TextScriptImporter = (1031,)
+    SceneAsset = (1032,)
+    NativeFormatImporter = (1034,)
+    MonoImporter = (1035,)
+    AssetServerCache = (1037,)
+    LibraryAssetImporter = (1038,)
+    ModelImporter = (1040,)
+    FBXImporter = (1041,)
+    TrueTypeFontImporter = (1042,)
+    MovieImporter = (1044,)
+    EditorBuildSettings = (1045,)
+    DDSImporter = (1046,)
+    InspectorExpandedState = (1048,)
+    AnnotationManager = (1049,)
+    PluginImporter = (1050,)
+    EditorUserBuildSettings = (1051,)
+    PVRImporter = (1052,)
+    ASTCImporter = (1053,)
+    KTXImporter = (1054,)
+    IHVImageFormatImporter = (1055,)
+    AnimatorStateTransition = (1101,)
+    AnimatorState = (1102,)
+    HumanTemplate = (1105,)
+    AnimatorStateMachine = (1107,)
+    PreviewAssetType = (1108,)
+    AnimatorTransition = (1109,)
+    SpeedTreeImporter = (1110,)
+    AnimatorTransitionBase = (1111,)
+    SubstanceImporter = (1112,)
+    LightmapParameters = (1113,)
+    LightmapSnapshot = (1120,)
+    GISRaster = (1121,)
+    GISRasterImporter = (1122,)
+    CadImporter = (1123,)
+    SketchUpImporter = (1124,)
+    BuildReport = (1125,)
+    PackedAssets = (1126,)
+    VideoClipImporter = (1127,)
+    ActivationLogComponent = (2000,)
+    # kLargestEditorClassID = 2001
+    # kClassIdOutOfHierarchy = 100000
+    SubDerived = (367388927,)
+    SiblingDerived = (334799969,)
+    SpriteAtlas = (687078895,)
+    Derived = (1091556383,)
+    LowerResBlitTexture = (1480428607,)
+    RenderPassAttachment = 1571458007
+
+    def __str__(self):
+        return self.name
+
+    def __eq__(self, value):
+        if isinstance(value, str):
+            return self.name == value
+        else:
+            return self.value == value
+
+    @classmethod
+    def _missing_(cls, value):
+        return ClassIDType.UnknownType</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType"><code class="flex name class">
+<span>class <span class="ident">ClassIDType</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ClassIDType(IntEnum):
+    UnknownType = (-1,)
+    Object = (0,)
+    GameObject = (1,)
+    Component = (2,)
+    LevelGameManager = (3,)
+    Transform = (4,)
+    TimeManager = (5,)
+    GlobalGameManager = (6,)
+    Behaviour = (8,)
+    GameManager = (9,)
+    AudioManager = (11,)
+    ParticleAnimator = (12,)
+    InputManager = (13,)
+    EllipsoidParticleEmitter = (15,)
+    Pipeline = (17,)
+    EditorExtension = (18,)
+    Physics2DSettings = (19,)
+    Camera = (20,)
+    Material = (21,)
+    MeshRenderer = (23,)
+    Renderer = (25,)
+    ParticleRenderer = (26,)
+    Texture = (27,)
+    Texture2D = (28,)
+    SceneSettings = (29,)
+    GraphicsSettings = (30,)
+    MeshFilter = (33,)
+    OcclusionPortal = (41,)
+    Mesh = (43,)
+    Skybox = (45,)
+    QualitySettings = (47,)
+    Shader = (48,)
+    TextAsset = (49,)
+    Rigidbody2D = (50,)
+    Physics2DManager = (51,)
+    Collider2D = (53,)
+    Rigidbody = (54,)
+    PhysicsManager = (55,)
+    Collider = (56,)
+    Joint = (57,)
+    CircleCollider2D = (58,)
+    HingeJoint = (59,)
+    PolygonCollider2D = (60,)
+    BoxCollider2D = (61,)
+    PhysicsMaterial2D = (62,)
+    MeshCollider = (64,)
+    BoxCollider = (65,)
+    SpriteCollider2D = (66,)
+    EdgeCollider2D = (68,)
+    CapsuleCollider2D = (70,)
+    ComputeShader = (72,)
+    AnimationClip = (74,)
+    ConstantForce = (75,)
+    WorldParticleCollider = (76,)
+    TagManager = (78,)
+    AudioListener = (81,)
+    AudioSource = (82,)
+    AudioClip = (83,)
+    RenderTexture = (84,)
+    CustomRenderTexture = (86,)
+    MeshParticleEmitter = (87,)
+    ParticleEmitter = (88,)
+    Cubemap = (89,)
+    Avatar = (90,)
+    AnimatorController = (91,)
+    GUILayer = (92,)
+    RuntimeAnimatorController = (93,)
+    ScriptMapper = (94,)
+    Animator = (95,)
+    TrailRenderer = (96,)
+    DelayedCallManager = (98,)
+    TextMesh = (102,)
+    RenderSettings = (104,)
+    Light = (108,)
+    CGProgram = (109,)
+    BaseAnimationTrack = (110,)
+    Animation = (111,)
+    MonoBehaviour = (114,)
+    MonoScript = (115,)
+    MonoManager = (116,)
+    Texture3D = (117,)
+    NewAnimationTrack = (118,)
+    Projector = (119,)
+    LineRenderer = (120,)
+    Flare = (121,)
+    Halo = (122,)
+    LensFlare = (123,)
+    FlareLayer = (124,)
+    HaloLayer = (125,)
+    NavMeshAreas = (126,)
+    HaloManager = (127,)
+    Font = (128,)
+    PlayerSettings = (129,)
+    NamedObject = (130,)
+    GUITexture = (131,)
+    GUIText = (132,)
+    GUIElement = (133,)
+    PhysicMaterial = (134,)
+    SphereCollider = (135,)
+    CapsuleCollider = (136,)
+    SkinnedMeshRenderer = (137,)
+    FixedJoint = (138,)
+    RaycastCollider = (140,)
+    BuildSettings = (141,)
+    AssetBundle = (142,)
+    CharacterController = (143,)
+    CharacterJoint = (144,)
+    SpringJoint = (145,)
+    WheelCollider = (146,)
+    ResourceManager = (147,)
+    NetworkView = (148,)
+    NetworkManager = (149,)
+    PreloadData = (150,)
+    MovieTexture = (152,)
+    ConfigurableJoint = (153,)
+    TerrainCollider = (154,)
+    MasterServerInterface = (155,)
+    TerrainData = (156,)
+    LightmapSettings = (157,)
+    WebCamTexture = (158,)
+    EditorSettings = (159,)
+    InteractiveCloth = (160,)
+    ClothRenderer = (161,)
+    EditorUserSettings = (162,)
+    SkinnedCloth = (163,)
+    AudioReverbFilter = (164,)
+    AudioHighPassFilter = (165,)
+    AudioChorusFilter = (166,)
+    AudioReverbZone = (167,)
+    AudioEchoFilter = (168,)
+    AudioLowPassFilter = (169,)
+    AudioDistortionFilter = (170,)
+    SparseTexture = (171,)
+    AudioBehaviour = (180,)
+    AudioFilter = (181,)
+    WindZone = (182,)
+    Cloth = (183,)
+    SubstanceArchive = (184,)
+    ProceduralMaterial = (185,)
+    ProceduralTexture = (186,)
+    Texture2DArray = (187,)
+    CubemapArray = (188,)
+    OffMeshLink = (191,)
+    OcclusionArea = (192,)
+    Tree = (193,)
+    NavMeshObsolete = (194,)
+    NavMeshAgent = (195,)
+    NavMeshSettings = (196,)
+    LightProbesLegacy = (197,)
+    ParticleSystem = (198,)
+    ParticleSystemRenderer = (199,)
+    ShaderVariantCollection = (200,)
+    LODGroup = (205,)
+    BlendTree = (206,)
+    Motion = (207,)
+    NavMeshObstacle = (208,)
+    TerrainInstance = (210,)
+    SpriteRenderer = (212,)
+    Sprite = (213,)
+    CachedSpriteAtlas = (214,)
+    ReflectionProbe = (215,)
+    ReflectionProbes = (216,)
+    Terrain = (218,)
+    LightProbeGroup = (220,)
+    AnimatorOverrideController = (221,)
+    CanvasRenderer = (222,)
+    Canvas = (223,)
+    RectTransform = (224,)
+    CanvasGroup = (225,)
+    BillboardAsset = (226,)
+    BillboardRenderer = (227,)
+    SpeedTreeWindAsset = (228,)
+    AnchoredJoint2D = (229,)
+    Joint2D = (230,)
+    SpringJoint2D = (231,)
+    DistanceJoint2D = (232,)
+    HingeJoint2D = (233,)
+    SliderJoint2D = (234,)
+    WheelJoint2D = (235,)
+    ClusterInputManager = (236,)
+    BaseVideoTexture = (237,)
+    NavMeshData = (238,)
+    AudioMixer = (240,)
+    AudioMixerController = (241,)
+    AudioMixerGroupController = (243,)
+    AudioMixerEffectController = (244,)
+    AudioMixerSnapshotController = (245,)
+    PhysicsUpdateBehaviour2D = (246,)
+    ConstantForce2D = (247,)
+    Effector2D = (248,)
+    AreaEffector2D = (249,)
+    PointEffector2D = (250,)
+    PlatformEffector2D = (251,)
+    SurfaceEffector2D = (252,)
+    BuoyancyEffector2D = (253,)
+    RelativeJoint2D = (254,)
+    FixedJoint2D = (255,)
+    FrictionJoint2D = (256,)
+    TargetJoint2D = (257,)
+    LightProbes = (258,)
+    LightProbeProxyVolume = (259,)
+    SampleClip = (271,)
+    AudioMixerSnapshot = (272,)
+    AudioMixerGroup = (273,)
+    NScreenBridge = (280,)
+    AssetBundleManifest = (290,)
+    UnityAdsManager = (292,)
+    RuntimeInitializeOnLoadManager = (300,)
+    CloudWebServicesManager = (301,)
+    UnityAnalyticsManager = (303,)
+    CrashReportManager = (304,)
+    PerformanceReportingManager = (305,)
+    UnityConnectSettings = (310,)
+    AvatarMask = (319,)
+    VideoPlayer = (328,)
+    VideoClip = (329,)
+    OcclusionCullingData = (363,)
+    # kLargestRuntimeClassID = 364
+    SmallestEditorClassID = (1000,)
+    Prefab = (1001,)
+    EditorExtensionImpl = (1002,)
+    AssetImporter = (1003,)
+    AssetDatabase = (1004,)
+    Mesh3DSImporter = (1005,)
+    TextureImporter = (1006,)
+    ShaderImporter = (1007,)
+    ComputeShaderImporter = (1008,)
+    AudioImporter = (1020,)
+    HierarchyState = (1026,)
+    GUIDSerializer = (1027,)
+    AssetMetaData = (1028,)
+    DefaultAsset = (1029,)
+    DefaultImporter = (1030,)
+    TextScriptImporter = (1031,)
+    SceneAsset = (1032,)
+    NativeFormatImporter = (1034,)
+    MonoImporter = (1035,)
+    AssetServerCache = (1037,)
+    LibraryAssetImporter = (1038,)
+    ModelImporter = (1040,)
+    FBXImporter = (1041,)
+    TrueTypeFontImporter = (1042,)
+    MovieImporter = (1044,)
+    EditorBuildSettings = (1045,)
+    DDSImporter = (1046,)
+    InspectorExpandedState = (1048,)
+    AnnotationManager = (1049,)
+    PluginImporter = (1050,)
+    EditorUserBuildSettings = (1051,)
+    PVRImporter = (1052,)
+    ASTCImporter = (1053,)
+    KTXImporter = (1054,)
+    IHVImageFormatImporter = (1055,)
+    AnimatorStateTransition = (1101,)
+    AnimatorState = (1102,)
+    HumanTemplate = (1105,)
+    AnimatorStateMachine = (1107,)
+    PreviewAssetType = (1108,)
+    AnimatorTransition = (1109,)
+    SpeedTreeImporter = (1110,)
+    AnimatorTransitionBase = (1111,)
+    SubstanceImporter = (1112,)
+    LightmapParameters = (1113,)
+    LightmapSnapshot = (1120,)
+    GISRaster = (1121,)
+    GISRasterImporter = (1122,)
+    CadImporter = (1123,)
+    SketchUpImporter = (1124,)
+    BuildReport = (1125,)
+    PackedAssets = (1126,)
+    VideoClipImporter = (1127,)
+    ActivationLogComponent = (2000,)
+    # kLargestEditorClassID = 2001
+    # kClassIdOutOfHierarchy = 100000
+    SubDerived = (367388927,)
+    SiblingDerived = (334799969,)
+    SpriteAtlas = (687078895,)
+    Derived = (1091556383,)
+    LowerResBlitTexture = (1480428607,)
+    RenderPassAttachment = 1571458007
+
+    def __str__(self):
+        return self.name
+
+    def __eq__(self, value):
+        if isinstance(value, str):
+            return self.name == value
+        else:
+            return self.value == value
+
+    @classmethod
+    def _missing_(cls, value):
+        return ClassIDType.UnknownType</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.IntEnum</li>
+<li>builtins.int</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ASTCImporter"><code class="name">var <span class="ident">ASTCImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ActivationLogComponent"><code class="name">var <span class="ident">ActivationLogComponent</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AnchoredJoint2D"><code class="name">var <span class="ident">AnchoredJoint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Animation"><code class="name">var <span class="ident">Animation</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AnimationClip"><code class="name">var <span class="ident">AnimationClip</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Animator"><code class="name">var <span class="ident">Animator</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AnimatorController"><code class="name">var <span class="ident">AnimatorController</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AnimatorOverrideController"><code class="name">var <span class="ident">AnimatorOverrideController</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AnimatorState"><code class="name">var <span class="ident">AnimatorState</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AnimatorStateMachine"><code class="name">var <span class="ident">AnimatorStateMachine</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AnimatorStateTransition"><code class="name">var <span class="ident">AnimatorStateTransition</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AnimatorTransition"><code class="name">var <span class="ident">AnimatorTransition</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AnimatorTransitionBase"><code class="name">var <span class="ident">AnimatorTransitionBase</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AnnotationManager"><code class="name">var <span class="ident">AnnotationManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AreaEffector2D"><code class="name">var <span class="ident">AreaEffector2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AssetBundle"><code class="name">var <span class="ident">AssetBundle</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AssetBundleManifest"><code class="name">var <span class="ident">AssetBundleManifest</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AssetDatabase"><code class="name">var <span class="ident">AssetDatabase</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AssetImporter"><code class="name">var <span class="ident">AssetImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AssetMetaData"><code class="name">var <span class="ident">AssetMetaData</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AssetServerCache"><code class="name">var <span class="ident">AssetServerCache</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioBehaviour"><code class="name">var <span class="ident">AudioBehaviour</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioChorusFilter"><code class="name">var <span class="ident">AudioChorusFilter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioClip"><code class="name">var <span class="ident">AudioClip</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioDistortionFilter"><code class="name">var <span class="ident">AudioDistortionFilter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioEchoFilter"><code class="name">var <span class="ident">AudioEchoFilter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioFilter"><code class="name">var <span class="ident">AudioFilter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioHighPassFilter"><code class="name">var <span class="ident">AudioHighPassFilter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioImporter"><code class="name">var <span class="ident">AudioImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioListener"><code class="name">var <span class="ident">AudioListener</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioLowPassFilter"><code class="name">var <span class="ident">AudioLowPassFilter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioManager"><code class="name">var <span class="ident">AudioManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioMixer"><code class="name">var <span class="ident">AudioMixer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerController"><code class="name">var <span class="ident">AudioMixerController</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerEffectController"><code class="name">var <span class="ident">AudioMixerEffectController</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerGroup"><code class="name">var <span class="ident">AudioMixerGroup</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerGroupController"><code class="name">var <span class="ident">AudioMixerGroupController</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerSnapshot"><code class="name">var <span class="ident">AudioMixerSnapshot</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerSnapshotController"><code class="name">var <span class="ident">AudioMixerSnapshotController</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioReverbFilter"><code class="name">var <span class="ident">AudioReverbFilter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioReverbZone"><code class="name">var <span class="ident">AudioReverbZone</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AudioSource"><code class="name">var <span class="ident">AudioSource</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Avatar"><code class="name">var <span class="ident">Avatar</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.AvatarMask"><code class="name">var <span class="ident">AvatarMask</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.BaseAnimationTrack"><code class="name">var <span class="ident">BaseAnimationTrack</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.BaseVideoTexture"><code class="name">var <span class="ident">BaseVideoTexture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Behaviour"><code class="name">var <span class="ident">Behaviour</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.BillboardAsset"><code class="name">var <span class="ident">BillboardAsset</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.BillboardRenderer"><code class="name">var <span class="ident">BillboardRenderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.BlendTree"><code class="name">var <span class="ident">BlendTree</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.BoxCollider"><code class="name">var <span class="ident">BoxCollider</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.BoxCollider2D"><code class="name">var <span class="ident">BoxCollider2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.BuildReport"><code class="name">var <span class="ident">BuildReport</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.BuildSettings"><code class="name">var <span class="ident">BuildSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.BuoyancyEffector2D"><code class="name">var <span class="ident">BuoyancyEffector2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CGProgram"><code class="name">var <span class="ident">CGProgram</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CachedSpriteAtlas"><code class="name">var <span class="ident">CachedSpriteAtlas</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CadImporter"><code class="name">var <span class="ident">CadImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Camera"><code class="name">var <span class="ident">Camera</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Canvas"><code class="name">var <span class="ident">Canvas</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CanvasGroup"><code class="name">var <span class="ident">CanvasGroup</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CanvasRenderer"><code class="name">var <span class="ident">CanvasRenderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CapsuleCollider"><code class="name">var <span class="ident">CapsuleCollider</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CapsuleCollider2D"><code class="name">var <span class="ident">CapsuleCollider2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CharacterController"><code class="name">var <span class="ident">CharacterController</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CharacterJoint"><code class="name">var <span class="ident">CharacterJoint</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CircleCollider2D"><code class="name">var <span class="ident">CircleCollider2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Cloth"><code class="name">var <span class="ident">Cloth</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ClothRenderer"><code class="name">var <span class="ident">ClothRenderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CloudWebServicesManager"><code class="name">var <span class="ident">CloudWebServicesManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ClusterInputManager"><code class="name">var <span class="ident">ClusterInputManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Collider"><code class="name">var <span class="ident">Collider</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Collider2D"><code class="name">var <span class="ident">Collider2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Component"><code class="name">var <span class="ident">Component</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ComputeShader"><code class="name">var <span class="ident">ComputeShader</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ComputeShaderImporter"><code class="name">var <span class="ident">ComputeShaderImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ConfigurableJoint"><code class="name">var <span class="ident">ConfigurableJoint</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ConstantForce"><code class="name">var <span class="ident">ConstantForce</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ConstantForce2D"><code class="name">var <span class="ident">ConstantForce2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CrashReportManager"><code class="name">var <span class="ident">CrashReportManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Cubemap"><code class="name">var <span class="ident">Cubemap</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CubemapArray"><code class="name">var <span class="ident">CubemapArray</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.CustomRenderTexture"><code class="name">var <span class="ident">CustomRenderTexture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.DDSImporter"><code class="name">var <span class="ident">DDSImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.DefaultAsset"><code class="name">var <span class="ident">DefaultAsset</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.DefaultImporter"><code class="name">var <span class="ident">DefaultImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.DelayedCallManager"><code class="name">var <span class="ident">DelayedCallManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Derived"><code class="name">var <span class="ident">Derived</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.DistanceJoint2D"><code class="name">var <span class="ident">DistanceJoint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.EdgeCollider2D"><code class="name">var <span class="ident">EdgeCollider2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.EditorBuildSettings"><code class="name">var <span class="ident">EditorBuildSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.EditorExtension"><code class="name">var <span class="ident">EditorExtension</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.EditorExtensionImpl"><code class="name">var <span class="ident">EditorExtensionImpl</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.EditorSettings"><code class="name">var <span class="ident">EditorSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.EditorUserBuildSettings"><code class="name">var <span class="ident">EditorUserBuildSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.EditorUserSettings"><code class="name">var <span class="ident">EditorUserSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Effector2D"><code class="name">var <span class="ident">Effector2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.EllipsoidParticleEmitter"><code class="name">var <span class="ident">EllipsoidParticleEmitter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.FBXImporter"><code class="name">var <span class="ident">FBXImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.FixedJoint"><code class="name">var <span class="ident">FixedJoint</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.FixedJoint2D"><code class="name">var <span class="ident">FixedJoint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Flare"><code class="name">var <span class="ident">Flare</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.FlareLayer"><code class="name">var <span class="ident">FlareLayer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Font"><code class="name">var <span class="ident">Font</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.FrictionJoint2D"><code class="name">var <span class="ident">FrictionJoint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GISRaster"><code class="name">var <span class="ident">GISRaster</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GISRasterImporter"><code class="name">var <span class="ident">GISRasterImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GUIDSerializer"><code class="name">var <span class="ident">GUIDSerializer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GUIElement"><code class="name">var <span class="ident">GUIElement</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GUILayer"><code class="name">var <span class="ident">GUILayer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GUIText"><code class="name">var <span class="ident">GUIText</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GUITexture"><code class="name">var <span class="ident">GUITexture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GameManager"><code class="name">var <span class="ident">GameManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GameObject"><code class="name">var <span class="ident">GameObject</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GlobalGameManager"><code class="name">var <span class="ident">GlobalGameManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.GraphicsSettings"><code class="name">var <span class="ident">GraphicsSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Halo"><code class="name">var <span class="ident">Halo</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.HaloLayer"><code class="name">var <span class="ident">HaloLayer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.HaloManager"><code class="name">var <span class="ident">HaloManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.HierarchyState"><code class="name">var <span class="ident">HierarchyState</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.HingeJoint"><code class="name">var <span class="ident">HingeJoint</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.HingeJoint2D"><code class="name">var <span class="ident">HingeJoint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.HumanTemplate"><code class="name">var <span class="ident">HumanTemplate</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.IHVImageFormatImporter"><code class="name">var <span class="ident">IHVImageFormatImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.InputManager"><code class="name">var <span class="ident">InputManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.InspectorExpandedState"><code class="name">var <span class="ident">InspectorExpandedState</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.InteractiveCloth"><code class="name">var <span class="ident">InteractiveCloth</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Joint"><code class="name">var <span class="ident">Joint</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Joint2D"><code class="name">var <span class="ident">Joint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.KTXImporter"><code class="name">var <span class="ident">KTXImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LODGroup"><code class="name">var <span class="ident">LODGroup</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LensFlare"><code class="name">var <span class="ident">LensFlare</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LevelGameManager"><code class="name">var <span class="ident">LevelGameManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LibraryAssetImporter"><code class="name">var <span class="ident">LibraryAssetImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Light"><code class="name">var <span class="ident">Light</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LightProbeGroup"><code class="name">var <span class="ident">LightProbeGroup</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LightProbeProxyVolume"><code class="name">var <span class="ident">LightProbeProxyVolume</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LightProbes"><code class="name">var <span class="ident">LightProbes</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LightProbesLegacy"><code class="name">var <span class="ident">LightProbesLegacy</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LightmapParameters"><code class="name">var <span class="ident">LightmapParameters</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LightmapSettings"><code class="name">var <span class="ident">LightmapSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LightmapSnapshot"><code class="name">var <span class="ident">LightmapSnapshot</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LineRenderer"><code class="name">var <span class="ident">LineRenderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.LowerResBlitTexture"><code class="name">var <span class="ident">LowerResBlitTexture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MasterServerInterface"><code class="name">var <span class="ident">MasterServerInterface</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Material"><code class="name">var <span class="ident">Material</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Mesh"><code class="name">var <span class="ident">Mesh</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Mesh3DSImporter"><code class="name">var <span class="ident">Mesh3DSImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MeshCollider"><code class="name">var <span class="ident">MeshCollider</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MeshFilter"><code class="name">var <span class="ident">MeshFilter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MeshParticleEmitter"><code class="name">var <span class="ident">MeshParticleEmitter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MeshRenderer"><code class="name">var <span class="ident">MeshRenderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ModelImporter"><code class="name">var <span class="ident">ModelImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MonoBehaviour"><code class="name">var <span class="ident">MonoBehaviour</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MonoImporter"><code class="name">var <span class="ident">MonoImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MonoManager"><code class="name">var <span class="ident">MonoManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MonoScript"><code class="name">var <span class="ident">MonoScript</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Motion"><code class="name">var <span class="ident">Motion</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MovieImporter"><code class="name">var <span class="ident">MovieImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.MovieTexture"><code class="name">var <span class="ident">MovieTexture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NScreenBridge"><code class="name">var <span class="ident">NScreenBridge</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NamedObject"><code class="name">var <span class="ident">NamedObject</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NativeFormatImporter"><code class="name">var <span class="ident">NativeFormatImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NavMeshAgent"><code class="name">var <span class="ident">NavMeshAgent</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NavMeshAreas"><code class="name">var <span class="ident">NavMeshAreas</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NavMeshData"><code class="name">var <span class="ident">NavMeshData</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NavMeshObsolete"><code class="name">var <span class="ident">NavMeshObsolete</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NavMeshObstacle"><code class="name">var <span class="ident">NavMeshObstacle</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NavMeshSettings"><code class="name">var <span class="ident">NavMeshSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NetworkManager"><code class="name">var <span class="ident">NetworkManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NetworkView"><code class="name">var <span class="ident">NetworkView</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.NewAnimationTrack"><code class="name">var <span class="ident">NewAnimationTrack</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Object"><code class="name">var <span class="ident">Object</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.OcclusionArea"><code class="name">var <span class="ident">OcclusionArea</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.OcclusionCullingData"><code class="name">var <span class="ident">OcclusionCullingData</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.OcclusionPortal"><code class="name">var <span class="ident">OcclusionPortal</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.OffMeshLink"><code class="name">var <span class="ident">OffMeshLink</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PVRImporter"><code class="name">var <span class="ident">PVRImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PackedAssets"><code class="name">var <span class="ident">PackedAssets</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ParticleAnimator"><code class="name">var <span class="ident">ParticleAnimator</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ParticleEmitter"><code class="name">var <span class="ident">ParticleEmitter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ParticleRenderer"><code class="name">var <span class="ident">ParticleRenderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ParticleSystem"><code class="name">var <span class="ident">ParticleSystem</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ParticleSystemRenderer"><code class="name">var <span class="ident">ParticleSystemRenderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PerformanceReportingManager"><code class="name">var <span class="ident">PerformanceReportingManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PhysicMaterial"><code class="name">var <span class="ident">PhysicMaterial</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Physics2DManager"><code class="name">var <span class="ident">Physics2DManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Physics2DSettings"><code class="name">var <span class="ident">Physics2DSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PhysicsManager"><code class="name">var <span class="ident">PhysicsManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PhysicsMaterial2D"><code class="name">var <span class="ident">PhysicsMaterial2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PhysicsUpdateBehaviour2D"><code class="name">var <span class="ident">PhysicsUpdateBehaviour2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Pipeline"><code class="name">var <span class="ident">Pipeline</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PlatformEffector2D"><code class="name">var <span class="ident">PlatformEffector2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PlayerSettings"><code class="name">var <span class="ident">PlayerSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PluginImporter"><code class="name">var <span class="ident">PluginImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PointEffector2D"><code class="name">var <span class="ident">PointEffector2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PolygonCollider2D"><code class="name">var <span class="ident">PolygonCollider2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Prefab"><code class="name">var <span class="ident">Prefab</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PreloadData"><code class="name">var <span class="ident">PreloadData</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.PreviewAssetType"><code class="name">var <span class="ident">PreviewAssetType</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ProceduralMaterial"><code class="name">var <span class="ident">ProceduralMaterial</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ProceduralTexture"><code class="name">var <span class="ident">ProceduralTexture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Projector"><code class="name">var <span class="ident">Projector</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.QualitySettings"><code class="name">var <span class="ident">QualitySettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.RaycastCollider"><code class="name">var <span class="ident">RaycastCollider</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.RectTransform"><code class="name">var <span class="ident">RectTransform</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ReflectionProbe"><code class="name">var <span class="ident">ReflectionProbe</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ReflectionProbes"><code class="name">var <span class="ident">ReflectionProbes</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.RelativeJoint2D"><code class="name">var <span class="ident">RelativeJoint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.RenderPassAttachment"><code class="name">var <span class="ident">RenderPassAttachment</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.RenderSettings"><code class="name">var <span class="ident">RenderSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.RenderTexture"><code class="name">var <span class="ident">RenderTexture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Renderer"><code class="name">var <span class="ident">Renderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ResourceManager"><code class="name">var <span class="ident">ResourceManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Rigidbody"><code class="name">var <span class="ident">Rigidbody</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Rigidbody2D"><code class="name">var <span class="ident">Rigidbody2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.RuntimeAnimatorController"><code class="name">var <span class="ident">RuntimeAnimatorController</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.RuntimeInitializeOnLoadManager"><code class="name">var <span class="ident">RuntimeInitializeOnLoadManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SampleClip"><code class="name">var <span class="ident">SampleClip</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SceneAsset"><code class="name">var <span class="ident">SceneAsset</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SceneSettings"><code class="name">var <span class="ident">SceneSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ScriptMapper"><code class="name">var <span class="ident">ScriptMapper</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Shader"><code class="name">var <span class="ident">Shader</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ShaderImporter"><code class="name">var <span class="ident">ShaderImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.ShaderVariantCollection"><code class="name">var <span class="ident">ShaderVariantCollection</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SiblingDerived"><code class="name">var <span class="ident">SiblingDerived</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SketchUpImporter"><code class="name">var <span class="ident">SketchUpImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SkinnedCloth"><code class="name">var <span class="ident">SkinnedCloth</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SkinnedMeshRenderer"><code class="name">var <span class="ident">SkinnedMeshRenderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Skybox"><code class="name">var <span class="ident">Skybox</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SliderJoint2D"><code class="name">var <span class="ident">SliderJoint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SmallestEditorClassID"><code class="name">var <span class="ident">SmallestEditorClassID</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SparseTexture"><code class="name">var <span class="ident">SparseTexture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SpeedTreeImporter"><code class="name">var <span class="ident">SpeedTreeImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SpeedTreeWindAsset"><code class="name">var <span class="ident">SpeedTreeWindAsset</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SphereCollider"><code class="name">var <span class="ident">SphereCollider</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SpringJoint"><code class="name">var <span class="ident">SpringJoint</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SpringJoint2D"><code class="name">var <span class="ident">SpringJoint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Sprite"><code class="name">var <span class="ident">Sprite</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SpriteAtlas"><code class="name">var <span class="ident">SpriteAtlas</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SpriteCollider2D"><code class="name">var <span class="ident">SpriteCollider2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SpriteRenderer"><code class="name">var <span class="ident">SpriteRenderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SubDerived"><code class="name">var <span class="ident">SubDerived</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SubstanceArchive"><code class="name">var <span class="ident">SubstanceArchive</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SubstanceImporter"><code class="name">var <span class="ident">SubstanceImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.SurfaceEffector2D"><code class="name">var <span class="ident">SurfaceEffector2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TagManager"><code class="name">var <span class="ident">TagManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TargetJoint2D"><code class="name">var <span class="ident">TargetJoint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Terrain"><code class="name">var <span class="ident">Terrain</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TerrainCollider"><code class="name">var <span class="ident">TerrainCollider</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TerrainData"><code class="name">var <span class="ident">TerrainData</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TerrainInstance"><code class="name">var <span class="ident">TerrainInstance</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TextAsset"><code class="name">var <span class="ident">TextAsset</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TextMesh"><code class="name">var <span class="ident">TextMesh</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TextScriptImporter"><code class="name">var <span class="ident">TextScriptImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Texture"><code class="name">var <span class="ident">Texture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Texture2D"><code class="name">var <span class="ident">Texture2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Texture2DArray"><code class="name">var <span class="ident">Texture2DArray</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Texture3D"><code class="name">var <span class="ident">Texture3D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TextureImporter"><code class="name">var <span class="ident">TextureImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TimeManager"><code class="name">var <span class="ident">TimeManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TrailRenderer"><code class="name">var <span class="ident">TrailRenderer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Transform"><code class="name">var <span class="ident">Transform</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.Tree"><code class="name">var <span class="ident">Tree</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.TrueTypeFontImporter"><code class="name">var <span class="ident">TrueTypeFontImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.UnityAdsManager"><code class="name">var <span class="ident">UnityAdsManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.UnityAnalyticsManager"><code class="name">var <span class="ident">UnityAnalyticsManager</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.UnityConnectSettings"><code class="name">var <span class="ident">UnityConnectSettings</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.UnknownType"><code class="name">var <span class="ident">UnknownType</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.VideoClip"><code class="name">var <span class="ident">VideoClip</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.VideoClipImporter"><code class="name">var <span class="ident">VideoClipImporter</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.VideoPlayer"><code class="name">var <span class="ident">VideoPlayer</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.WebCamTexture"><code class="name">var <span class="ident">WebCamTexture</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.WheelCollider"><code class="name">var <span class="ident">WheelCollider</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.WheelJoint2D"><code class="name">var <span class="ident">WheelJoint2D</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.WindZone"><code class="name">var <span class="ident">WindZone</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.enums.ClassIDType.ClassIDType.WorldParticleCollider"><code class="name">var <span class="ident">WorldParticleCollider</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="UnityPy.enums" href="index.html">UnityPy.enums</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="UnityPy.enums.ClassIDType.ClassIDType" href="#UnityPy.enums.ClassIDType.ClassIDType">ClassIDType</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ASTCImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.ASTCImporter">ASTCImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ActivationLogComponent" href="#UnityPy.enums.ClassIDType.ClassIDType.ActivationLogComponent">ActivationLogComponent</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AnchoredJoint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.AnchoredJoint2D">AnchoredJoint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Animation" href="#UnityPy.enums.ClassIDType.ClassIDType.Animation">Animation</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AnimationClip" href="#UnityPy.enums.ClassIDType.ClassIDType.AnimationClip">AnimationClip</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Animator" href="#UnityPy.enums.ClassIDType.ClassIDType.Animator">Animator</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AnimatorController" href="#UnityPy.enums.ClassIDType.ClassIDType.AnimatorController">AnimatorController</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AnimatorOverrideController" href="#UnityPy.enums.ClassIDType.ClassIDType.AnimatorOverrideController">AnimatorOverrideController</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AnimatorState" href="#UnityPy.enums.ClassIDType.ClassIDType.AnimatorState">AnimatorState</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AnimatorStateMachine" href="#UnityPy.enums.ClassIDType.ClassIDType.AnimatorStateMachine">AnimatorStateMachine</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AnimatorStateTransition" href="#UnityPy.enums.ClassIDType.ClassIDType.AnimatorStateTransition">AnimatorStateTransition</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AnimatorTransition" href="#UnityPy.enums.ClassIDType.ClassIDType.AnimatorTransition">AnimatorTransition</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AnimatorTransitionBase" href="#UnityPy.enums.ClassIDType.ClassIDType.AnimatorTransitionBase">AnimatorTransitionBase</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AnnotationManager" href="#UnityPy.enums.ClassIDType.ClassIDType.AnnotationManager">AnnotationManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AreaEffector2D" href="#UnityPy.enums.ClassIDType.ClassIDType.AreaEffector2D">AreaEffector2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AssetBundle" href="#UnityPy.enums.ClassIDType.ClassIDType.AssetBundle">AssetBundle</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AssetBundleManifest" href="#UnityPy.enums.ClassIDType.ClassIDType.AssetBundleManifest">AssetBundleManifest</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AssetDatabase" href="#UnityPy.enums.ClassIDType.ClassIDType.AssetDatabase">AssetDatabase</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AssetImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.AssetImporter">AssetImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AssetMetaData" href="#UnityPy.enums.ClassIDType.ClassIDType.AssetMetaData">AssetMetaData</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AssetServerCache" href="#UnityPy.enums.ClassIDType.ClassIDType.AssetServerCache">AssetServerCache</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioBehaviour" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioBehaviour">AudioBehaviour</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioChorusFilter" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioChorusFilter">AudioChorusFilter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioClip" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioClip">AudioClip</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioDistortionFilter" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioDistortionFilter">AudioDistortionFilter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioEchoFilter" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioEchoFilter">AudioEchoFilter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioFilter" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioFilter">AudioFilter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioHighPassFilter" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioHighPassFilter">AudioHighPassFilter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioImporter">AudioImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioListener" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioListener">AudioListener</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioLowPassFilter" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioLowPassFilter">AudioLowPassFilter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioManager" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioManager">AudioManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioMixer" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioMixer">AudioMixer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerController" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioMixerController">AudioMixerController</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerEffectController" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioMixerEffectController">AudioMixerEffectController</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerGroup" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioMixerGroup">AudioMixerGroup</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerGroupController" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioMixerGroupController">AudioMixerGroupController</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerSnapshot" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioMixerSnapshot">AudioMixerSnapshot</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioMixerSnapshotController" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioMixerSnapshotController">AudioMixerSnapshotController</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioReverbFilter" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioReverbFilter">AudioReverbFilter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioReverbZone" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioReverbZone">AudioReverbZone</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AudioSource" href="#UnityPy.enums.ClassIDType.ClassIDType.AudioSource">AudioSource</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Avatar" href="#UnityPy.enums.ClassIDType.ClassIDType.Avatar">Avatar</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.AvatarMask" href="#UnityPy.enums.ClassIDType.ClassIDType.AvatarMask">AvatarMask</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.BaseAnimationTrack" href="#UnityPy.enums.ClassIDType.ClassIDType.BaseAnimationTrack">BaseAnimationTrack</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.BaseVideoTexture" href="#UnityPy.enums.ClassIDType.ClassIDType.BaseVideoTexture">BaseVideoTexture</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Behaviour" href="#UnityPy.enums.ClassIDType.ClassIDType.Behaviour">Behaviour</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.BillboardAsset" href="#UnityPy.enums.ClassIDType.ClassIDType.BillboardAsset">BillboardAsset</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.BillboardRenderer" href="#UnityPy.enums.ClassIDType.ClassIDType.BillboardRenderer">BillboardRenderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.BlendTree" href="#UnityPy.enums.ClassIDType.ClassIDType.BlendTree">BlendTree</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.BoxCollider" href="#UnityPy.enums.ClassIDType.ClassIDType.BoxCollider">BoxCollider</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.BoxCollider2D" href="#UnityPy.enums.ClassIDType.ClassIDType.BoxCollider2D">BoxCollider2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.BuildReport" href="#UnityPy.enums.ClassIDType.ClassIDType.BuildReport">BuildReport</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.BuildSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.BuildSettings">BuildSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.BuoyancyEffector2D" href="#UnityPy.enums.ClassIDType.ClassIDType.BuoyancyEffector2D">BuoyancyEffector2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CGProgram" href="#UnityPy.enums.ClassIDType.ClassIDType.CGProgram">CGProgram</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CachedSpriteAtlas" href="#UnityPy.enums.ClassIDType.ClassIDType.CachedSpriteAtlas">CachedSpriteAtlas</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CadImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.CadImporter">CadImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Camera" href="#UnityPy.enums.ClassIDType.ClassIDType.Camera">Camera</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Canvas" href="#UnityPy.enums.ClassIDType.ClassIDType.Canvas">Canvas</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CanvasGroup" href="#UnityPy.enums.ClassIDType.ClassIDType.CanvasGroup">CanvasGroup</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CanvasRenderer" href="#UnityPy.enums.ClassIDType.ClassIDType.CanvasRenderer">CanvasRenderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CapsuleCollider" href="#UnityPy.enums.ClassIDType.ClassIDType.CapsuleCollider">CapsuleCollider</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CapsuleCollider2D" href="#UnityPy.enums.ClassIDType.ClassIDType.CapsuleCollider2D">CapsuleCollider2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CharacterController" href="#UnityPy.enums.ClassIDType.ClassIDType.CharacterController">CharacterController</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CharacterJoint" href="#UnityPy.enums.ClassIDType.ClassIDType.CharacterJoint">CharacterJoint</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CircleCollider2D" href="#UnityPy.enums.ClassIDType.ClassIDType.CircleCollider2D">CircleCollider2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Cloth" href="#UnityPy.enums.ClassIDType.ClassIDType.Cloth">Cloth</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ClothRenderer" href="#UnityPy.enums.ClassIDType.ClassIDType.ClothRenderer">ClothRenderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CloudWebServicesManager" href="#UnityPy.enums.ClassIDType.ClassIDType.CloudWebServicesManager">CloudWebServicesManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ClusterInputManager" href="#UnityPy.enums.ClassIDType.ClassIDType.ClusterInputManager">ClusterInputManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Collider" href="#UnityPy.enums.ClassIDType.ClassIDType.Collider">Collider</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Collider2D" href="#UnityPy.enums.ClassIDType.ClassIDType.Collider2D">Collider2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Component" href="#UnityPy.enums.ClassIDType.ClassIDType.Component">Component</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ComputeShader" href="#UnityPy.enums.ClassIDType.ClassIDType.ComputeShader">ComputeShader</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ComputeShaderImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.ComputeShaderImporter">ComputeShaderImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ConfigurableJoint" href="#UnityPy.enums.ClassIDType.ClassIDType.ConfigurableJoint">ConfigurableJoint</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ConstantForce" href="#UnityPy.enums.ClassIDType.ClassIDType.ConstantForce">ConstantForce</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ConstantForce2D" href="#UnityPy.enums.ClassIDType.ClassIDType.ConstantForce2D">ConstantForce2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CrashReportManager" href="#UnityPy.enums.ClassIDType.ClassIDType.CrashReportManager">CrashReportManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Cubemap" href="#UnityPy.enums.ClassIDType.ClassIDType.Cubemap">Cubemap</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CubemapArray" href="#UnityPy.enums.ClassIDType.ClassIDType.CubemapArray">CubemapArray</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.CustomRenderTexture" href="#UnityPy.enums.ClassIDType.ClassIDType.CustomRenderTexture">CustomRenderTexture</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.DDSImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.DDSImporter">DDSImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.DefaultAsset" href="#UnityPy.enums.ClassIDType.ClassIDType.DefaultAsset">DefaultAsset</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.DefaultImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.DefaultImporter">DefaultImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.DelayedCallManager" href="#UnityPy.enums.ClassIDType.ClassIDType.DelayedCallManager">DelayedCallManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Derived" href="#UnityPy.enums.ClassIDType.ClassIDType.Derived">Derived</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.DistanceJoint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.DistanceJoint2D">DistanceJoint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.EdgeCollider2D" href="#UnityPy.enums.ClassIDType.ClassIDType.EdgeCollider2D">EdgeCollider2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.EditorBuildSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.EditorBuildSettings">EditorBuildSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.EditorExtension" href="#UnityPy.enums.ClassIDType.ClassIDType.EditorExtension">EditorExtension</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.EditorExtensionImpl" href="#UnityPy.enums.ClassIDType.ClassIDType.EditorExtensionImpl">EditorExtensionImpl</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.EditorSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.EditorSettings">EditorSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.EditorUserBuildSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.EditorUserBuildSettings">EditorUserBuildSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.EditorUserSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.EditorUserSettings">EditorUserSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Effector2D" href="#UnityPy.enums.ClassIDType.ClassIDType.Effector2D">Effector2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.EllipsoidParticleEmitter" href="#UnityPy.enums.ClassIDType.ClassIDType.EllipsoidParticleEmitter">EllipsoidParticleEmitter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.FBXImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.FBXImporter">FBXImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.FixedJoint" href="#UnityPy.enums.ClassIDType.ClassIDType.FixedJoint">FixedJoint</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.FixedJoint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.FixedJoint2D">FixedJoint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Flare" href="#UnityPy.enums.ClassIDType.ClassIDType.Flare">Flare</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.FlareLayer" href="#UnityPy.enums.ClassIDType.ClassIDType.FlareLayer">FlareLayer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Font" href="#UnityPy.enums.ClassIDType.ClassIDType.Font">Font</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.FrictionJoint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.FrictionJoint2D">FrictionJoint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GISRaster" href="#UnityPy.enums.ClassIDType.ClassIDType.GISRaster">GISRaster</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GISRasterImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.GISRasterImporter">GISRasterImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GUIDSerializer" href="#UnityPy.enums.ClassIDType.ClassIDType.GUIDSerializer">GUIDSerializer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GUIElement" href="#UnityPy.enums.ClassIDType.ClassIDType.GUIElement">GUIElement</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GUILayer" href="#UnityPy.enums.ClassIDType.ClassIDType.GUILayer">GUILayer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GUIText" href="#UnityPy.enums.ClassIDType.ClassIDType.GUIText">GUIText</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GUITexture" href="#UnityPy.enums.ClassIDType.ClassIDType.GUITexture">GUITexture</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GameManager" href="#UnityPy.enums.ClassIDType.ClassIDType.GameManager">GameManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GameObject" href="#UnityPy.enums.ClassIDType.ClassIDType.GameObject">GameObject</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GlobalGameManager" href="#UnityPy.enums.ClassIDType.ClassIDType.GlobalGameManager">GlobalGameManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.GraphicsSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.GraphicsSettings">GraphicsSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Halo" href="#UnityPy.enums.ClassIDType.ClassIDType.Halo">Halo</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.HaloLayer" href="#UnityPy.enums.ClassIDType.ClassIDType.HaloLayer">HaloLayer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.HaloManager" href="#UnityPy.enums.ClassIDType.ClassIDType.HaloManager">HaloManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.HierarchyState" href="#UnityPy.enums.ClassIDType.ClassIDType.HierarchyState">HierarchyState</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.HingeJoint" href="#UnityPy.enums.ClassIDType.ClassIDType.HingeJoint">HingeJoint</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.HingeJoint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.HingeJoint2D">HingeJoint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.HumanTemplate" href="#UnityPy.enums.ClassIDType.ClassIDType.HumanTemplate">HumanTemplate</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.IHVImageFormatImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.IHVImageFormatImporter">IHVImageFormatImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.InputManager" href="#UnityPy.enums.ClassIDType.ClassIDType.InputManager">InputManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.InspectorExpandedState" href="#UnityPy.enums.ClassIDType.ClassIDType.InspectorExpandedState">InspectorExpandedState</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.InteractiveCloth" href="#UnityPy.enums.ClassIDType.ClassIDType.InteractiveCloth">InteractiveCloth</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Joint" href="#UnityPy.enums.ClassIDType.ClassIDType.Joint">Joint</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Joint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.Joint2D">Joint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.KTXImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.KTXImporter">KTXImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LODGroup" href="#UnityPy.enums.ClassIDType.ClassIDType.LODGroup">LODGroup</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LensFlare" href="#UnityPy.enums.ClassIDType.ClassIDType.LensFlare">LensFlare</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LevelGameManager" href="#UnityPy.enums.ClassIDType.ClassIDType.LevelGameManager">LevelGameManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LibraryAssetImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.LibraryAssetImporter">LibraryAssetImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Light" href="#UnityPy.enums.ClassIDType.ClassIDType.Light">Light</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LightProbeGroup" href="#UnityPy.enums.ClassIDType.ClassIDType.LightProbeGroup">LightProbeGroup</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LightProbeProxyVolume" href="#UnityPy.enums.ClassIDType.ClassIDType.LightProbeProxyVolume">LightProbeProxyVolume</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LightProbes" href="#UnityPy.enums.ClassIDType.ClassIDType.LightProbes">LightProbes</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LightProbesLegacy" href="#UnityPy.enums.ClassIDType.ClassIDType.LightProbesLegacy">LightProbesLegacy</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LightmapParameters" href="#UnityPy.enums.ClassIDType.ClassIDType.LightmapParameters">LightmapParameters</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LightmapSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.LightmapSettings">LightmapSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LightmapSnapshot" href="#UnityPy.enums.ClassIDType.ClassIDType.LightmapSnapshot">LightmapSnapshot</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LineRenderer" href="#UnityPy.enums.ClassIDType.ClassIDType.LineRenderer">LineRenderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.LowerResBlitTexture" href="#UnityPy.enums.ClassIDType.ClassIDType.LowerResBlitTexture">LowerResBlitTexture</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MasterServerInterface" href="#UnityPy.enums.ClassIDType.ClassIDType.MasterServerInterface">MasterServerInterface</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Material" href="#UnityPy.enums.ClassIDType.ClassIDType.Material">Material</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Mesh" href="#UnityPy.enums.ClassIDType.ClassIDType.Mesh">Mesh</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Mesh3DSImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.Mesh3DSImporter">Mesh3DSImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MeshCollider" href="#UnityPy.enums.ClassIDType.ClassIDType.MeshCollider">MeshCollider</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MeshFilter" href="#UnityPy.enums.ClassIDType.ClassIDType.MeshFilter">MeshFilter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MeshParticleEmitter" href="#UnityPy.enums.ClassIDType.ClassIDType.MeshParticleEmitter">MeshParticleEmitter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MeshRenderer" href="#UnityPy.enums.ClassIDType.ClassIDType.MeshRenderer">MeshRenderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ModelImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.ModelImporter">ModelImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MonoBehaviour" href="#UnityPy.enums.ClassIDType.ClassIDType.MonoBehaviour">MonoBehaviour</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MonoImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.MonoImporter">MonoImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MonoManager" href="#UnityPy.enums.ClassIDType.ClassIDType.MonoManager">MonoManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MonoScript" href="#UnityPy.enums.ClassIDType.ClassIDType.MonoScript">MonoScript</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Motion" href="#UnityPy.enums.ClassIDType.ClassIDType.Motion">Motion</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MovieImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.MovieImporter">MovieImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.MovieTexture" href="#UnityPy.enums.ClassIDType.ClassIDType.MovieTexture">MovieTexture</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NScreenBridge" href="#UnityPy.enums.ClassIDType.ClassIDType.NScreenBridge">NScreenBridge</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NamedObject" href="#UnityPy.enums.ClassIDType.ClassIDType.NamedObject">NamedObject</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NativeFormatImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.NativeFormatImporter">NativeFormatImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NavMeshAgent" href="#UnityPy.enums.ClassIDType.ClassIDType.NavMeshAgent">NavMeshAgent</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NavMeshAreas" href="#UnityPy.enums.ClassIDType.ClassIDType.NavMeshAreas">NavMeshAreas</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NavMeshData" href="#UnityPy.enums.ClassIDType.ClassIDType.NavMeshData">NavMeshData</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NavMeshObsolete" href="#UnityPy.enums.ClassIDType.ClassIDType.NavMeshObsolete">NavMeshObsolete</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NavMeshObstacle" href="#UnityPy.enums.ClassIDType.ClassIDType.NavMeshObstacle">NavMeshObstacle</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NavMeshSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.NavMeshSettings">NavMeshSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NetworkManager" href="#UnityPy.enums.ClassIDType.ClassIDType.NetworkManager">NetworkManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NetworkView" href="#UnityPy.enums.ClassIDType.ClassIDType.NetworkView">NetworkView</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.NewAnimationTrack" href="#UnityPy.enums.ClassIDType.ClassIDType.NewAnimationTrack">NewAnimationTrack</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Object" href="#UnityPy.enums.ClassIDType.ClassIDType.Object">Object</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.OcclusionArea" href="#UnityPy.enums.ClassIDType.ClassIDType.OcclusionArea">OcclusionArea</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.OcclusionCullingData" href="#UnityPy.enums.ClassIDType.ClassIDType.OcclusionCullingData">OcclusionCullingData</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.OcclusionPortal" href="#UnityPy.enums.ClassIDType.ClassIDType.OcclusionPortal">OcclusionPortal</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.OffMeshLink" href="#UnityPy.enums.ClassIDType.ClassIDType.OffMeshLink">OffMeshLink</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PVRImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.PVRImporter">PVRImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PackedAssets" href="#UnityPy.enums.ClassIDType.ClassIDType.PackedAssets">PackedAssets</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ParticleAnimator" href="#UnityPy.enums.ClassIDType.ClassIDType.ParticleAnimator">ParticleAnimator</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ParticleEmitter" href="#UnityPy.enums.ClassIDType.ClassIDType.ParticleEmitter">ParticleEmitter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ParticleRenderer" href="#UnityPy.enums.ClassIDType.ClassIDType.ParticleRenderer">ParticleRenderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ParticleSystem" href="#UnityPy.enums.ClassIDType.ClassIDType.ParticleSystem">ParticleSystem</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ParticleSystemRenderer" href="#UnityPy.enums.ClassIDType.ClassIDType.ParticleSystemRenderer">ParticleSystemRenderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PerformanceReportingManager" href="#UnityPy.enums.ClassIDType.ClassIDType.PerformanceReportingManager">PerformanceReportingManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PhysicMaterial" href="#UnityPy.enums.ClassIDType.ClassIDType.PhysicMaterial">PhysicMaterial</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Physics2DManager" href="#UnityPy.enums.ClassIDType.ClassIDType.Physics2DManager">Physics2DManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Physics2DSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.Physics2DSettings">Physics2DSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PhysicsManager" href="#UnityPy.enums.ClassIDType.ClassIDType.PhysicsManager">PhysicsManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PhysicsMaterial2D" href="#UnityPy.enums.ClassIDType.ClassIDType.PhysicsMaterial2D">PhysicsMaterial2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PhysicsUpdateBehaviour2D" href="#UnityPy.enums.ClassIDType.ClassIDType.PhysicsUpdateBehaviour2D">PhysicsUpdateBehaviour2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Pipeline" href="#UnityPy.enums.ClassIDType.ClassIDType.Pipeline">Pipeline</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PlatformEffector2D" href="#UnityPy.enums.ClassIDType.ClassIDType.PlatformEffector2D">PlatformEffector2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PlayerSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.PlayerSettings">PlayerSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PluginImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.PluginImporter">PluginImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PointEffector2D" href="#UnityPy.enums.ClassIDType.ClassIDType.PointEffector2D">PointEffector2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PolygonCollider2D" href="#UnityPy.enums.ClassIDType.ClassIDType.PolygonCollider2D">PolygonCollider2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Prefab" href="#UnityPy.enums.ClassIDType.ClassIDType.Prefab">Prefab</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PreloadData" href="#UnityPy.enums.ClassIDType.ClassIDType.PreloadData">PreloadData</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.PreviewAssetType" href="#UnityPy.enums.ClassIDType.ClassIDType.PreviewAssetType">PreviewAssetType</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ProceduralMaterial" href="#UnityPy.enums.ClassIDType.ClassIDType.ProceduralMaterial">ProceduralMaterial</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ProceduralTexture" href="#UnityPy.enums.ClassIDType.ClassIDType.ProceduralTexture">ProceduralTexture</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Projector" href="#UnityPy.enums.ClassIDType.ClassIDType.Projector">Projector</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.QualitySettings" href="#UnityPy.enums.ClassIDType.ClassIDType.QualitySettings">QualitySettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.RaycastCollider" href="#UnityPy.enums.ClassIDType.ClassIDType.RaycastCollider">RaycastCollider</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.RectTransform" href="#UnityPy.enums.ClassIDType.ClassIDType.RectTransform">RectTransform</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ReflectionProbe" href="#UnityPy.enums.ClassIDType.ClassIDType.ReflectionProbe">ReflectionProbe</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ReflectionProbes" href="#UnityPy.enums.ClassIDType.ClassIDType.ReflectionProbes">ReflectionProbes</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.RelativeJoint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.RelativeJoint2D">RelativeJoint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.RenderPassAttachment" href="#UnityPy.enums.ClassIDType.ClassIDType.RenderPassAttachment">RenderPassAttachment</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.RenderSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.RenderSettings">RenderSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.RenderTexture" href="#UnityPy.enums.ClassIDType.ClassIDType.RenderTexture">RenderTexture</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Renderer" href="#UnityPy.enums.ClassIDType.ClassIDType.Renderer">Renderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ResourceManager" href="#UnityPy.enums.ClassIDType.ClassIDType.ResourceManager">ResourceManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Rigidbody" href="#UnityPy.enums.ClassIDType.ClassIDType.Rigidbody">Rigidbody</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Rigidbody2D" href="#UnityPy.enums.ClassIDType.ClassIDType.Rigidbody2D">Rigidbody2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.RuntimeAnimatorController" href="#UnityPy.enums.ClassIDType.ClassIDType.RuntimeAnimatorController">RuntimeAnimatorController</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.RuntimeInitializeOnLoadManager" href="#UnityPy.enums.ClassIDType.ClassIDType.RuntimeInitializeOnLoadManager">RuntimeInitializeOnLoadManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SampleClip" href="#UnityPy.enums.ClassIDType.ClassIDType.SampleClip">SampleClip</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SceneAsset" href="#UnityPy.enums.ClassIDType.ClassIDType.SceneAsset">SceneAsset</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SceneSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.SceneSettings">SceneSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ScriptMapper" href="#UnityPy.enums.ClassIDType.ClassIDType.ScriptMapper">ScriptMapper</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Shader" href="#UnityPy.enums.ClassIDType.ClassIDType.Shader">Shader</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ShaderImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.ShaderImporter">ShaderImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.ShaderVariantCollection" href="#UnityPy.enums.ClassIDType.ClassIDType.ShaderVariantCollection">ShaderVariantCollection</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SiblingDerived" href="#UnityPy.enums.ClassIDType.ClassIDType.SiblingDerived">SiblingDerived</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SketchUpImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.SketchUpImporter">SketchUpImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SkinnedCloth" href="#UnityPy.enums.ClassIDType.ClassIDType.SkinnedCloth">SkinnedCloth</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SkinnedMeshRenderer" href="#UnityPy.enums.ClassIDType.ClassIDType.SkinnedMeshRenderer">SkinnedMeshRenderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Skybox" href="#UnityPy.enums.ClassIDType.ClassIDType.Skybox">Skybox</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SliderJoint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.SliderJoint2D">SliderJoint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SmallestEditorClassID" href="#UnityPy.enums.ClassIDType.ClassIDType.SmallestEditorClassID">SmallestEditorClassID</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SparseTexture" href="#UnityPy.enums.ClassIDType.ClassIDType.SparseTexture">SparseTexture</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SpeedTreeImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.SpeedTreeImporter">SpeedTreeImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SpeedTreeWindAsset" href="#UnityPy.enums.ClassIDType.ClassIDType.SpeedTreeWindAsset">SpeedTreeWindAsset</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SphereCollider" href="#UnityPy.enums.ClassIDType.ClassIDType.SphereCollider">SphereCollider</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SpringJoint" href="#UnityPy.enums.ClassIDType.ClassIDType.SpringJoint">SpringJoint</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SpringJoint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.SpringJoint2D">SpringJoint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Sprite" href="#UnityPy.enums.ClassIDType.ClassIDType.Sprite">Sprite</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SpriteAtlas" href="#UnityPy.enums.ClassIDType.ClassIDType.SpriteAtlas">SpriteAtlas</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SpriteCollider2D" href="#UnityPy.enums.ClassIDType.ClassIDType.SpriteCollider2D">SpriteCollider2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SpriteRenderer" href="#UnityPy.enums.ClassIDType.ClassIDType.SpriteRenderer">SpriteRenderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SubDerived" href="#UnityPy.enums.ClassIDType.ClassIDType.SubDerived">SubDerived</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SubstanceArchive" href="#UnityPy.enums.ClassIDType.ClassIDType.SubstanceArchive">SubstanceArchive</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SubstanceImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.SubstanceImporter">SubstanceImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.SurfaceEffector2D" href="#UnityPy.enums.ClassIDType.ClassIDType.SurfaceEffector2D">SurfaceEffector2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TagManager" href="#UnityPy.enums.ClassIDType.ClassIDType.TagManager">TagManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TargetJoint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.TargetJoint2D">TargetJoint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Terrain" href="#UnityPy.enums.ClassIDType.ClassIDType.Terrain">Terrain</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TerrainCollider" href="#UnityPy.enums.ClassIDType.ClassIDType.TerrainCollider">TerrainCollider</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TerrainData" href="#UnityPy.enums.ClassIDType.ClassIDType.TerrainData">TerrainData</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TerrainInstance" href="#UnityPy.enums.ClassIDType.ClassIDType.TerrainInstance">TerrainInstance</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TextAsset" href="#UnityPy.enums.ClassIDType.ClassIDType.TextAsset">TextAsset</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TextMesh" href="#UnityPy.enums.ClassIDType.ClassIDType.TextMesh">TextMesh</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TextScriptImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.TextScriptImporter">TextScriptImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Texture" href="#UnityPy.enums.ClassIDType.ClassIDType.Texture">Texture</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Texture2D" href="#UnityPy.enums.ClassIDType.ClassIDType.Texture2D">Texture2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Texture2DArray" href="#UnityPy.enums.ClassIDType.ClassIDType.Texture2DArray">Texture2DArray</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Texture3D" href="#UnityPy.enums.ClassIDType.ClassIDType.Texture3D">Texture3D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TextureImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.TextureImporter">TextureImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TimeManager" href="#UnityPy.enums.ClassIDType.ClassIDType.TimeManager">TimeManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TrailRenderer" href="#UnityPy.enums.ClassIDType.ClassIDType.TrailRenderer">TrailRenderer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Transform" href="#UnityPy.enums.ClassIDType.ClassIDType.Transform">Transform</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.Tree" href="#UnityPy.enums.ClassIDType.ClassIDType.Tree">Tree</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.TrueTypeFontImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.TrueTypeFontImporter">TrueTypeFontImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.UnityAdsManager" href="#UnityPy.enums.ClassIDType.ClassIDType.UnityAdsManager">UnityAdsManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.UnityAnalyticsManager" href="#UnityPy.enums.ClassIDType.ClassIDType.UnityAnalyticsManager">UnityAnalyticsManager</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.UnityConnectSettings" href="#UnityPy.enums.ClassIDType.ClassIDType.UnityConnectSettings">UnityConnectSettings</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.UnknownType" href="#UnityPy.enums.ClassIDType.ClassIDType.UnknownType">UnknownType</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.VideoClip" href="#UnityPy.enums.ClassIDType.ClassIDType.VideoClip">VideoClip</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.VideoClipImporter" href="#UnityPy.enums.ClassIDType.ClassIDType.VideoClipImporter">VideoClipImporter</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.VideoPlayer" href="#UnityPy.enums.ClassIDType.ClassIDType.VideoPlayer">VideoPlayer</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.WebCamTexture" href="#UnityPy.enums.ClassIDType.ClassIDType.WebCamTexture">WebCamTexture</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.WheelCollider" href="#UnityPy.enums.ClassIDType.ClassIDType.WheelCollider">WheelCollider</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.WheelJoint2D" href="#UnityPy.enums.ClassIDType.ClassIDType.WheelJoint2D">WheelJoint2D</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.WindZone" href="#UnityPy.enums.ClassIDType.ClassIDType.WindZone">WindZone</a></code></li>
+<li><code><a title="UnityPy.enums.ClassIDType.ClassIDType.WorldParticleCollider" href="#UnityPy.enums.ClassIDType.ClassIDType.WorldParticleCollider">WorldParticleCollider</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

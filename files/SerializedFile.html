@@ -1,0 +1,2058 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>UnityPy.files.SerializedFile API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>UnityPy.files.SerializedFile</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import os
+import re
+import sys
+
+from . import File, ObjectReader
+from ..enums import BuildTarget, ClassIDType, CommonString
+from ..streams import EndianBinaryReader, EndianBinaryWriter
+
+RECURSION_LIMIT = sys.getrecursionlimit()
+
+
+class SerializedFileHeader:
+    metadata_size: int
+    file_size: int
+    version: int
+    data_offset: int
+    endian: bytes
+    reserved: bytes
+    
+    def __init__(self, reader: EndianBinaryReader):
+        self.metadata_size = reader.read_u_int()
+        self.file_size = reader.read_u_int()
+        self.version = reader.read_u_int()
+        self.data_offset = reader.read_u_int()
+
+
+class LocalSerializedObjectIdentifier:  # script type
+    local_serialized_file_index: int
+    local_identifier_in_file: int
+    
+    def __init__(self, header: SerializedFileHeader, reader: EndianBinaryReader):
+        self.local_serialized_file_index = reader.read_int()
+        if header.version &lt; 14:
+            self.local_identifier_in_file = reader.read_int()
+        else:
+            reader.align_stream()
+            self.local_identifier_in_file = reader.read_long()
+    
+    def write(self, header: SerializedFileHeader, writer: EndianBinaryWriter):
+        writer.write_int(self.local_serialized_file_index)
+        if header.version &lt; 14:
+            writer.write_int(self.local_identifier_in_file)
+        else:
+            writer.align_stream()
+            writer.write_long(self.local_identifier_in_file)
+
+
+class FileIdentifier:  # external
+    guid: bytes
+    type: int
+    # enum { kNonAssetType = 0, kDeprecatedCachedAssetType = 1, kSerializedAssetType = 2, kMetaAssetType = 3 };
+    path: str
+    
+    @property
+    def name(self):
+        return os.path.basename(self.path)
+    
+    def __repr__(self):
+        return f&#34;&lt;{self.__class__.__name__}({self.path})&gt;&#34;
+    
+    def __init__(self, header: SerializedFileHeader, reader: EndianBinaryReader):
+        if header.version &gt;= 6:
+            self.temp_empty = reader.read_string_to_null()
+        if header.version &gt;= 5:
+            self.guid = reader.read_bytes(16)
+            self.type = reader.read_int()
+        self.path = reader.read_string_to_null()
+    
+    def write(self, header: SerializedFileHeader, writer: EndianBinaryWriter):
+        if header.version &gt;= 6:
+            writer.write_string_to_null(self.temp_empty)
+        if header.version &gt;= 5:
+            writer.write_bytes(self.guid)
+            writer.write_int(self.type)
+        writer.write_string_to_null(self.path)
+
+
+class TypeTreeNode:
+    type: str
+    name: str
+    byte_size: int
+    index: int
+    is_array: int
+    version: int
+    meta_flag: int
+    level: int
+    type_str_offset: int
+    name_str_offset: int
+
+
+class BuildType:
+    build_type: str
+    
+    def __init__(self, build_type):
+        self.build_type = build_type
+    
+    @property
+    def is_alpha(self):
+        return self.build_type == &#34;a&#34;
+    
+    @property
+    def is_path(self):
+        return self.build_type == &#34;p&#34;
+
+
+class SerializedType:
+    class_id: int
+    is_stripped_type: bool
+    script_type_index = -1
+    nodes: list = []  # TypeTreeNode
+    script_id: bytes  # Hash128
+    old_type_hash: bytes  # Hash128}
+    
+    def __init__(self, reader, serialized_file):
+        version = serialized_file.header.version
+        self.class_id = reader.read_int()
+        
+        if version &gt;= 16:
+            self.is_stripped_type = reader.read_boolean()
+        
+        if version &gt;= 17:
+            self.script_type_index = reader.read_short()
+        
+        if version &gt;= 13:
+            if (version &lt; 16 and self.class_id &lt; 0) or (
+                    version &gt;= 16 and self.class_id == 114
+            ):
+                self.script_id = reader.read_bytes(16)  # Hash128
+            self.old_type_hash = reader.read_bytes(16)  # Hash128
+        
+        if serialized_file._enable_type_tree:
+            type_tree = []
+            if version &gt;= 12 or version == 10:
+                self.string_data = serialized_file.read_type_tree_blob(
+                    type_tree)
+            else:
+                serialized_file.read_type_tree(type_tree)
+            
+            if version &gt;= 21:
+                self.type_dependencies = reader.read_int_array()
+            
+            self.nodes = type_tree
+    
+    def write(self, serialized_file, writer):
+        version = serialized_file.header.version
+        writer.write_int(self.class_id)
+        
+        if version &gt;= 16:
+            writer.write_boolean(self.is_stripped_type)
+        
+        if version &gt;= 17:
+            writer.write_short(self.script_type_index)
+        
+        if version &gt;= 13:
+            if (version &lt; 16 and self.class_id &lt; 0) or (
+                    version &gt;= 16 and self.class_id == 114
+            ):
+                writer.write_bytes(self.script_id)  # Hash128
+            writer.write_bytes(self.old_type_hash)  # Hash128
+        
+        if serialized_file._enable_type_tree:
+            if version &gt;= 12 or version == 10:
+                serialized_file.save_type_tree5(
+                    self.nodes, writer, self.string_data)
+            else:
+                serialized_file.save_type_tree(self.nodes, writer)
+
+
+class SerializedFile(File.File):
+    reader: EndianBinaryReader
+    is_changed: bool
+    unity_version: str
+    version: tuple
+    build_type: BuildType
+    target_platform: BuildTarget
+    types: list
+    script_types: list
+    externals: list
+    _container: dict
+    objects: dict
+    container_: dict
+    _cache: dict
+    header: SerializedFileHeader
+    
+    @property
+    def files(self):
+        return self.objects
+    
+    def __init__(self, reader: EndianBinaryReader, parent=None):
+        self.is_changed = False
+        self.parent = parent
+        self.reader = reader
+        
+        self.unity_version = &#34;2.5.0f5&#34;
+        self.version = (0, 0, 0, 0)
+        self.build_type = BuildType(&#34;&#34;)
+        self.target_platform = BuildTarget.UnknownPlatform
+        self._enable_type_tree = True
+        self.types = []
+        self.script_types = []
+        self.externals = []
+        self._container = {}
+        
+        self.objects = {}
+        self.container_ = {}
+        # used to speed up mass asset extraction
+        # some assets refer to each other, so by keeping the result
+        # of specific assets cached the extraction can be speed up by a lot.
+        # used by: Sprite (Texture2D (with alpha) cached),
+        self._cache = {}
+        self.unknown = 0
+        
+        # ReadHeader
+        header = SerializedFileHeader(reader)
+        self.header = header
+        
+        if header.version &gt;= 9:
+            header.endian = &#34;&gt;&#34; if reader.read_boolean() else &#34;&lt;&#34;
+            header.reserved = reader.read_bytes(3)
+            if header.version &gt;= 22:
+                header.metadata_size = reader.read_u_int()
+                header.file_size = reader.read_long()
+                header.data_offset = reader.read_long()
+                self.unknown = reader.read_long()  # unknown
+        else:
+            reader.Position = header.file_size - header.metadata_size
+            header.endian = &#34;&gt;&#34; if reader.read_boolean() else &#34;&lt;&#34;
+        
+        reader.endian = header.endian
+        
+        if header.version &gt;= 7:
+            unity_version = reader.read_string_to_null()
+            self.set_version(unity_version)
+        
+        if header.version &gt;= 8:
+            self._m_target_platform = reader.read_int()
+            self.target_platform = BuildTarget(self._m_target_platform)
+        
+        if header.version &gt;= 13:
+            self._enable_type_tree = reader.read_boolean()
+        
+        # ReadTypes
+        type_count = reader.read_int()
+        self.types = [SerializedType(reader, self) for _ in range(type_count)]
+        
+        self.big_id_enabled = 0
+        if 7 &lt;= header.version &lt; 14:
+            self.big_id_enabled = reader.read_int()
+        
+        # ReadObjects
+        object_count = reader.read_int()
+        self.objects = {}
+        for _ in range(object_count):
+            obj = ObjectReader.ObjectReader(self, reader)
+            self.objects[obj.path_id] = obj
+        
+        # Read Scripts
+        if header.version &gt;= 11:
+            script_count = reader.read_int()
+            self.script_types = [
+                LocalSerializedObjectIdentifier(header, reader)
+                for _ in range(script_count)
+            ]
+        
+        # Read Externals
+        externals_count = reader.read_int()
+        self.externals = [
+            FileIdentifier(header, reader) for _ in range(externals_count)
+        ]
+        
+        if header.version &gt;= 20:
+            ref_type_count = reader.read_int()
+            self.ref_types = [
+                SerializedType(reader, self) for _ in range(ref_type_count)
+            ]
+        
+        if header.version &gt;= 5:
+            self.userInformation = reader.read_string_to_null()
+        
+        # read the asset_bundles to get the containers
+        for obj in self.objects.values():
+            if obj.type == ClassIDType.AssetBundle:
+                data = obj.read()
+                for container, asset_info in data.container.items():
+                    asset = asset_info.asset
+                    self.container_[container] = asset
+                    if hasattr(asset, &#34;path_id&#34;):
+                        self._container[asset.path_id] = container
+        # if environment is not None:
+        #    environment.container = {**environment.container, **self.container}
+    
+    @property
+    def container(self):
+        return self.container_
+    
+    def set_version(self, string_version):
+        self.unity_version = string_version
+        build_type = re.findall(r&#34;([^\d.])&#34;, string_version)
+        self.build_type = BuildType(build_type[0] if build_type else &#34;&#34;)
+        version_split = re.split(r&#34;\D&#34;, string_version)
+        self.version = tuple(int(x) for x in version_split)
+    
+    def mark_changed(self):
+        self.is_changed = True
+        if self.parent:
+            self.parent.mark_changed()
+    
+    def read_type_tree(self, type_tree, level=0):
+        if level == RECURSION_LIMIT - 1:
+            raise RecursionError
+        
+        type_tree_node = TypeTreeNode()
+        type_tree.append(type_tree_node)
+        type_tree_node.level = level
+        type_tree_node.type = self.reader.read_string_to_null()
+        type_tree_node.name = self.reader.read_string_to_null()
+        type_tree_node.byte_size = self.reader.read_int()
+        if self.header.version == 2:
+            type_tree_node.variable_count = self.reader.read_int()
+        
+        if self.header.version != 3:
+            type_tree_node.index = self.reader.read_int()
+        
+        type_tree_node.is_array = self.reader.read_int()
+        type_tree_node.version = self.reader.read_int()
+        if self.header.version != 3:
+            type_tree_node.meta_flag = self.reader.read_int()
+        
+        children_count = self.reader.read_int()
+        for i in range(children_count):
+            self.read_type_tree(type_tree, level + 1)
+    
+    def read_type_tree_blob(self, type_tree):
+        reader = self.reader
+        number_of_nodes = self.reader.read_int()
+        string_buffer_size = self.reader.read_int()
+        
+        for _ in range(number_of_nodes):
+            node = TypeTreeNode()
+            type_tree.append(node)
+            node.version = reader.read_u_short()
+            node.level = reader.read_byte()
+            node.is_array = reader.read_boolean()
+            node.type_str_offset = reader.read_u_int()
+            node.name_str_offset = reader.read_u_int()
+            node.byte_size = reader.read_int()
+            node.index = reader.read_int()
+            node.meta_flag = reader.read_int()
+            
+            if self.header.version &gt; 19:
+                node.ref_type_hash = reader.read_u_long()
+        
+        string_buffer_reader = EndianBinaryReader(
+            reader.read(string_buffer_size), reader.endian)
+        for node in type_tree:
+            node.type = read_string(string_buffer_reader, node.type_str_offset)
+            node.name = read_string(string_buffer_reader, node.name_str_offset)
+        
+        return string_buffer_reader.bytes
+    
+    def save(self) -&gt; bytes:
+        # 1. header -&gt; has to be delayed until the very end
+        # 2. data -&gt; types, objects, scripts, ...
+        
+        # so write the data first
+        header = self.header
+        meta_writer = EndianBinaryWriter(endian=header.endian)
+        data_writer = EndianBinaryWriter(endian=header.endian)
+        if header.version &gt;= 7:
+            meta_writer.write_string_to_null(self.unity_version)
+        
+        if header.version &gt;= 8:
+            meta_writer.write_int(self._m_target_platform)
+        
+        if header.version &gt;= 13:
+            meta_writer.write_boolean(self._enable_type_tree)
+        
+        # ReadTypes
+        meta_writer.write_int(len(self.types))
+        for typ in self.types:
+            typ.write(self, meta_writer)
+        
+        if 7 &lt;= header.version &lt; 14:
+            meta_writer.write_int(self.big_id_enabled)
+        
+        # ReadObjects
+        meta_writer.write_int(len(self.objects))
+        for obj in self.objects.values():
+            obj.write(header, meta_writer, data_writer)
+            data_writer.align_stream(8)
+        
+        # Read Scripts
+        if header.version &gt;= 11:
+            meta_writer.write_int(len(self.script_types))
+            for script_type in self.script_types:
+                script_type.write(header, meta_writer)
+        
+        # Read Externals
+        meta_writer.write_int(len(self.externals))
+        for external in self.externals:
+            external.write(header, meta_writer)
+        
+        if header.version &gt;= 20:
+            meta_writer.write_int(len(self.ref_types))
+            for ref_type in self.ref_types:
+                ref_type.write(self, meta_writer)
+        
+        if header.version &gt;= 5:
+            meta_writer.write_string_to_null(self.userInformation)
+        
+        # prepare header
+        writer = EndianBinaryWriter()
+        header_size = 16  # 4*4
+        metadata_size = meta_writer.Length
+        data_size = data_writer.Length
+        if header.version &gt;= 9:
+            # 1 bool + 3 reserved + extra header 4 + 3*8
+            header_size += 4 if header.version &lt; 22 else 4 + 28
+            data_offset = header_size + metadata_size
+            # align data_offset
+            data_offset += (16 - data_offset % 16) % 16
+            file_size = data_offset + data_size
+            if header.version &lt; 22:
+                writer.write_u_int(metadata_size)
+                writer.write_u_int(file_size)
+                writer.write_u_int(header.version)
+                # reader.Position = header.file_size - header.metadata_size
+                # so data follows right after this header -&gt; after 32
+                writer.write_u_int(data_offset)
+                writer.write_boolean(&#34;&gt;&#34; == header.endian)
+                writer.write_bytes(header.reserved)
+            else:
+                # old header
+                writer.write_u_int(0)
+                writer.write_u_int(0)
+                writer.write_u_int(header.version)
+                writer.write_u_int(0)
+                writer.write_boolean(&#34;&gt;&#34; == header.endian)
+                writer.write_bytes(header.reserved)
+                writer.write_u_int(metadata_size)
+                writer.write_long(file_size)
+                writer.write_long(data_offset)
+                writer.write_long(self.unknown)
+            
+            writer.write_bytes(meta_writer.bytes)
+            writer.align_stream(16)
+            writer.write_bytes(data_writer.bytes)
+        
+        else:
+            metadata_size += 1  # endian boolean
+            file_size = header_size + metadata_size + data_size
+            writer.write_u_int(metadata_size)
+            writer.write_u_int(file_size)
+            writer.write_u_int(header.version)
+            # reader.Position = header.file_size - header.metadata_size
+            # so data follows right after this header -&gt; after 32
+            writer.write_u_int(32)
+            writer.write_bytes(data_writer.bytes)
+            writer.write_boolean(&#34;&gt;&#34; == header.endian)
+            writer.write_bytes(meta_writer.bytes)
+        
+        return writer.bytes
+    
+    def save_serialized_type(
+            self,
+            typ: SerializedType,
+            header: SerializedFileHeader,
+            writer: EndianBinaryWriter,
+    ):
+        writer.write_int(typ.class_id)
+        
+        if header.version &gt;= 16:
+            writer.write_boolean(typ.is_stripped_type)
+        
+        if header.version &gt;= 17:
+            writer.write_short(typ.script_type_index)
+        
+        if header.version &gt;= 13:
+            if (header.version &lt; 16 and typ.class_id &lt; 0) or (
+                    header.version &gt;= 16 and typ.class_id == 114
+            ):
+                writer.write_bytes(typ.script_id)  # Hash128
+            writer.write_bytes(typ.old_type_hash)  # Hash128
+        
+        if self._enable_type_tree:
+            if header.version &gt;= 12 or header.version == 10:
+                self.save_type_tree5(typ.nodes, writer, typ.string_data)
+            else:
+                self.save_type_tree(typ.nodes, writer)
+    
+    def save_type_tree(self, nodes: list, writer: EndianBinaryWriter):
+        for i, node in nodes:
+            writer.write_string_to_null(node.type)
+            writer.write_string_to_null(node.name)
+            writer.write_int(node.byte_size)
+            if self.header.version == 2:
+                writer.write_int(node.variable_count)
+            
+            if self.header.version != 3:
+                writer.write_int(node.index)
+            
+            writer.write_int(node.is_array)
+            writer.write_int(node.version)
+            if self.header.version != 3:
+                writer.write_int(node.meta_flag)
+            
+            # calc children count
+            children_count = 0
+            for node2 in nodes[i + 1:]:
+                if node2.level == node.level:
+                    break
+                if node2.level == node.level - 1:
+                    children_count += 1
+            writer.write_int(children_count)
+    
+    def save_type_tree5(self, nodes: list, writer: EndianBinaryWriter, str_data=b&#34;&#34;):
+        # node count
+        # stream buffer size
+        # node data
+        # string buffer
+        
+        string_buffer = EndianBinaryWriter()
+        string_buffer.write(str_data)
+        strings_values = [
+            (node.type_str_offset, node.name_str_offset) for node in nodes
+        ]
+        
+        # number of nodes
+        writer.write_int(len(nodes))
+        # string buffer size
+        writer.write_int(string_buffer.Length)
+        
+        # nodes
+        for i, node in enumerate(nodes):
+            # version
+            writer.write_u_short(node.version)
+            # level
+            writer.write_byte(node.level)
+            # is array
+            writer.write_boolean(node.is_array)
+            # type str offfset
+            writer.write_u_int(strings_values[i][0])
+            # name str offset
+            writer.write_u_int(strings_values[i][1])
+            # byte size
+            writer.write_int(node.byte_size)
+            # index
+            writer.write_int(node.index)
+            # meta flag
+            writer.write_int(node.meta_flag)
+            # ref hash
+            if self.header.version &gt; 19:
+                writer.write_u_long(node.ref_type_hash)
+        
+        # string buffer
+        writer.write(string_buffer.bytes)
+        
+        if self.header.version &gt;= 21:
+            writer.write_bytes(b&#34;\x00&#34; * 4)
+
+
+def read_string(string_buffer_reader: EndianBinaryReader, value: int) -&gt; str:
+    is_offset = (value &amp; 0x80000000) == 0
+    if is_offset:
+        string_buffer_reader.Position = value
+        return string_buffer_reader.read_string_to_null()
+    
+    offset = value &amp; 0x7FFFFFFF
+    if offset in CommonString:
+        return CommonString[offset]
+    
+    return str(offset)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="UnityPy.files.SerializedFile.read_string"><code class="name flex">
+<span>def <span class="ident">read_string</span></span>(<span>string_buffer_reader: <a title="UnityPy.streams.EndianBinaryReader.EndianBinaryReader" href="../streams/EndianBinaryReader.html#UnityPy.streams.EndianBinaryReader.EndianBinaryReader">EndianBinaryReader</a>, value: int) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_string(string_buffer_reader: EndianBinaryReader, value: int) -&gt; str:
+    is_offset = (value &amp; 0x80000000) == 0
+    if is_offset:
+        string_buffer_reader.Position = value
+        return string_buffer_reader.read_string_to_null()
+    
+    offset = value &amp; 0x7FFFFFFF
+    if offset in CommonString:
+        return CommonString[offset]
+    
+    return str(offset)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="UnityPy.files.SerializedFile.BuildType"><code class="flex name class">
+<span>class <span class="ident">BuildType</span></span>
+<span>(</span><span>build_type)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BuildType:
+    build_type: str
+    
+    def __init__(self, build_type):
+        self.build_type = build_type
+    
+    @property
+    def is_alpha(self):
+        return self.build_type == &#34;a&#34;
+    
+    @property
+    def is_path(self):
+        return self.build_type == &#34;p&#34;</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.BuildType.build_type"><code class="name">var <span class="ident">build_type</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.BuildType.is_alpha"><code class="name">var <span class="ident">is_alpha</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_alpha(self):
+    return self.build_type == &#34;a&#34;</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.SerializedFile.BuildType.is_path"><code class="name">var <span class="ident">is_path</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def is_path(self):
+    return self.build_type == &#34;p&#34;</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.files.SerializedFile.FileIdentifier"><code class="flex name class">
+<span>class <span class="ident">FileIdentifier</span></span>
+<span>(</span><span>header: <a title="UnityPy.files.SerializedFile.SerializedFileHeader" href="#UnityPy.files.SerializedFile.SerializedFileHeader">SerializedFileHeader</a>, reader: <a title="UnityPy.streams.EndianBinaryReader.EndianBinaryReader" href="../streams/EndianBinaryReader.html#UnityPy.streams.EndianBinaryReader.EndianBinaryReader">EndianBinaryReader</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FileIdentifier:  # external
+    guid: bytes
+    type: int
+    # enum { kNonAssetType = 0, kDeprecatedCachedAssetType = 1, kSerializedAssetType = 2, kMetaAssetType = 3 };
+    path: str
+    
+    @property
+    def name(self):
+        return os.path.basename(self.path)
+    
+    def __repr__(self):
+        return f&#34;&lt;{self.__class__.__name__}({self.path})&gt;&#34;
+    
+    def __init__(self, header: SerializedFileHeader, reader: EndianBinaryReader):
+        if header.version &gt;= 6:
+            self.temp_empty = reader.read_string_to_null()
+        if header.version &gt;= 5:
+            self.guid = reader.read_bytes(16)
+            self.type = reader.read_int()
+        self.path = reader.read_string_to_null()
+    
+    def write(self, header: SerializedFileHeader, writer: EndianBinaryWriter):
+        if header.version &gt;= 6:
+            writer.write_string_to_null(self.temp_empty)
+        if header.version &gt;= 5:
+            writer.write_bytes(self.guid)
+            writer.write_int(self.type)
+        writer.write_string_to_null(self.path)</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.FileIdentifier.guid"><code class="name">var <span class="ident">guid</span> : bytes</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.FileIdentifier.path"><code class="name">var <span class="ident">path</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.FileIdentifier.type"><code class="name">var <span class="ident">type</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.FileIdentifier.name"><code class="name">var <span class="ident">name</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self):
+    return os.path.basename(self.path)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.FileIdentifier.write"><code class="name flex">
+<span>def <span class="ident">write</span></span>(<span>self, header: <a title="UnityPy.files.SerializedFile.SerializedFileHeader" href="#UnityPy.files.SerializedFile.SerializedFileHeader">SerializedFileHeader</a>, writer: <a title="UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter" href="../streams/EndianBinaryWriter.html#UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter">EndianBinaryWriter</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write(self, header: SerializedFileHeader, writer: EndianBinaryWriter):
+    if header.version &gt;= 6:
+        writer.write_string_to_null(self.temp_empty)
+    if header.version &gt;= 5:
+        writer.write_bytes(self.guid)
+        writer.write_int(self.type)
+    writer.write_string_to_null(self.path)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier"><code class="flex name class">
+<span>class <span class="ident">LocalSerializedObjectIdentifier</span></span>
+<span>(</span><span>header: <a title="UnityPy.files.SerializedFile.SerializedFileHeader" href="#UnityPy.files.SerializedFile.SerializedFileHeader">SerializedFileHeader</a>, reader: <a title="UnityPy.streams.EndianBinaryReader.EndianBinaryReader" href="../streams/EndianBinaryReader.html#UnityPy.streams.EndianBinaryReader.EndianBinaryReader">EndianBinaryReader</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class LocalSerializedObjectIdentifier:  # script type
+    local_serialized_file_index: int
+    local_identifier_in_file: int
+    
+    def __init__(self, header: SerializedFileHeader, reader: EndianBinaryReader):
+        self.local_serialized_file_index = reader.read_int()
+        if header.version &lt; 14:
+            self.local_identifier_in_file = reader.read_int()
+        else:
+            reader.align_stream()
+            self.local_identifier_in_file = reader.read_long()
+    
+    def write(self, header: SerializedFileHeader, writer: EndianBinaryWriter):
+        writer.write_int(self.local_serialized_file_index)
+        if header.version &lt; 14:
+            writer.write_int(self.local_identifier_in_file)
+        else:
+            writer.align_stream()
+            writer.write_long(self.local_identifier_in_file)</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier.local_identifier_in_file"><code class="name">var <span class="ident">local_identifier_in_file</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier.local_serialized_file_index"><code class="name">var <span class="ident">local_serialized_file_index</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier.write"><code class="name flex">
+<span>def <span class="ident">write</span></span>(<span>self, header: <a title="UnityPy.files.SerializedFile.SerializedFileHeader" href="#UnityPy.files.SerializedFile.SerializedFileHeader">SerializedFileHeader</a>, writer: <a title="UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter" href="../streams/EndianBinaryWriter.html#UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter">EndianBinaryWriter</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write(self, header: SerializedFileHeader, writer: EndianBinaryWriter):
+    writer.write_int(self.local_serialized_file_index)
+    if header.version &lt; 14:
+        writer.write_int(self.local_identifier_in_file)
+    else:
+        writer.align_stream()
+        writer.write_long(self.local_identifier_in_file)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile"><code class="flex name class">
+<span>class <span class="ident">SerializedFile</span></span>
+<span>(</span><span>reader: <a title="UnityPy.streams.EndianBinaryReader.EndianBinaryReader" href="../streams/EndianBinaryReader.html#UnityPy.streams.EndianBinaryReader.EndianBinaryReader">EndianBinaryReader</a>, parent=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedFile(File.File):
+    reader: EndianBinaryReader
+    is_changed: bool
+    unity_version: str
+    version: tuple
+    build_type: BuildType
+    target_platform: BuildTarget
+    types: list
+    script_types: list
+    externals: list
+    _container: dict
+    objects: dict
+    container_: dict
+    _cache: dict
+    header: SerializedFileHeader
+    
+    @property
+    def files(self):
+        return self.objects
+    
+    def __init__(self, reader: EndianBinaryReader, parent=None):
+        self.is_changed = False
+        self.parent = parent
+        self.reader = reader
+        
+        self.unity_version = &#34;2.5.0f5&#34;
+        self.version = (0, 0, 0, 0)
+        self.build_type = BuildType(&#34;&#34;)
+        self.target_platform = BuildTarget.UnknownPlatform
+        self._enable_type_tree = True
+        self.types = []
+        self.script_types = []
+        self.externals = []
+        self._container = {}
+        
+        self.objects = {}
+        self.container_ = {}
+        # used to speed up mass asset extraction
+        # some assets refer to each other, so by keeping the result
+        # of specific assets cached the extraction can be speed up by a lot.
+        # used by: Sprite (Texture2D (with alpha) cached),
+        self._cache = {}
+        self.unknown = 0
+        
+        # ReadHeader
+        header = SerializedFileHeader(reader)
+        self.header = header
+        
+        if header.version &gt;= 9:
+            header.endian = &#34;&gt;&#34; if reader.read_boolean() else &#34;&lt;&#34;
+            header.reserved = reader.read_bytes(3)
+            if header.version &gt;= 22:
+                header.metadata_size = reader.read_u_int()
+                header.file_size = reader.read_long()
+                header.data_offset = reader.read_long()
+                self.unknown = reader.read_long()  # unknown
+        else:
+            reader.Position = header.file_size - header.metadata_size
+            header.endian = &#34;&gt;&#34; if reader.read_boolean() else &#34;&lt;&#34;
+        
+        reader.endian = header.endian
+        
+        if header.version &gt;= 7:
+            unity_version = reader.read_string_to_null()
+            self.set_version(unity_version)
+        
+        if header.version &gt;= 8:
+            self._m_target_platform = reader.read_int()
+            self.target_platform = BuildTarget(self._m_target_platform)
+        
+        if header.version &gt;= 13:
+            self._enable_type_tree = reader.read_boolean()
+        
+        # ReadTypes
+        type_count = reader.read_int()
+        self.types = [SerializedType(reader, self) for _ in range(type_count)]
+        
+        self.big_id_enabled = 0
+        if 7 &lt;= header.version &lt; 14:
+            self.big_id_enabled = reader.read_int()
+        
+        # ReadObjects
+        object_count = reader.read_int()
+        self.objects = {}
+        for _ in range(object_count):
+            obj = ObjectReader.ObjectReader(self, reader)
+            self.objects[obj.path_id] = obj
+        
+        # Read Scripts
+        if header.version &gt;= 11:
+            script_count = reader.read_int()
+            self.script_types = [
+                LocalSerializedObjectIdentifier(header, reader)
+                for _ in range(script_count)
+            ]
+        
+        # Read Externals
+        externals_count = reader.read_int()
+        self.externals = [
+            FileIdentifier(header, reader) for _ in range(externals_count)
+        ]
+        
+        if header.version &gt;= 20:
+            ref_type_count = reader.read_int()
+            self.ref_types = [
+                SerializedType(reader, self) for _ in range(ref_type_count)
+            ]
+        
+        if header.version &gt;= 5:
+            self.userInformation = reader.read_string_to_null()
+        
+        # read the asset_bundles to get the containers
+        for obj in self.objects.values():
+            if obj.type == ClassIDType.AssetBundle:
+                data = obj.read()
+                for container, asset_info in data.container.items():
+                    asset = asset_info.asset
+                    self.container_[container] = asset
+                    if hasattr(asset, &#34;path_id&#34;):
+                        self._container[asset.path_id] = container
+        # if environment is not None:
+        #    environment.container = {**environment.container, **self.container}
+    
+    @property
+    def container(self):
+        return self.container_
+    
+    def set_version(self, string_version):
+        self.unity_version = string_version
+        build_type = re.findall(r&#34;([^\d.])&#34;, string_version)
+        self.build_type = BuildType(build_type[0] if build_type else &#34;&#34;)
+        version_split = re.split(r&#34;\D&#34;, string_version)
+        self.version = tuple(int(x) for x in version_split)
+    
+    def mark_changed(self):
+        self.is_changed = True
+        if self.parent:
+            self.parent.mark_changed()
+    
+    def read_type_tree(self, type_tree, level=0):
+        if level == RECURSION_LIMIT - 1:
+            raise RecursionError
+        
+        type_tree_node = TypeTreeNode()
+        type_tree.append(type_tree_node)
+        type_tree_node.level = level
+        type_tree_node.type = self.reader.read_string_to_null()
+        type_tree_node.name = self.reader.read_string_to_null()
+        type_tree_node.byte_size = self.reader.read_int()
+        if self.header.version == 2:
+            type_tree_node.variable_count = self.reader.read_int()
+        
+        if self.header.version != 3:
+            type_tree_node.index = self.reader.read_int()
+        
+        type_tree_node.is_array = self.reader.read_int()
+        type_tree_node.version = self.reader.read_int()
+        if self.header.version != 3:
+            type_tree_node.meta_flag = self.reader.read_int()
+        
+        children_count = self.reader.read_int()
+        for i in range(children_count):
+            self.read_type_tree(type_tree, level + 1)
+    
+    def read_type_tree_blob(self, type_tree):
+        reader = self.reader
+        number_of_nodes = self.reader.read_int()
+        string_buffer_size = self.reader.read_int()
+        
+        for _ in range(number_of_nodes):
+            node = TypeTreeNode()
+            type_tree.append(node)
+            node.version = reader.read_u_short()
+            node.level = reader.read_byte()
+            node.is_array = reader.read_boolean()
+            node.type_str_offset = reader.read_u_int()
+            node.name_str_offset = reader.read_u_int()
+            node.byte_size = reader.read_int()
+            node.index = reader.read_int()
+            node.meta_flag = reader.read_int()
+            
+            if self.header.version &gt; 19:
+                node.ref_type_hash = reader.read_u_long()
+        
+        string_buffer_reader = EndianBinaryReader(
+            reader.read(string_buffer_size), reader.endian)
+        for node in type_tree:
+            node.type = read_string(string_buffer_reader, node.type_str_offset)
+            node.name = read_string(string_buffer_reader, node.name_str_offset)
+        
+        return string_buffer_reader.bytes
+    
+    def save(self) -&gt; bytes:
+        # 1. header -&gt; has to be delayed until the very end
+        # 2. data -&gt; types, objects, scripts, ...
+        
+        # so write the data first
+        header = self.header
+        meta_writer = EndianBinaryWriter(endian=header.endian)
+        data_writer = EndianBinaryWriter(endian=header.endian)
+        if header.version &gt;= 7:
+            meta_writer.write_string_to_null(self.unity_version)
+        
+        if header.version &gt;= 8:
+            meta_writer.write_int(self._m_target_platform)
+        
+        if header.version &gt;= 13:
+            meta_writer.write_boolean(self._enable_type_tree)
+        
+        # ReadTypes
+        meta_writer.write_int(len(self.types))
+        for typ in self.types:
+            typ.write(self, meta_writer)
+        
+        if 7 &lt;= header.version &lt; 14:
+            meta_writer.write_int(self.big_id_enabled)
+        
+        # ReadObjects
+        meta_writer.write_int(len(self.objects))
+        for obj in self.objects.values():
+            obj.write(header, meta_writer, data_writer)
+            data_writer.align_stream(8)
+        
+        # Read Scripts
+        if header.version &gt;= 11:
+            meta_writer.write_int(len(self.script_types))
+            for script_type in self.script_types:
+                script_type.write(header, meta_writer)
+        
+        # Read Externals
+        meta_writer.write_int(len(self.externals))
+        for external in self.externals:
+            external.write(header, meta_writer)
+        
+        if header.version &gt;= 20:
+            meta_writer.write_int(len(self.ref_types))
+            for ref_type in self.ref_types:
+                ref_type.write(self, meta_writer)
+        
+        if header.version &gt;= 5:
+            meta_writer.write_string_to_null(self.userInformation)
+        
+        # prepare header
+        writer = EndianBinaryWriter()
+        header_size = 16  # 4*4
+        metadata_size = meta_writer.Length
+        data_size = data_writer.Length
+        if header.version &gt;= 9:
+            # 1 bool + 3 reserved + extra header 4 + 3*8
+            header_size += 4 if header.version &lt; 22 else 4 + 28
+            data_offset = header_size + metadata_size
+            # align data_offset
+            data_offset += (16 - data_offset % 16) % 16
+            file_size = data_offset + data_size
+            if header.version &lt; 22:
+                writer.write_u_int(metadata_size)
+                writer.write_u_int(file_size)
+                writer.write_u_int(header.version)
+                # reader.Position = header.file_size - header.metadata_size
+                # so data follows right after this header -&gt; after 32
+                writer.write_u_int(data_offset)
+                writer.write_boolean(&#34;&gt;&#34; == header.endian)
+                writer.write_bytes(header.reserved)
+            else:
+                # old header
+                writer.write_u_int(0)
+                writer.write_u_int(0)
+                writer.write_u_int(header.version)
+                writer.write_u_int(0)
+                writer.write_boolean(&#34;&gt;&#34; == header.endian)
+                writer.write_bytes(header.reserved)
+                writer.write_u_int(metadata_size)
+                writer.write_long(file_size)
+                writer.write_long(data_offset)
+                writer.write_long(self.unknown)
+            
+            writer.write_bytes(meta_writer.bytes)
+            writer.align_stream(16)
+            writer.write_bytes(data_writer.bytes)
+        
+        else:
+            metadata_size += 1  # endian boolean
+            file_size = header_size + metadata_size + data_size
+            writer.write_u_int(metadata_size)
+            writer.write_u_int(file_size)
+            writer.write_u_int(header.version)
+            # reader.Position = header.file_size - header.metadata_size
+            # so data follows right after this header -&gt; after 32
+            writer.write_u_int(32)
+            writer.write_bytes(data_writer.bytes)
+            writer.write_boolean(&#34;&gt;&#34; == header.endian)
+            writer.write_bytes(meta_writer.bytes)
+        
+        return writer.bytes
+    
+    def save_serialized_type(
+            self,
+            typ: SerializedType,
+            header: SerializedFileHeader,
+            writer: EndianBinaryWriter,
+    ):
+        writer.write_int(typ.class_id)
+        
+        if header.version &gt;= 16:
+            writer.write_boolean(typ.is_stripped_type)
+        
+        if header.version &gt;= 17:
+            writer.write_short(typ.script_type_index)
+        
+        if header.version &gt;= 13:
+            if (header.version &lt; 16 and typ.class_id &lt; 0) or (
+                    header.version &gt;= 16 and typ.class_id == 114
+            ):
+                writer.write_bytes(typ.script_id)  # Hash128
+            writer.write_bytes(typ.old_type_hash)  # Hash128
+        
+        if self._enable_type_tree:
+            if header.version &gt;= 12 or header.version == 10:
+                self.save_type_tree5(typ.nodes, writer, typ.string_data)
+            else:
+                self.save_type_tree(typ.nodes, writer)
+    
+    def save_type_tree(self, nodes: list, writer: EndianBinaryWriter):
+        for i, node in nodes:
+            writer.write_string_to_null(node.type)
+            writer.write_string_to_null(node.name)
+            writer.write_int(node.byte_size)
+            if self.header.version == 2:
+                writer.write_int(node.variable_count)
+            
+            if self.header.version != 3:
+                writer.write_int(node.index)
+            
+            writer.write_int(node.is_array)
+            writer.write_int(node.version)
+            if self.header.version != 3:
+                writer.write_int(node.meta_flag)
+            
+            # calc children count
+            children_count = 0
+            for node2 in nodes[i + 1:]:
+                if node2.level == node.level:
+                    break
+                if node2.level == node.level - 1:
+                    children_count += 1
+            writer.write_int(children_count)
+    
+    def save_type_tree5(self, nodes: list, writer: EndianBinaryWriter, str_data=b&#34;&#34;):
+        # node count
+        # stream buffer size
+        # node data
+        # string buffer
+        
+        string_buffer = EndianBinaryWriter()
+        string_buffer.write(str_data)
+        strings_values = [
+            (node.type_str_offset, node.name_str_offset) for node in nodes
+        ]
+        
+        # number of nodes
+        writer.write_int(len(nodes))
+        # string buffer size
+        writer.write_int(string_buffer.Length)
+        
+        # nodes
+        for i, node in enumerate(nodes):
+            # version
+            writer.write_u_short(node.version)
+            # level
+            writer.write_byte(node.level)
+            # is array
+            writer.write_boolean(node.is_array)
+            # type str offfset
+            writer.write_u_int(strings_values[i][0])
+            # name str offset
+            writer.write_u_int(strings_values[i][1])
+            # byte size
+            writer.write_int(node.byte_size)
+            # index
+            writer.write_int(node.index)
+            # meta flag
+            writer.write_int(node.meta_flag)
+            # ref hash
+            if self.header.version &gt; 19:
+                writer.write_u_long(node.ref_type_hash)
+        
+        # string buffer
+        writer.write(string_buffer.bytes)
+        
+        if self.header.version &gt;= 21:
+            writer.write_bytes(b&#34;\x00&#34; * 4)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="UnityPy.files.File.File" href="File.html#UnityPy.files.File.File">File</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.build_type"><code class="name">var <span class="ident">build_type</span> : <a title="UnityPy.files.SerializedFile.BuildType" href="#UnityPy.files.SerializedFile.BuildType">BuildType</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.container_"><code class="name">var <span class="ident">container_</span> : dict</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.externals"><code class="name">var <span class="ident">externals</span> : list</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.header"><code class="name">var <span class="ident">header</span> : <a title="UnityPy.files.SerializedFile.SerializedFileHeader" href="#UnityPy.files.SerializedFile.SerializedFileHeader">SerializedFileHeader</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.is_changed"><code class="name">var <span class="ident">is_changed</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.objects"><code class="name">var <span class="ident">objects</span> : dict</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.reader"><code class="name">var <span class="ident">reader</span> : <a title="UnityPy.streams.EndianBinaryReader.EndianBinaryReader" href="../streams/EndianBinaryReader.html#UnityPy.streams.EndianBinaryReader.EndianBinaryReader">EndianBinaryReader</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.script_types"><code class="name">var <span class="ident">script_types</span> : list</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.target_platform"><code class="name">var <span class="ident">target_platform</span> : <a title="UnityPy.enums.BuildTarget.BuildTarget" href="../enums/BuildTarget.html#UnityPy.enums.BuildTarget.BuildTarget">BuildTarget</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.types"><code class="name">var <span class="ident">types</span> : list</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.unity_version"><code class="name">var <span class="ident">unity_version</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.version"><code class="name">var <span class="ident">version</span> : tuple</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.container"><code class="name">var <span class="ident">container</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def container(self):
+    return self.container_</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.files"><code class="name">var <span class="ident">files</span> : dict</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def files(self):
+    return self.objects</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.mark_changed"><code class="name flex">
+<span>def <span class="ident">mark_changed</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def mark_changed(self):
+    self.is_changed = True
+    if self.parent:
+        self.parent.mark_changed()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.read_type_tree"><code class="name flex">
+<span>def <span class="ident">read_type_tree</span></span>(<span>self, type_tree, level=0)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_type_tree(self, type_tree, level=0):
+    if level == RECURSION_LIMIT - 1:
+        raise RecursionError
+    
+    type_tree_node = TypeTreeNode()
+    type_tree.append(type_tree_node)
+    type_tree_node.level = level
+    type_tree_node.type = self.reader.read_string_to_null()
+    type_tree_node.name = self.reader.read_string_to_null()
+    type_tree_node.byte_size = self.reader.read_int()
+    if self.header.version == 2:
+        type_tree_node.variable_count = self.reader.read_int()
+    
+    if self.header.version != 3:
+        type_tree_node.index = self.reader.read_int()
+    
+    type_tree_node.is_array = self.reader.read_int()
+    type_tree_node.version = self.reader.read_int()
+    if self.header.version != 3:
+        type_tree_node.meta_flag = self.reader.read_int()
+    
+    children_count = self.reader.read_int()
+    for i in range(children_count):
+        self.read_type_tree(type_tree, level + 1)</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.read_type_tree_blob"><code class="name flex">
+<span>def <span class="ident">read_type_tree_blob</span></span>(<span>self, type_tree)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_type_tree_blob(self, type_tree):
+    reader = self.reader
+    number_of_nodes = self.reader.read_int()
+    string_buffer_size = self.reader.read_int()
+    
+    for _ in range(number_of_nodes):
+        node = TypeTreeNode()
+        type_tree.append(node)
+        node.version = reader.read_u_short()
+        node.level = reader.read_byte()
+        node.is_array = reader.read_boolean()
+        node.type_str_offset = reader.read_u_int()
+        node.name_str_offset = reader.read_u_int()
+        node.byte_size = reader.read_int()
+        node.index = reader.read_int()
+        node.meta_flag = reader.read_int()
+        
+        if self.header.version &gt; 19:
+            node.ref_type_hash = reader.read_u_long()
+    
+    string_buffer_reader = EndianBinaryReader(
+        reader.read(string_buffer_size), reader.endian)
+    for node in type_tree:
+        node.type = read_string(string_buffer_reader, node.type_str_offset)
+        node.name = read_string(string_buffer_reader, node.name_str_offset)
+    
+    return string_buffer_reader.bytes</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.save"><code class="name flex">
+<span>def <span class="ident">save</span></span>(<span>self) ‑> bytes</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save(self) -&gt; bytes:
+    # 1. header -&gt; has to be delayed until the very end
+    # 2. data -&gt; types, objects, scripts, ...
+    
+    # so write the data first
+    header = self.header
+    meta_writer = EndianBinaryWriter(endian=header.endian)
+    data_writer = EndianBinaryWriter(endian=header.endian)
+    if header.version &gt;= 7:
+        meta_writer.write_string_to_null(self.unity_version)
+    
+    if header.version &gt;= 8:
+        meta_writer.write_int(self._m_target_platform)
+    
+    if header.version &gt;= 13:
+        meta_writer.write_boolean(self._enable_type_tree)
+    
+    # ReadTypes
+    meta_writer.write_int(len(self.types))
+    for typ in self.types:
+        typ.write(self, meta_writer)
+    
+    if 7 &lt;= header.version &lt; 14:
+        meta_writer.write_int(self.big_id_enabled)
+    
+    # ReadObjects
+    meta_writer.write_int(len(self.objects))
+    for obj in self.objects.values():
+        obj.write(header, meta_writer, data_writer)
+        data_writer.align_stream(8)
+    
+    # Read Scripts
+    if header.version &gt;= 11:
+        meta_writer.write_int(len(self.script_types))
+        for script_type in self.script_types:
+            script_type.write(header, meta_writer)
+    
+    # Read Externals
+    meta_writer.write_int(len(self.externals))
+    for external in self.externals:
+        external.write(header, meta_writer)
+    
+    if header.version &gt;= 20:
+        meta_writer.write_int(len(self.ref_types))
+        for ref_type in self.ref_types:
+            ref_type.write(self, meta_writer)
+    
+    if header.version &gt;= 5:
+        meta_writer.write_string_to_null(self.userInformation)
+    
+    # prepare header
+    writer = EndianBinaryWriter()
+    header_size = 16  # 4*4
+    metadata_size = meta_writer.Length
+    data_size = data_writer.Length
+    if header.version &gt;= 9:
+        # 1 bool + 3 reserved + extra header 4 + 3*8
+        header_size += 4 if header.version &lt; 22 else 4 + 28
+        data_offset = header_size + metadata_size
+        # align data_offset
+        data_offset += (16 - data_offset % 16) % 16
+        file_size = data_offset + data_size
+        if header.version &lt; 22:
+            writer.write_u_int(metadata_size)
+            writer.write_u_int(file_size)
+            writer.write_u_int(header.version)
+            # reader.Position = header.file_size - header.metadata_size
+            # so data follows right after this header -&gt; after 32
+            writer.write_u_int(data_offset)
+            writer.write_boolean(&#34;&gt;&#34; == header.endian)
+            writer.write_bytes(header.reserved)
+        else:
+            # old header
+            writer.write_u_int(0)
+            writer.write_u_int(0)
+            writer.write_u_int(header.version)
+            writer.write_u_int(0)
+            writer.write_boolean(&#34;&gt;&#34; == header.endian)
+            writer.write_bytes(header.reserved)
+            writer.write_u_int(metadata_size)
+            writer.write_long(file_size)
+            writer.write_long(data_offset)
+            writer.write_long(self.unknown)
+        
+        writer.write_bytes(meta_writer.bytes)
+        writer.align_stream(16)
+        writer.write_bytes(data_writer.bytes)
+    
+    else:
+        metadata_size += 1  # endian boolean
+        file_size = header_size + metadata_size + data_size
+        writer.write_u_int(metadata_size)
+        writer.write_u_int(file_size)
+        writer.write_u_int(header.version)
+        # reader.Position = header.file_size - header.metadata_size
+        # so data follows right after this header -&gt; after 32
+        writer.write_u_int(32)
+        writer.write_bytes(data_writer.bytes)
+        writer.write_boolean(&#34;&gt;&#34; == header.endian)
+        writer.write_bytes(meta_writer.bytes)
+    
+    return writer.bytes</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.save_serialized_type"><code class="name flex">
+<span>def <span class="ident">save_serialized_type</span></span>(<span>self, typ: <a title="UnityPy.files.SerializedFile.SerializedType" href="#UnityPy.files.SerializedFile.SerializedType">SerializedType</a>, header: <a title="UnityPy.files.SerializedFile.SerializedFileHeader" href="#UnityPy.files.SerializedFile.SerializedFileHeader">SerializedFileHeader</a>, writer: <a title="UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter" href="../streams/EndianBinaryWriter.html#UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter">EndianBinaryWriter</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_serialized_type(
+        self,
+        typ: SerializedType,
+        header: SerializedFileHeader,
+        writer: EndianBinaryWriter,
+):
+    writer.write_int(typ.class_id)
+    
+    if header.version &gt;= 16:
+        writer.write_boolean(typ.is_stripped_type)
+    
+    if header.version &gt;= 17:
+        writer.write_short(typ.script_type_index)
+    
+    if header.version &gt;= 13:
+        if (header.version &lt; 16 and typ.class_id &lt; 0) or (
+                header.version &gt;= 16 and typ.class_id == 114
+        ):
+            writer.write_bytes(typ.script_id)  # Hash128
+        writer.write_bytes(typ.old_type_hash)  # Hash128
+    
+    if self._enable_type_tree:
+        if header.version &gt;= 12 or header.version == 10:
+            self.save_type_tree5(typ.nodes, writer, typ.string_data)
+        else:
+            self.save_type_tree(typ.nodes, writer)</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.save_type_tree"><code class="name flex">
+<span>def <span class="ident">save_type_tree</span></span>(<span>self, nodes: list, writer: <a title="UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter" href="../streams/EndianBinaryWriter.html#UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter">EndianBinaryWriter</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_type_tree(self, nodes: list, writer: EndianBinaryWriter):
+    for i, node in nodes:
+        writer.write_string_to_null(node.type)
+        writer.write_string_to_null(node.name)
+        writer.write_int(node.byte_size)
+        if self.header.version == 2:
+            writer.write_int(node.variable_count)
+        
+        if self.header.version != 3:
+            writer.write_int(node.index)
+        
+        writer.write_int(node.is_array)
+        writer.write_int(node.version)
+        if self.header.version != 3:
+            writer.write_int(node.meta_flag)
+        
+        # calc children count
+        children_count = 0
+        for node2 in nodes[i + 1:]:
+            if node2.level == node.level:
+                break
+            if node2.level == node.level - 1:
+                children_count += 1
+        writer.write_int(children_count)</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.save_type_tree5"><code class="name flex">
+<span>def <span class="ident">save_type_tree5</span></span>(<span>self, nodes: list, writer: <a title="UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter" href="../streams/EndianBinaryWriter.html#UnityPy.streams.EndianBinaryWriter.EndianBinaryWriter">EndianBinaryWriter</a>, str_data=b'')</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_type_tree5(self, nodes: list, writer: EndianBinaryWriter, str_data=b&#34;&#34;):
+    # node count
+    # stream buffer size
+    # node data
+    # string buffer
+    
+    string_buffer = EndianBinaryWriter()
+    string_buffer.write(str_data)
+    strings_values = [
+        (node.type_str_offset, node.name_str_offset) for node in nodes
+    ]
+    
+    # number of nodes
+    writer.write_int(len(nodes))
+    # string buffer size
+    writer.write_int(string_buffer.Length)
+    
+    # nodes
+    for i, node in enumerate(nodes):
+        # version
+        writer.write_u_short(node.version)
+        # level
+        writer.write_byte(node.level)
+        # is array
+        writer.write_boolean(node.is_array)
+        # type str offfset
+        writer.write_u_int(strings_values[i][0])
+        # name str offset
+        writer.write_u_int(strings_values[i][1])
+        # byte size
+        writer.write_int(node.byte_size)
+        # index
+        writer.write_int(node.index)
+        # meta flag
+        writer.write_int(node.meta_flag)
+        # ref hash
+        if self.header.version &gt; 19:
+            writer.write_u_long(node.ref_type_hash)
+    
+    # string buffer
+    writer.write(string_buffer.bytes)
+    
+    if self.header.version &gt;= 21:
+        writer.write_bytes(b&#34;\x00&#34; * 4)</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFile.set_version"><code class="name flex">
+<span>def <span class="ident">set_version</span></span>(<span>self, string_version)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_version(self, string_version):
+    self.unity_version = string_version
+    build_type = re.findall(r&#34;([^\d.])&#34;, string_version)
+    self.build_type = BuildType(build_type[0] if build_type else &#34;&#34;)
+    version_split = re.split(r&#34;\D&#34;, string_version)
+    self.version = tuple(int(x) for x in version_split)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFileHeader"><code class="flex name class">
+<span>class <span class="ident">SerializedFileHeader</span></span>
+<span>(</span><span>reader: <a title="UnityPy.streams.EndianBinaryReader.EndianBinaryReader" href="../streams/EndianBinaryReader.html#UnityPy.streams.EndianBinaryReader.EndianBinaryReader">EndianBinaryReader</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedFileHeader:
+    metadata_size: int
+    file_size: int
+    version: int
+    data_offset: int
+    endian: bytes
+    reserved: bytes
+    
+    def __init__(self, reader: EndianBinaryReader):
+        self.metadata_size = reader.read_u_int()
+        self.file_size = reader.read_u_int()
+        self.version = reader.read_u_int()
+        self.data_offset = reader.read_u_int()</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.SerializedFileHeader.data_offset"><code class="name">var <span class="ident">data_offset</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFileHeader.endian"><code class="name">var <span class="ident">endian</span> : bytes</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFileHeader.file_size"><code class="name">var <span class="ident">file_size</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFileHeader.metadata_size"><code class="name">var <span class="ident">metadata_size</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFileHeader.reserved"><code class="name">var <span class="ident">reserved</span> : bytes</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedFileHeader.version"><code class="name">var <span class="ident">version</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedType"><code class="flex name class">
+<span>class <span class="ident">SerializedType</span></span>
+<span>(</span><span>reader, serialized_file)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SerializedType:
+    class_id: int
+    is_stripped_type: bool
+    script_type_index = -1
+    nodes: list = []  # TypeTreeNode
+    script_id: bytes  # Hash128
+    old_type_hash: bytes  # Hash128}
+    
+    def __init__(self, reader, serialized_file):
+        version = serialized_file.header.version
+        self.class_id = reader.read_int()
+        
+        if version &gt;= 16:
+            self.is_stripped_type = reader.read_boolean()
+        
+        if version &gt;= 17:
+            self.script_type_index = reader.read_short()
+        
+        if version &gt;= 13:
+            if (version &lt; 16 and self.class_id &lt; 0) or (
+                    version &gt;= 16 and self.class_id == 114
+            ):
+                self.script_id = reader.read_bytes(16)  # Hash128
+            self.old_type_hash = reader.read_bytes(16)  # Hash128
+        
+        if serialized_file._enable_type_tree:
+            type_tree = []
+            if version &gt;= 12 or version == 10:
+                self.string_data = serialized_file.read_type_tree_blob(
+                    type_tree)
+            else:
+                serialized_file.read_type_tree(type_tree)
+            
+            if version &gt;= 21:
+                self.type_dependencies = reader.read_int_array()
+            
+            self.nodes = type_tree
+    
+    def write(self, serialized_file, writer):
+        version = serialized_file.header.version
+        writer.write_int(self.class_id)
+        
+        if version &gt;= 16:
+            writer.write_boolean(self.is_stripped_type)
+        
+        if version &gt;= 17:
+            writer.write_short(self.script_type_index)
+        
+        if version &gt;= 13:
+            if (version &lt; 16 and self.class_id &lt; 0) or (
+                    version &gt;= 16 and self.class_id == 114
+            ):
+                writer.write_bytes(self.script_id)  # Hash128
+            writer.write_bytes(self.old_type_hash)  # Hash128
+        
+        if serialized_file._enable_type_tree:
+            if version &gt;= 12 or version == 10:
+                serialized_file.save_type_tree5(
+                    self.nodes, writer, self.string_data)
+            else:
+                serialized_file.save_type_tree(self.nodes, writer)</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.SerializedType.class_id"><code class="name">var <span class="ident">class_id</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedType.is_stripped_type"><code class="name">var <span class="ident">is_stripped_type</span> : bool</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedType.nodes"><code class="name">var <span class="ident">nodes</span> : list</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedType.old_type_hash"><code class="name">var <span class="ident">old_type_hash</span> : bytes</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedType.script_id"><code class="name">var <span class="ident">script_id</span> : bytes</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.SerializedType.script_type_index"><code class="name">var <span class="ident">script_type_index</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.SerializedType.write"><code class="name flex">
+<span>def <span class="ident">write</span></span>(<span>self, serialized_file, writer)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write(self, serialized_file, writer):
+    version = serialized_file.header.version
+    writer.write_int(self.class_id)
+    
+    if version &gt;= 16:
+        writer.write_boolean(self.is_stripped_type)
+    
+    if version &gt;= 17:
+        writer.write_short(self.script_type_index)
+    
+    if version &gt;= 13:
+        if (version &lt; 16 and self.class_id &lt; 0) or (
+                version &gt;= 16 and self.class_id == 114
+        ):
+            writer.write_bytes(self.script_id)  # Hash128
+        writer.write_bytes(self.old_type_hash)  # Hash128
+    
+    if serialized_file._enable_type_tree:
+        if version &gt;= 12 or version == 10:
+            serialized_file.save_type_tree5(
+                self.nodes, writer, self.string_data)
+        else:
+            serialized_file.save_type_tree(self.nodes, writer)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode"><code class="flex name class">
+<span>class <span class="ident">TypeTreeNode</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TypeTreeNode:
+    type: str
+    name: str
+    byte_size: int
+    index: int
+    is_array: int
+    version: int
+    meta_flag: int
+    level: int
+    type_str_offset: int
+    name_str_offset: int</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode.byte_size"><code class="name">var <span class="ident">byte_size</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode.index"><code class="name">var <span class="ident">index</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode.is_array"><code class="name">var <span class="ident">is_array</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode.level"><code class="name">var <span class="ident">level</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode.meta_flag"><code class="name">var <span class="ident">meta_flag</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode.name"><code class="name">var <span class="ident">name</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode.name_str_offset"><code class="name">var <span class="ident">name_str_offset</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode.type"><code class="name">var <span class="ident">type</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode.type_str_offset"><code class="name">var <span class="ident">type_str_offset</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.files.SerializedFile.TypeTreeNode.version"><code class="name">var <span class="ident">version</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="UnityPy.files" href="index.html">UnityPy.files</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="UnityPy.files.SerializedFile.read_string" href="#UnityPy.files.SerializedFile.read_string">read_string</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="UnityPy.files.SerializedFile.BuildType" href="#UnityPy.files.SerializedFile.BuildType">BuildType</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.files.SerializedFile.BuildType.build_type" href="#UnityPy.files.SerializedFile.BuildType.build_type">build_type</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.BuildType.is_alpha" href="#UnityPy.files.SerializedFile.BuildType.is_alpha">is_alpha</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.BuildType.is_path" href="#UnityPy.files.SerializedFile.BuildType.is_path">is_path</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.files.SerializedFile.FileIdentifier" href="#UnityPy.files.SerializedFile.FileIdentifier">FileIdentifier</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.files.SerializedFile.FileIdentifier.guid" href="#UnityPy.files.SerializedFile.FileIdentifier.guid">guid</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.FileIdentifier.name" href="#UnityPy.files.SerializedFile.FileIdentifier.name">name</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.FileIdentifier.path" href="#UnityPy.files.SerializedFile.FileIdentifier.path">path</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.FileIdentifier.type" href="#UnityPy.files.SerializedFile.FileIdentifier.type">type</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.FileIdentifier.write" href="#UnityPy.files.SerializedFile.FileIdentifier.write">write</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier" href="#UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier">LocalSerializedObjectIdentifier</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier.local_identifier_in_file" href="#UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier.local_identifier_in_file">local_identifier_in_file</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier.local_serialized_file_index" href="#UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier.local_serialized_file_index">local_serialized_file_index</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier.write" href="#UnityPy.files.SerializedFile.LocalSerializedObjectIdentifier.write">write</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.files.SerializedFile.SerializedFile" href="#UnityPy.files.SerializedFile.SerializedFile">SerializedFile</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.build_type" href="#UnityPy.files.SerializedFile.SerializedFile.build_type">build_type</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.container" href="#UnityPy.files.SerializedFile.SerializedFile.container">container</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.container_" href="#UnityPy.files.SerializedFile.SerializedFile.container_">container_</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.externals" href="#UnityPy.files.SerializedFile.SerializedFile.externals">externals</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.files" href="#UnityPy.files.SerializedFile.SerializedFile.files">files</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.header" href="#UnityPy.files.SerializedFile.SerializedFile.header">header</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.is_changed" href="#UnityPy.files.SerializedFile.SerializedFile.is_changed">is_changed</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.mark_changed" href="#UnityPy.files.SerializedFile.SerializedFile.mark_changed">mark_changed</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.objects" href="#UnityPy.files.SerializedFile.SerializedFile.objects">objects</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.read_type_tree" href="#UnityPy.files.SerializedFile.SerializedFile.read_type_tree">read_type_tree</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.read_type_tree_blob" href="#UnityPy.files.SerializedFile.SerializedFile.read_type_tree_blob">read_type_tree_blob</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.reader" href="#UnityPy.files.SerializedFile.SerializedFile.reader">reader</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.save" href="#UnityPy.files.SerializedFile.SerializedFile.save">save</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.save_serialized_type" href="#UnityPy.files.SerializedFile.SerializedFile.save_serialized_type">save_serialized_type</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.save_type_tree" href="#UnityPy.files.SerializedFile.SerializedFile.save_type_tree">save_type_tree</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.save_type_tree5" href="#UnityPy.files.SerializedFile.SerializedFile.save_type_tree5">save_type_tree5</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.script_types" href="#UnityPy.files.SerializedFile.SerializedFile.script_types">script_types</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.set_version" href="#UnityPy.files.SerializedFile.SerializedFile.set_version">set_version</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.target_platform" href="#UnityPy.files.SerializedFile.SerializedFile.target_platform">target_platform</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.types" href="#UnityPy.files.SerializedFile.SerializedFile.types">types</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.unity_version" href="#UnityPy.files.SerializedFile.SerializedFile.unity_version">unity_version</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFile.version" href="#UnityPy.files.SerializedFile.SerializedFile.version">version</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.files.SerializedFile.SerializedFileHeader" href="#UnityPy.files.SerializedFile.SerializedFileHeader">SerializedFileHeader</a></code></h4>
+<ul class="two-column">
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFileHeader.data_offset" href="#UnityPy.files.SerializedFile.SerializedFileHeader.data_offset">data_offset</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFileHeader.endian" href="#UnityPy.files.SerializedFile.SerializedFileHeader.endian">endian</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFileHeader.file_size" href="#UnityPy.files.SerializedFile.SerializedFileHeader.file_size">file_size</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFileHeader.metadata_size" href="#UnityPy.files.SerializedFile.SerializedFileHeader.metadata_size">metadata_size</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFileHeader.reserved" href="#UnityPy.files.SerializedFile.SerializedFileHeader.reserved">reserved</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedFileHeader.version" href="#UnityPy.files.SerializedFile.SerializedFileHeader.version">version</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.files.SerializedFile.SerializedType" href="#UnityPy.files.SerializedFile.SerializedType">SerializedType</a></code></h4>
+<ul class="two-column">
+<li><code><a title="UnityPy.files.SerializedFile.SerializedType.class_id" href="#UnityPy.files.SerializedFile.SerializedType.class_id">class_id</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedType.is_stripped_type" href="#UnityPy.files.SerializedFile.SerializedType.is_stripped_type">is_stripped_type</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedType.nodes" href="#UnityPy.files.SerializedFile.SerializedType.nodes">nodes</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedType.old_type_hash" href="#UnityPy.files.SerializedFile.SerializedType.old_type_hash">old_type_hash</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedType.script_id" href="#UnityPy.files.SerializedFile.SerializedType.script_id">script_id</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedType.script_type_index" href="#UnityPy.files.SerializedFile.SerializedType.script_type_index">script_type_index</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.SerializedType.write" href="#UnityPy.files.SerializedFile.SerializedType.write">write</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.files.SerializedFile.TypeTreeNode" href="#UnityPy.files.SerializedFile.TypeTreeNode">TypeTreeNode</a></code></h4>
+<ul class="two-column">
+<li><code><a title="UnityPy.files.SerializedFile.TypeTreeNode.byte_size" href="#UnityPy.files.SerializedFile.TypeTreeNode.byte_size">byte_size</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.TypeTreeNode.index" href="#UnityPy.files.SerializedFile.TypeTreeNode.index">index</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.TypeTreeNode.is_array" href="#UnityPy.files.SerializedFile.TypeTreeNode.is_array">is_array</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.TypeTreeNode.level" href="#UnityPy.files.SerializedFile.TypeTreeNode.level">level</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.TypeTreeNode.meta_flag" href="#UnityPy.files.SerializedFile.TypeTreeNode.meta_flag">meta_flag</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.TypeTreeNode.name" href="#UnityPy.files.SerializedFile.TypeTreeNode.name">name</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.TypeTreeNode.name_str_offset" href="#UnityPy.files.SerializedFile.TypeTreeNode.name_str_offset">name_str_offset</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.TypeTreeNode.type" href="#UnityPy.files.SerializedFile.TypeTreeNode.type">type</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.TypeTreeNode.type_str_offset" href="#UnityPy.files.SerializedFile.TypeTreeNode.type_str_offset">type_str_offset</a></code></li>
+<li><code><a title="UnityPy.files.SerializedFile.TypeTreeNode.version" href="#UnityPy.files.SerializedFile.TypeTreeNode.version">version</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

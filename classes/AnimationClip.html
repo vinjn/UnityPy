@@ -1,0 +1,1985 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>UnityPy.classes.AnimationClip API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>UnityPy.classes.AnimationClip</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import math
+from enum import IntEnum
+
+from .NamedObject import NamedObject
+from .PPtr import PPtr
+from ..enums import ClassIDType
+from ..math import Quaternion, Vector3
+from ..streams import EndianBinaryReader
+
+
+def uint(num):
+    if num &lt; 0 or num &gt; 4294967295:
+        return num % 4294967296
+    return num
+
+
+class Keyframe:
+    def __init__(self, reader, readerFunc):
+        self.time = reader.read_float()
+        self.value = readerFunc()
+        self.inSlope = readerFunc()
+        self.outSlope = readerFunc()
+        if reader.version &gt;= (2018,):  # 2018 and up
+            self.weightedMode = reader.read_int()
+            self.inWeight = readerFunc()
+            self.outWeight = readerFunc()
+
+
+class AnimationCurve:
+    def __init__(self, reader, readerFunc):
+        version = reader.version
+        numCurves = reader.read_int()
+        self.m_Curve = [Keyframe(reader, readerFunc) for _ in range(numCurves)]
+
+        self.m_PreInfinity = reader.read_int()
+        self.m_PostInfinity = reader.read_int()
+        if version &gt;= (5, 3):  # 5.3 and up
+            self.m_RotationOrder = reader.read_int()
+
+
+class QuaternionCurve:
+    def __init__(self, reader):
+        self.curve = AnimationCurve(reader, reader.read_quaternion)  # &lt;Quaternion&gt;
+        self.path = reader.read_aligned_string()
+
+
+class PackedFloatVector:
+    def __init__(self, reader):
+        self.m_NumItems = reader.read_u_int()
+        self.m_Range = reader.read_float()
+        self.m_Start = reader.read_float()
+
+        numData = reader.read_int()
+        self.m_Data = reader.read_bytes(numData)
+        reader.align_stream()
+
+        self.m_BitSize = reader.read_byte()
+        reader.align_stream()
+
+    def save(self, writer):
+        writer.write_u_int(self.m_NumItems)
+        writer.write_float(self.m_Range)
+        writer.write_float(self.m_Start)
+
+        writer.write_int(len(self.m_Data))
+        writer.write_bytes(self.m_Data)
+        writer.align_stream()
+
+        writer.write_byte(self.m_BitSize)
+        writer.align_stream()
+
+    def UnpackFloats(
+        self,
+        itemCountInChunk: int,
+        chunkStride: int,
+        start: int = 0,
+        numChunks: int = -1,
+    ):
+        bitPos: int = self.m_BitSize * start
+        indexPos: int = bitPos // 8
+        bitPos %= 8
+
+        scale: float = 1.0 / self.m_Range
+        if numChunks == -1:
+            numChunks = self.m_NumItems // itemCountInChunk
+        end = chunkStride * numChunks / 4
+        data = []
+        for index in (0, end, chunkStride // 4):
+            for i in range(itemCountInChunk):
+                x = 0  # uint
+                bits = 0
+                while bits &lt; self.m_BitSize:
+                    x |= uint(
+                        (self.m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits
+                    )  # (uint)((m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits)
+                    num = min(self.m_BitSize - bits, 8 - bitPos)
+                    bitPos += num
+                    bits += num
+                    if bitPos == 8:  #
+                        indexPos += 1
+                        bitPos = 0
+
+                x &amp;= uint((1 &lt;&lt; self.m_BitSize) - 1)  # (uint)(1 &lt;&lt; m_BitSize) - 1u
+                data.append(x / (scale * ((1 &lt;&lt; self.m_BitSize) - 1)) + self.m_Start)
+
+        return data
+
+
+class PackedIntVector:
+    def __init__(self, reader):
+        self.m_NumItems = reader.read_u_int()
+
+        numData = reader.read_int()
+        self.m_Data = reader.read_bytes(numData)
+        reader.align_stream()
+
+        self.m_BitSize = reader.read_byte()
+        reader.align_stream()
+
+    def save(self, writer):
+        writer.write_u_int(self.m_NumItems)
+
+        writer.write_int(len(self.m_Data))
+        writer.write_bytes(self.m_Data)
+        writer.align_stream()
+
+        writer.write_byte(self.m_BitSize)
+        writer.align_stream()
+
+    def UnpackInts(self):
+        data = []
+        indexPos = 0
+        bitPos = 0
+        m_BitSize = self.m_BitSize
+
+        for i in range(self.m_NumItems):
+            bits = 0
+            entry = 0
+            while bits &lt;&lt; m_BitSize:
+                entry |= (self.m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits
+                num = min(m_BitSize - bits, 8 - bitPos)
+                bitPos += num
+                bits += num
+                if bitPos == 8:  #
+                    indexPos += 1
+                    bitPos = 0
+            data.append(entry &amp; (1 &lt;&lt; m_BitSize) - 1)
+        return data
+
+
+class PackedQuatVector:
+    def __init__(self, reader):
+        self.m_NumItems = reader.read_u_int()
+        numData = reader.read_int()
+        self.m_Data = reader.read_bytes(numData)
+        reader.align_stream()
+
+    def UnpackQuats(self):
+        m_Data = self.m_Data
+        data = []
+        indexPos = 0
+        bitPos = 0
+
+        for i in range(self.m_NumItems):
+            flags = 0
+            bits = 0
+            while bits &lt; 3:
+                flags |= (m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits  # unit
+                num = min(3 - bits, 8 - bitPos)
+                bitPos += num
+                bits += num
+                if bitPos == 8:  #
+                    indexPos += 1
+                    bitPos = 0
+            flags &amp;= 7
+
+            q = Quaternion()
+            sum = 0
+            for j in range(4):
+                if (flags &amp; 3) != j:  #
+                    bitSize = 9 if ((flags &amp; 3) + 1) % 4 == j else 10
+                    x = 0
+
+                    bits = 0
+                    while bits &lt; bitSize:
+                        x |= (m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits  # uint
+                        num = min(bitSize - bits, 8 - bitPos)
+                        bitPos += num
+                        bits += num
+                        if bitPos == 8:  #
+                            indexPos += 1
+                            bitPos = 0
+                    x &amp;= (1 &lt;&lt; bitSize) - 1  # unit
+                    q[j] = x / (0.5 * ((1 &lt;&lt; bitSize) - 1)) - 1
+                    sum += q[j] * q[j]
+
+            lastComponent = flags &amp; 3  # int
+            q[lastComponent] = math.sqrt(1 - sum)  # float
+            if (flags &amp; 4) != 0:  # 0u
+                q[lastComponent] = -q[lastComponent]
+            data.append(q)
+
+        return data
+
+
+class CompressedAnimationCurve:
+    def __init__(self, reader):
+        self.m_Path = reader.read_aligned_string()
+        self.m_Times = PackedIntVector(reader)
+        self.m_Values = PackedQuatVector(reader)
+        self.m_Slopes = PackedFloatVector(reader)
+        self.m_PreInfinity = reader.read_int()
+        self.m_PostInfinity = reader.read_int()
+
+
+class Vector3Curve:
+    def __init__(self, reader):
+        self.curve = AnimationCurve(reader, reader.read_vector3)  # Vector3
+        self.path = reader.read_aligned_string()
+
+
+class FloatCurve:
+    def __init__(self, reader):
+        self.curve = AnimationCurve(reader, reader.read_float)  # Float
+        self.attribute = reader.read_aligned_string()
+        self.path = reader.read_aligned_string()
+        self.classID = ClassIDType(reader.read_int())
+        self.script = PPtr(reader)  # MonoScript
+
+
+class PPtrKeyframe:
+    def __init__(self, reader):
+        self.time = reader.read_float()
+        self.value = PPtr(reader)  # Object
+
+
+class PPtrCurve:
+    def __init__(self, reader):
+        numCurves = reader.read_int()
+        self.curve = [PPtrKeyframe(reader) for _ in range(numCurves)]
+
+        self.attribute = reader.read_aligned_string()
+        self.path = reader.read_aligned_string()
+        self.classID = reader.read_int()
+        self.script = PPtr(reader)  # MonoScript
+
+
+class AABB:
+    def __init__(self, reader):
+        self.m_Center = reader.read_vector3()
+        self.m_Extent = reader.read_vector3()
+
+    def save(self, writer):
+        writer.write_vector3(self.m_Center)
+        writer.write_vector3(self.m_Extent)
+
+
+class xform:
+    def __init__(self, reader):
+        version = reader.version
+        self.t = (
+            reader.read_vector3()
+            if version &gt;= (5, 4)
+            else Vector3(reader.read_vector4())
+        )  # 5.4 and up
+        self.q = reader.read_quaternion()
+        self.s = (
+            reader.read_vector3()
+            if version &gt;= (5, 4)
+            else Vector3(reader.read_vector4())
+        )  # 5.4 and up
+
+
+class HandPose:
+    def __init__(self, reader):
+        self.m_GrabX = xform(reader)
+        self.m_DoFArray = reader.read_float_array()
+        self.m_Override = reader.read_float()
+        self.m_CloseOpen = reader.read_float()
+        self.m_InOut = reader.read_float()
+        self.m_Grab = reader.read_float()
+
+
+class HumanGoal:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_X = xform(reader)
+        self.m_WeightT = reader.read_float()
+        self.m_WeightR = reader.read_float()
+        if version &gt;= (5,):  # 5.0 and up
+            self.m_HintT = (
+                reader.read_vector3()
+                if version &gt;= (5, 4)
+                else Vector3(reader.read_vector4())
+            )  # 5.4 and up
+            self.m_HintWeightT = reader.read_float()
+
+
+class HumanPose:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_RootX = xform(reader)
+        self.m_LookAtPosition = (
+            reader.read_vector3()
+            if version &gt;= (5, 4)
+            else Vector3(reader.read_vector4())
+        )  # 5.4 and up
+        self.m_LookAtWeight = reader.read_vector4()
+
+        numGoals = reader.read_int()
+        self.m_GoalArray = [HumanGoal(reader) for _ in range(numGoals)]
+
+        self.m_LeftHandPose = HandPose(reader)
+        self.m_RightHandPose = HandPose(reader)
+
+        self.m_DoFArray = reader.read_float_array()
+
+        if version &gt;= (5, 2):  # 5.2 and up
+            numTDof = reader.read_int()
+            self.m_TDoFArray = [
+                reader.read_vector3()
+                if version &gt;= (5, 4)
+                else Vector3(reader.read_vector4())  # 5.4 and up
+                for _ in range(numTDof)
+            ]
+
+
+class StreamedCurveKey:
+    def __init__(self, reader):
+        self.index = reader.read_int()
+        self.coeff = reader.read_float_array(4)
+
+        self.outSlope = self.coeff[2]
+        self.value = self.coeff[3]
+
+    def CalculateNextInSlope(self, dx: float, rhs):
+        &#34;&#34;&#34;
+        :param dx: float
+        :param rhs: StreamedCurvedKey
+        :return:
+        &#34;&#34;&#34;
+        # Stepped
+        if self.coeff[0] == 0 and self.coeff[1] == 0 and self.coeff[2] == 0:
+            return float(&#39;inf&#39;)
+
+        dx = max(dx, 0.0001)
+        dy = rhs.value - self.value
+        length = 1.0 / (dx * dx)
+        d1 = self.outSlope * dx
+        d2 = dy + dy + dy - d1 - d1 - self.coeff[1] / length
+        return d2 / dx
+
+
+class StreamedFrame:
+    def __init__(self, reader):
+        self.time = reader.read_float()
+        numKeys = reader.read_int()
+        self.keyList = [StreamedCurveKey(reader) for _ in range(numKeys)]
+
+
+class StreamedClip:
+    def __init__(self, reader):
+        self.data = reader.read_u_int_array()
+        self.curveCount = reader.read_u_int()
+
+    def ReadData(self):
+        frameList = []
+        buffer = self.data[0 : len(self.data) * 4]
+        reader = EndianBinaryReader(buffer)
+        while reader.Position &lt; reader.Length:
+            frameList.append(StreamedFrame(reader))
+
+        for frameIndex in range(2, len(frameList) - 1):
+            frame = frameList[frameIndex]
+            for curveKey in frame.keyList:
+                i = frameIndex - 1
+                while i &gt;= 0:
+                    preFrame = frameList[i]
+                    try:
+                        preCurveKey = [
+                            x for x in preFrame.keyList if x.index == curveKey.index
+                        ][0]
+                        curveKey.inSlope = preCurveKey.CalculateNextInSlope(
+                            frame.time - preFrame.time, curveKey
+                        )
+                        break
+                    except IndexError:
+                        pass
+                    i -= 1
+        return frameList
+
+
+class DenseClip:
+    def __init__(self, reader):
+        self.m_FrameCount = reader.read_int()
+        self.m_CurveCount = reader.read_u_int()
+        self.m_SampleRate = reader.read_float()
+        self.m_BeginTime = reader.read_float()
+        self.m_SampleArray = reader.read_float_array()
+
+
+class ConstantClip:
+    def __init__(self, reader):
+        self.data = reader.read_float_array()
+
+
+class ValueConstant:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_ID = reader.read_u_int()
+        if version &lt; (5, 5):  # 5.5 down
+            self.m_TypeID = reader.read_u_int()
+        self.m_Type = reader.read_u_int()
+        self.m_Index = reader.read_u_int()
+
+
+class ValueArrayConstant:
+    def __init__(self, reader):
+        numVals = reader.read_int()
+        self.m_ValueArray = [ValueConstant(reader) for _ in range(numVals)]
+
+
+class Clip:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_StreamedClip = StreamedClip(reader)
+        self.m_DenseClip = DenseClip(reader)
+        if version &gt;= (4, 3):  # 4.3 and up
+            self.m_ConstantClip = ConstantClip(reader)
+        if version &lt; (2018, 3):  # 2018.3 down
+            self.m_Binding = ValueArrayConstant(reader)
+
+
+class ValueDelta:
+    def __init__(self, reader):
+        self.m_Start = reader.read_float()
+        self.m_Stop = reader.read_float()
+
+
+class ClipMuscleConstant:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_DeltaPose = HumanPose(reader)
+        self.m_StartX = xform(reader)
+        if version &gt;= (5, 5):  # 5.5 and up
+            self.m_StopX = xform(reader)
+        self.m_LeftFootStartX = xform(reader)
+        self.m_RightFootStartX = xform(reader)
+        if version &lt; (5,):  # 5.0 down
+            self.m_MotionStartX = xform(reader)
+            self.m_MotionStopX = xform(reader)
+        self.m_AverageSpeed = (
+            reader.read_vector3()
+            if version &gt;= (5, 4)
+            else Vector3(reader.read_vector4())
+        )  # 5.4 and up
+        self.m_Clip = Clip(reader)
+        self.m_StartTime = reader.read_float()
+        self.m_StopTime = reader.read_float()
+        self.m_OrientationOffsetY = reader.read_float()
+        self.m_Level = reader.read_float()
+        self.m_CycleOffset = reader.read_float()
+        self.m_AverageAngularSpeed = reader.read_float()
+
+        self.m_IndexArray = reader.read_int_array()
+        if version &lt; (4, 3):  # 4.3 down
+            self.m_AdditionalCurveIndexArray = reader.read_int_array()
+        numDeltas = reader.read_int()
+        self.m_ValueArrayDelta = [ValueDelta(reader) for _ in range(numDeltas)]
+        if version &gt;= (5, 3):  # 5.3 and up
+            self.m_ValueArrayReferencePose = reader.read_float_array()
+
+        self.m_Mirror = reader.read_boolean()
+        if version &gt;= (4, 3):  # 4.3 and up
+            self.m_LoopTime = reader.read_boolean()
+        self.m_LoopBlend = reader.read_boolean()
+        self.m_LoopBlendOrientation = reader.read_boolean()
+        self.m_LoopBlendPositionY = reader.read_boolean()
+        self.m_LoopBlendPositionXZ = reader.read_boolean()
+        if version &gt;= (5, 5):  # 5.5 and up
+            self.m_StartAtOrigin = reader.read_boolean()
+        self.m_KeepOriginalOrientation = reader.read_boolean()
+        self.m_KeepOriginalPositionY = reader.read_boolean()
+        self.m_KeepOriginalPositionXZ = reader.read_boolean()
+        self.m_HeightFromFeet = reader.read_boolean()
+        reader.align_stream()
+
+
+class GenericBinding:
+    def __init__(self, reader):
+        version = reader.version
+        self.path = reader.read_u_int()
+        self.attribute = reader.read_u_int()
+        self.script = PPtr(reader)  # Object
+        if version &gt;= (5, 6):  # 5.6 and up
+            self.typeID = ClassIDType(reader.read_int())
+        else:
+            self.typeID = ClassIDType(reader.read_u_short())
+        self.customType = reader.read_byte()
+        self.isPPtrCurve = reader.read_byte()
+        reader.align_stream()
+
+
+class AnimationClipBindingConstant:
+    def __init__(self, reader):
+        numBindings = reader.read_int()
+        self.genericBindings = [GenericBinding(reader) for _ in range(numBindings)]
+
+        numMappings = reader.read_int()
+        self.pptrCurveMapping = [PPtr(reader) for _ in range(numMappings)]  # Object
+
+        def FindBinding(self, index):
+            curves = 0
+            for b in self.genericBindings:
+                if b.typeID == ClassIDType.Transform:  #
+                    switch = b.attribute
+
+                    if switch in [1, 3, 4]:
+                        # case 1: #kBindTransformPosition
+                        # case 3: #kBindTransformScale
+                        # case 4: #kBindTransformEuler
+                        curves += 3
+                    elif switch == 2:  # kBindTransformRotation
+                        curves += 4
+                    else:
+                        curves += 1
+                else:
+                    curves += 1
+                if curves &gt; index:
+                    return b
+            return None
+
+
+class AnimationType(IntEnum):
+    kLegacy = (1,)
+    kGeneric = (2,)
+    kHumanoid = 3
+
+
+class AnimationClip(NamedObject):
+    def __init__(self, reader):
+        super().__init__(reader=reader)
+        version = reader.version
+        if version &gt;= (5,):  # 5.0 and up
+            self.m_Legacy = reader.read_boolean()
+        elif version &gt;= (4,):  # 4.0 and up
+            self.m_AnimationType = AnimationType(reader.read_int())
+            if self.m_AnimationType == AnimationType.kLegacy:  #
+                self.m_Legacy = True
+        else:
+            self.m_Legacy = True
+
+        self.m_Compressed = reader.read_boolean()
+        if version &gt;= (4, 3):  # 4.3 and up
+            self.m_UseHighQualityCurve = reader.read_boolean()
+        reader.align_stream()
+        numRCurves = reader.read_int()
+        self.m_RotationCurves = [QuaternionCurve(reader) for _ in range(numRCurves)]
+
+        numCRCurves = reader.read_int()
+        self.m_CompressedRotationCurves = [
+            CompressedAnimationCurve(reader) for _ in range(numCRCurves)
+        ]
+
+        if version &gt;= (5, 3):  # 5.3 and up
+            numEulerCurves = reader.read_int()
+            self.m_EulerCurves = [Vector3Curve(reader) for _ in range(numEulerCurves)]
+
+        numPCurves = reader.read_int()
+        self.m_PositionCurves = [Vector3Curve(reader) for _ in range(numPCurves)]
+
+        numSCurves = reader.read_int()
+        self.m_ScaleCurves = [Vector3Curve(reader) for _ in range(numSCurves)]
+
+        numFCurves = reader.read_int()
+        self.m_FloatCurves = [FloatCurve(reader) for _ in range(numFCurves)]
+        if version &gt;= (4, 3):  # 4.3 and up
+            numPtrCurves = reader.read_int()
+            self.m_PPtrCurves = [PPtrCurve(reader) for _ in range(numPtrCurves)]
+
+        self.m_SampleRate = reader.read_float()
+        self.m_WrapMode = reader.read_int()
+        if version &gt;= (3, 4):  # 3.4 and up
+            self.m_Bounds = AABB(reader)
+        if version &gt;= (4,):  # 4.0 and up
+            self.m_MuscleClipSize = reader.read_u_int()
+            self.m_MuscleClip = ClipMuscleConstant(reader)
+        if version &gt;= (4, 3):  # 4.3 and up
+            self.m_ClipBindingConstant = AnimationClipBindingConstant(reader)
+
+
+# m_HasGenericRootTransform 2018.3
+# m_HasMotionFloatCurves 2018.3
+# numEvents = reader.read_int()
+# self.m_Events = [
+#       AnimationEvent(reader)
+#       for _ in range(numEvents)
+# ]</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="UnityPy.classes.AnimationClip.uint"><code class="name flex">
+<span>def <span class="ident">uint</span></span>(<span>num)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def uint(num):
+    if num &lt; 0 or num &gt; 4294967295:
+        return num % 4294967296
+    return num</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="UnityPy.classes.AnimationClip.AABB"><code class="flex name class">
+<span>class <span class="ident">AABB</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AABB:
+    def __init__(self, reader):
+        self.m_Center = reader.read_vector3()
+        self.m_Extent = reader.read_vector3()
+
+    def save(self, writer):
+        writer.write_vector3(self.m_Center)
+        writer.write_vector3(self.m_Extent)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.classes.AnimationClip.AABB.save"><code class="name flex">
+<span>def <span class="ident">save</span></span>(<span>self, writer)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save(self, writer):
+    writer.write_vector3(self.m_Center)
+    writer.write_vector3(self.m_Extent)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.AnimationClip"><code class="flex name class">
+<span>class <span class="ident">AnimationClip</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AnimationClip(NamedObject):
+    def __init__(self, reader):
+        super().__init__(reader=reader)
+        version = reader.version
+        if version &gt;= (5,):  # 5.0 and up
+            self.m_Legacy = reader.read_boolean()
+        elif version &gt;= (4,):  # 4.0 and up
+            self.m_AnimationType = AnimationType(reader.read_int())
+            if self.m_AnimationType == AnimationType.kLegacy:  #
+                self.m_Legacy = True
+        else:
+            self.m_Legacy = True
+
+        self.m_Compressed = reader.read_boolean()
+        if version &gt;= (4, 3):  # 4.3 and up
+            self.m_UseHighQualityCurve = reader.read_boolean()
+        reader.align_stream()
+        numRCurves = reader.read_int()
+        self.m_RotationCurves = [QuaternionCurve(reader) for _ in range(numRCurves)]
+
+        numCRCurves = reader.read_int()
+        self.m_CompressedRotationCurves = [
+            CompressedAnimationCurve(reader) for _ in range(numCRCurves)
+        ]
+
+        if version &gt;= (5, 3):  # 5.3 and up
+            numEulerCurves = reader.read_int()
+            self.m_EulerCurves = [Vector3Curve(reader) for _ in range(numEulerCurves)]
+
+        numPCurves = reader.read_int()
+        self.m_PositionCurves = [Vector3Curve(reader) for _ in range(numPCurves)]
+
+        numSCurves = reader.read_int()
+        self.m_ScaleCurves = [Vector3Curve(reader) for _ in range(numSCurves)]
+
+        numFCurves = reader.read_int()
+        self.m_FloatCurves = [FloatCurve(reader) for _ in range(numFCurves)]
+        if version &gt;= (4, 3):  # 4.3 and up
+            numPtrCurves = reader.read_int()
+            self.m_PPtrCurves = [PPtrCurve(reader) for _ in range(numPtrCurves)]
+
+        self.m_SampleRate = reader.read_float()
+        self.m_WrapMode = reader.read_int()
+        if version &gt;= (3, 4):  # 3.4 and up
+            self.m_Bounds = AABB(reader)
+        if version &gt;= (4,):  # 4.0 and up
+            self.m_MuscleClipSize = reader.read_u_int()
+            self.m_MuscleClip = ClipMuscleConstant(reader)
+        if version &gt;= (4, 3):  # 4.3 and up
+            self.m_ClipBindingConstant = AnimationClipBindingConstant(reader)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="UnityPy.classes.NamedObject.NamedObject" href="NamedObject.html#UnityPy.classes.NamedObject.NamedObject">NamedObject</a></li>
+<li><a title="UnityPy.classes.EditorExtension.EditorExtension" href="EditorExtension.html#UnityPy.classes.EditorExtension.EditorExtension">EditorExtension</a></li>
+<li><a title="UnityPy.classes.Object.Object" href="Object.html#UnityPy.classes.Object.Object">Object</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.classes.AnimationClip.AnimationClip.type_tree"><code class="name">var <span class="ident">type_tree</span> : dict</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.AnimationClipBindingConstant"><code class="flex name class">
+<span>class <span class="ident">AnimationClipBindingConstant</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AnimationClipBindingConstant:
+    def __init__(self, reader):
+        numBindings = reader.read_int()
+        self.genericBindings = [GenericBinding(reader) for _ in range(numBindings)]
+
+        numMappings = reader.read_int()
+        self.pptrCurveMapping = [PPtr(reader) for _ in range(numMappings)]  # Object
+
+        def FindBinding(self, index):
+            curves = 0
+            for b in self.genericBindings:
+                if b.typeID == ClassIDType.Transform:  #
+                    switch = b.attribute
+
+                    if switch in [1, 3, 4]:
+                        # case 1: #kBindTransformPosition
+                        # case 3: #kBindTransformScale
+                        # case 4: #kBindTransformEuler
+                        curves += 3
+                    elif switch == 2:  # kBindTransformRotation
+                        curves += 4
+                    else:
+                        curves += 1
+                else:
+                    curves += 1
+                if curves &gt; index:
+                    return b
+            return None</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.AnimationCurve"><code class="flex name class">
+<span>class <span class="ident">AnimationCurve</span></span>
+<span>(</span><span>reader, readerFunc)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AnimationCurve:
+    def __init__(self, reader, readerFunc):
+        version = reader.version
+        numCurves = reader.read_int()
+        self.m_Curve = [Keyframe(reader, readerFunc) for _ in range(numCurves)]
+
+        self.m_PreInfinity = reader.read_int()
+        self.m_PostInfinity = reader.read_int()
+        if version &gt;= (5, 3):  # 5.3 and up
+            self.m_RotationOrder = reader.read_int()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.AnimationType"><code class="flex name class">
+<span>class <span class="ident">AnimationType</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AnimationType(IntEnum):
+    kLegacy = (1,)
+    kGeneric = (2,)
+    kHumanoid = 3</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.IntEnum</li>
+<li>builtins.int</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="UnityPy.classes.AnimationClip.AnimationType.kGeneric"><code class="name">var <span class="ident">kGeneric</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.AnimationType.kHumanoid"><code class="name">var <span class="ident">kHumanoid</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.AnimationType.kLegacy"><code class="name">var <span class="ident">kLegacy</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.Clip"><code class="flex name class">
+<span>class <span class="ident">Clip</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Clip:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_StreamedClip = StreamedClip(reader)
+        self.m_DenseClip = DenseClip(reader)
+        if version &gt;= (4, 3):  # 4.3 and up
+            self.m_ConstantClip = ConstantClip(reader)
+        if version &lt; (2018, 3):  # 2018.3 down
+            self.m_Binding = ValueArrayConstant(reader)</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.ClipMuscleConstant"><code class="flex name class">
+<span>class <span class="ident">ClipMuscleConstant</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ClipMuscleConstant:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_DeltaPose = HumanPose(reader)
+        self.m_StartX = xform(reader)
+        if version &gt;= (5, 5):  # 5.5 and up
+            self.m_StopX = xform(reader)
+        self.m_LeftFootStartX = xform(reader)
+        self.m_RightFootStartX = xform(reader)
+        if version &lt; (5,):  # 5.0 down
+            self.m_MotionStartX = xform(reader)
+            self.m_MotionStopX = xform(reader)
+        self.m_AverageSpeed = (
+            reader.read_vector3()
+            if version &gt;= (5, 4)
+            else Vector3(reader.read_vector4())
+        )  # 5.4 and up
+        self.m_Clip = Clip(reader)
+        self.m_StartTime = reader.read_float()
+        self.m_StopTime = reader.read_float()
+        self.m_OrientationOffsetY = reader.read_float()
+        self.m_Level = reader.read_float()
+        self.m_CycleOffset = reader.read_float()
+        self.m_AverageAngularSpeed = reader.read_float()
+
+        self.m_IndexArray = reader.read_int_array()
+        if version &lt; (4, 3):  # 4.3 down
+            self.m_AdditionalCurveIndexArray = reader.read_int_array()
+        numDeltas = reader.read_int()
+        self.m_ValueArrayDelta = [ValueDelta(reader) for _ in range(numDeltas)]
+        if version &gt;= (5, 3):  # 5.3 and up
+            self.m_ValueArrayReferencePose = reader.read_float_array()
+
+        self.m_Mirror = reader.read_boolean()
+        if version &gt;= (4, 3):  # 4.3 and up
+            self.m_LoopTime = reader.read_boolean()
+        self.m_LoopBlend = reader.read_boolean()
+        self.m_LoopBlendOrientation = reader.read_boolean()
+        self.m_LoopBlendPositionY = reader.read_boolean()
+        self.m_LoopBlendPositionXZ = reader.read_boolean()
+        if version &gt;= (5, 5):  # 5.5 and up
+            self.m_StartAtOrigin = reader.read_boolean()
+        self.m_KeepOriginalOrientation = reader.read_boolean()
+        self.m_KeepOriginalPositionY = reader.read_boolean()
+        self.m_KeepOriginalPositionXZ = reader.read_boolean()
+        self.m_HeightFromFeet = reader.read_boolean()
+        reader.align_stream()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.CompressedAnimationCurve"><code class="flex name class">
+<span>class <span class="ident">CompressedAnimationCurve</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class CompressedAnimationCurve:
+    def __init__(self, reader):
+        self.m_Path = reader.read_aligned_string()
+        self.m_Times = PackedIntVector(reader)
+        self.m_Values = PackedQuatVector(reader)
+        self.m_Slopes = PackedFloatVector(reader)
+        self.m_PreInfinity = reader.read_int()
+        self.m_PostInfinity = reader.read_int()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.ConstantClip"><code class="flex name class">
+<span>class <span class="ident">ConstantClip</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ConstantClip:
+    def __init__(self, reader):
+        self.data = reader.read_float_array()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.DenseClip"><code class="flex name class">
+<span>class <span class="ident">DenseClip</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DenseClip:
+    def __init__(self, reader):
+        self.m_FrameCount = reader.read_int()
+        self.m_CurveCount = reader.read_u_int()
+        self.m_SampleRate = reader.read_float()
+        self.m_BeginTime = reader.read_float()
+        self.m_SampleArray = reader.read_float_array()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.FloatCurve"><code class="flex name class">
+<span>class <span class="ident">FloatCurve</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FloatCurve:
+    def __init__(self, reader):
+        self.curve = AnimationCurve(reader, reader.read_float)  # Float
+        self.attribute = reader.read_aligned_string()
+        self.path = reader.read_aligned_string()
+        self.classID = ClassIDType(reader.read_int())
+        self.script = PPtr(reader)  # MonoScript</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.GenericBinding"><code class="flex name class">
+<span>class <span class="ident">GenericBinding</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class GenericBinding:
+    def __init__(self, reader):
+        version = reader.version
+        self.path = reader.read_u_int()
+        self.attribute = reader.read_u_int()
+        self.script = PPtr(reader)  # Object
+        if version &gt;= (5, 6):  # 5.6 and up
+            self.typeID = ClassIDType(reader.read_int())
+        else:
+            self.typeID = ClassIDType(reader.read_u_short())
+        self.customType = reader.read_byte()
+        self.isPPtrCurve = reader.read_byte()
+        reader.align_stream()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.HandPose"><code class="flex name class">
+<span>class <span class="ident">HandPose</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class HandPose:
+    def __init__(self, reader):
+        self.m_GrabX = xform(reader)
+        self.m_DoFArray = reader.read_float_array()
+        self.m_Override = reader.read_float()
+        self.m_CloseOpen = reader.read_float()
+        self.m_InOut = reader.read_float()
+        self.m_Grab = reader.read_float()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.HumanGoal"><code class="flex name class">
+<span>class <span class="ident">HumanGoal</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class HumanGoal:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_X = xform(reader)
+        self.m_WeightT = reader.read_float()
+        self.m_WeightR = reader.read_float()
+        if version &gt;= (5,):  # 5.0 and up
+            self.m_HintT = (
+                reader.read_vector3()
+                if version &gt;= (5, 4)
+                else Vector3(reader.read_vector4())
+            )  # 5.4 and up
+            self.m_HintWeightT = reader.read_float()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.HumanPose"><code class="flex name class">
+<span>class <span class="ident">HumanPose</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class HumanPose:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_RootX = xform(reader)
+        self.m_LookAtPosition = (
+            reader.read_vector3()
+            if version &gt;= (5, 4)
+            else Vector3(reader.read_vector4())
+        )  # 5.4 and up
+        self.m_LookAtWeight = reader.read_vector4()
+
+        numGoals = reader.read_int()
+        self.m_GoalArray = [HumanGoal(reader) for _ in range(numGoals)]
+
+        self.m_LeftHandPose = HandPose(reader)
+        self.m_RightHandPose = HandPose(reader)
+
+        self.m_DoFArray = reader.read_float_array()
+
+        if version &gt;= (5, 2):  # 5.2 and up
+            numTDof = reader.read_int()
+            self.m_TDoFArray = [
+                reader.read_vector3()
+                if version &gt;= (5, 4)
+                else Vector3(reader.read_vector4())  # 5.4 and up
+                for _ in range(numTDof)
+            ]</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.Keyframe"><code class="flex name class">
+<span>class <span class="ident">Keyframe</span></span>
+<span>(</span><span>reader, readerFunc)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Keyframe:
+    def __init__(self, reader, readerFunc):
+        self.time = reader.read_float()
+        self.value = readerFunc()
+        self.inSlope = readerFunc()
+        self.outSlope = readerFunc()
+        if reader.version &gt;= (2018,):  # 2018 and up
+            self.weightedMode = reader.read_int()
+            self.inWeight = readerFunc()
+            self.outWeight = readerFunc()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.PPtrCurve"><code class="flex name class">
+<span>class <span class="ident">PPtrCurve</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PPtrCurve:
+    def __init__(self, reader):
+        numCurves = reader.read_int()
+        self.curve = [PPtrKeyframe(reader) for _ in range(numCurves)]
+
+        self.attribute = reader.read_aligned_string()
+        self.path = reader.read_aligned_string()
+        self.classID = reader.read_int()
+        self.script = PPtr(reader)  # MonoScript</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.PPtrKeyframe"><code class="flex name class">
+<span>class <span class="ident">PPtrKeyframe</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PPtrKeyframe:
+    def __init__(self, reader):
+        self.time = reader.read_float()
+        self.value = PPtr(reader)  # Object</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.PackedFloatVector"><code class="flex name class">
+<span>class <span class="ident">PackedFloatVector</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PackedFloatVector:
+    def __init__(self, reader):
+        self.m_NumItems = reader.read_u_int()
+        self.m_Range = reader.read_float()
+        self.m_Start = reader.read_float()
+
+        numData = reader.read_int()
+        self.m_Data = reader.read_bytes(numData)
+        reader.align_stream()
+
+        self.m_BitSize = reader.read_byte()
+        reader.align_stream()
+
+    def save(self, writer):
+        writer.write_u_int(self.m_NumItems)
+        writer.write_float(self.m_Range)
+        writer.write_float(self.m_Start)
+
+        writer.write_int(len(self.m_Data))
+        writer.write_bytes(self.m_Data)
+        writer.align_stream()
+
+        writer.write_byte(self.m_BitSize)
+        writer.align_stream()
+
+    def UnpackFloats(
+        self,
+        itemCountInChunk: int,
+        chunkStride: int,
+        start: int = 0,
+        numChunks: int = -1,
+    ):
+        bitPos: int = self.m_BitSize * start
+        indexPos: int = bitPos // 8
+        bitPos %= 8
+
+        scale: float = 1.0 / self.m_Range
+        if numChunks == -1:
+            numChunks = self.m_NumItems // itemCountInChunk
+        end = chunkStride * numChunks / 4
+        data = []
+        for index in (0, end, chunkStride // 4):
+            for i in range(itemCountInChunk):
+                x = 0  # uint
+                bits = 0
+                while bits &lt; self.m_BitSize:
+                    x |= uint(
+                        (self.m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits
+                    )  # (uint)((m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits)
+                    num = min(self.m_BitSize - bits, 8 - bitPos)
+                    bitPos += num
+                    bits += num
+                    if bitPos == 8:  #
+                        indexPos += 1
+                        bitPos = 0
+
+                x &amp;= uint((1 &lt;&lt; self.m_BitSize) - 1)  # (uint)(1 &lt;&lt; m_BitSize) - 1u
+                data.append(x / (scale * ((1 &lt;&lt; self.m_BitSize) - 1)) + self.m_Start)
+
+        return data</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.classes.AnimationClip.PackedFloatVector.UnpackFloats"><code class="name flex">
+<span>def <span class="ident">UnpackFloats</span></span>(<span>self, itemCountInChunk: int, chunkStride: int, start: int = 0, numChunks: int = -1)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def UnpackFloats(
+    self,
+    itemCountInChunk: int,
+    chunkStride: int,
+    start: int = 0,
+    numChunks: int = -1,
+):
+    bitPos: int = self.m_BitSize * start
+    indexPos: int = bitPos // 8
+    bitPos %= 8
+
+    scale: float = 1.0 / self.m_Range
+    if numChunks == -1:
+        numChunks = self.m_NumItems // itemCountInChunk
+    end = chunkStride * numChunks / 4
+    data = []
+    for index in (0, end, chunkStride // 4):
+        for i in range(itemCountInChunk):
+            x = 0  # uint
+            bits = 0
+            while bits &lt; self.m_BitSize:
+                x |= uint(
+                    (self.m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits
+                )  # (uint)((m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits)
+                num = min(self.m_BitSize - bits, 8 - bitPos)
+                bitPos += num
+                bits += num
+                if bitPos == 8:  #
+                    indexPos += 1
+                    bitPos = 0
+
+            x &amp;= uint((1 &lt;&lt; self.m_BitSize) - 1)  # (uint)(1 &lt;&lt; m_BitSize) - 1u
+            data.append(x / (scale * ((1 &lt;&lt; self.m_BitSize) - 1)) + self.m_Start)
+
+    return data</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.PackedFloatVector.save"><code class="name flex">
+<span>def <span class="ident">save</span></span>(<span>self, writer)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save(self, writer):
+    writer.write_u_int(self.m_NumItems)
+    writer.write_float(self.m_Range)
+    writer.write_float(self.m_Start)
+
+    writer.write_int(len(self.m_Data))
+    writer.write_bytes(self.m_Data)
+    writer.align_stream()
+
+    writer.write_byte(self.m_BitSize)
+    writer.align_stream()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.PackedIntVector"><code class="flex name class">
+<span>class <span class="ident">PackedIntVector</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PackedIntVector:
+    def __init__(self, reader):
+        self.m_NumItems = reader.read_u_int()
+
+        numData = reader.read_int()
+        self.m_Data = reader.read_bytes(numData)
+        reader.align_stream()
+
+        self.m_BitSize = reader.read_byte()
+        reader.align_stream()
+
+    def save(self, writer):
+        writer.write_u_int(self.m_NumItems)
+
+        writer.write_int(len(self.m_Data))
+        writer.write_bytes(self.m_Data)
+        writer.align_stream()
+
+        writer.write_byte(self.m_BitSize)
+        writer.align_stream()
+
+    def UnpackInts(self):
+        data = []
+        indexPos = 0
+        bitPos = 0
+        m_BitSize = self.m_BitSize
+
+        for i in range(self.m_NumItems):
+            bits = 0
+            entry = 0
+            while bits &lt;&lt; m_BitSize:
+                entry |= (self.m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits
+                num = min(m_BitSize - bits, 8 - bitPos)
+                bitPos += num
+                bits += num
+                if bitPos == 8:  #
+                    indexPos += 1
+                    bitPos = 0
+            data.append(entry &amp; (1 &lt;&lt; m_BitSize) - 1)
+        return data</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.classes.AnimationClip.PackedIntVector.UnpackInts"><code class="name flex">
+<span>def <span class="ident">UnpackInts</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def UnpackInts(self):
+    data = []
+    indexPos = 0
+    bitPos = 0
+    m_BitSize = self.m_BitSize
+
+    for i in range(self.m_NumItems):
+        bits = 0
+        entry = 0
+        while bits &lt;&lt; m_BitSize:
+            entry |= (self.m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits
+            num = min(m_BitSize - bits, 8 - bitPos)
+            bitPos += num
+            bits += num
+            if bitPos == 8:  #
+                indexPos += 1
+                bitPos = 0
+        data.append(entry &amp; (1 &lt;&lt; m_BitSize) - 1)
+    return data</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.PackedIntVector.save"><code class="name flex">
+<span>def <span class="ident">save</span></span>(<span>self, writer)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save(self, writer):
+    writer.write_u_int(self.m_NumItems)
+
+    writer.write_int(len(self.m_Data))
+    writer.write_bytes(self.m_Data)
+    writer.align_stream()
+
+    writer.write_byte(self.m_BitSize)
+    writer.align_stream()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.PackedQuatVector"><code class="flex name class">
+<span>class <span class="ident">PackedQuatVector</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PackedQuatVector:
+    def __init__(self, reader):
+        self.m_NumItems = reader.read_u_int()
+        numData = reader.read_int()
+        self.m_Data = reader.read_bytes(numData)
+        reader.align_stream()
+
+    def UnpackQuats(self):
+        m_Data = self.m_Data
+        data = []
+        indexPos = 0
+        bitPos = 0
+
+        for i in range(self.m_NumItems):
+            flags = 0
+            bits = 0
+            while bits &lt; 3:
+                flags |= (m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits  # unit
+                num = min(3 - bits, 8 - bitPos)
+                bitPos += num
+                bits += num
+                if bitPos == 8:  #
+                    indexPos += 1
+                    bitPos = 0
+            flags &amp;= 7
+
+            q = Quaternion()
+            sum = 0
+            for j in range(4):
+                if (flags &amp; 3) != j:  #
+                    bitSize = 9 if ((flags &amp; 3) + 1) % 4 == j else 10
+                    x = 0
+
+                    bits = 0
+                    while bits &lt; bitSize:
+                        x |= (m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits  # uint
+                        num = min(bitSize - bits, 8 - bitPos)
+                        bitPos += num
+                        bits += num
+                        if bitPos == 8:  #
+                            indexPos += 1
+                            bitPos = 0
+                    x &amp;= (1 &lt;&lt; bitSize) - 1  # unit
+                    q[j] = x / (0.5 * ((1 &lt;&lt; bitSize) - 1)) - 1
+                    sum += q[j] * q[j]
+
+            lastComponent = flags &amp; 3  # int
+            q[lastComponent] = math.sqrt(1 - sum)  # float
+            if (flags &amp; 4) != 0:  # 0u
+                q[lastComponent] = -q[lastComponent]
+            data.append(q)
+
+        return data</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.classes.AnimationClip.PackedQuatVector.UnpackQuats"><code class="name flex">
+<span>def <span class="ident">UnpackQuats</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def UnpackQuats(self):
+    m_Data = self.m_Data
+    data = []
+    indexPos = 0
+    bitPos = 0
+
+    for i in range(self.m_NumItems):
+        flags = 0
+        bits = 0
+        while bits &lt; 3:
+            flags |= (m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits  # unit
+            num = min(3 - bits, 8 - bitPos)
+            bitPos += num
+            bits += num
+            if bitPos == 8:  #
+                indexPos += 1
+                bitPos = 0
+        flags &amp;= 7
+
+        q = Quaternion()
+        sum = 0
+        for j in range(4):
+            if (flags &amp; 3) != j:  #
+                bitSize = 9 if ((flags &amp; 3) + 1) % 4 == j else 10
+                x = 0
+
+                bits = 0
+                while bits &lt; bitSize:
+                    x |= (m_Data[indexPos] &gt;&gt; bitPos) &lt;&lt; bits  # uint
+                    num = min(bitSize - bits, 8 - bitPos)
+                    bitPos += num
+                    bits += num
+                    if bitPos == 8:  #
+                        indexPos += 1
+                        bitPos = 0
+                x &amp;= (1 &lt;&lt; bitSize) - 1  # unit
+                q[j] = x / (0.5 * ((1 &lt;&lt; bitSize) - 1)) - 1
+                sum += q[j] * q[j]
+
+        lastComponent = flags &amp; 3  # int
+        q[lastComponent] = math.sqrt(1 - sum)  # float
+        if (flags &amp; 4) != 0:  # 0u
+            q[lastComponent] = -q[lastComponent]
+        data.append(q)
+
+    return data</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.QuaternionCurve"><code class="flex name class">
+<span>class <span class="ident">QuaternionCurve</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class QuaternionCurve:
+    def __init__(self, reader):
+        self.curve = AnimationCurve(reader, reader.read_quaternion)  # &lt;Quaternion&gt;
+        self.path = reader.read_aligned_string()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.StreamedClip"><code class="flex name class">
+<span>class <span class="ident">StreamedClip</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StreamedClip:
+    def __init__(self, reader):
+        self.data = reader.read_u_int_array()
+        self.curveCount = reader.read_u_int()
+
+    def ReadData(self):
+        frameList = []
+        buffer = self.data[0 : len(self.data) * 4]
+        reader = EndianBinaryReader(buffer)
+        while reader.Position &lt; reader.Length:
+            frameList.append(StreamedFrame(reader))
+
+        for frameIndex in range(2, len(frameList) - 1):
+            frame = frameList[frameIndex]
+            for curveKey in frame.keyList:
+                i = frameIndex - 1
+                while i &gt;= 0:
+                    preFrame = frameList[i]
+                    try:
+                        preCurveKey = [
+                            x for x in preFrame.keyList if x.index == curveKey.index
+                        ][0]
+                        curveKey.inSlope = preCurveKey.CalculateNextInSlope(
+                            frame.time - preFrame.time, curveKey
+                        )
+                        break
+                    except IndexError:
+                        pass
+                    i -= 1
+        return frameList</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.classes.AnimationClip.StreamedClip.ReadData"><code class="name flex">
+<span>def <span class="ident">ReadData</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ReadData(self):
+    frameList = []
+    buffer = self.data[0 : len(self.data) * 4]
+    reader = EndianBinaryReader(buffer)
+    while reader.Position &lt; reader.Length:
+        frameList.append(StreamedFrame(reader))
+
+    for frameIndex in range(2, len(frameList) - 1):
+        frame = frameList[frameIndex]
+        for curveKey in frame.keyList:
+            i = frameIndex - 1
+            while i &gt;= 0:
+                preFrame = frameList[i]
+                try:
+                    preCurveKey = [
+                        x for x in preFrame.keyList if x.index == curveKey.index
+                    ][0]
+                    curveKey.inSlope = preCurveKey.CalculateNextInSlope(
+                        frame.time - preFrame.time, curveKey
+                    )
+                    break
+                except IndexError:
+                    pass
+                i -= 1
+    return frameList</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.StreamedCurveKey"><code class="flex name class">
+<span>class <span class="ident">StreamedCurveKey</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StreamedCurveKey:
+    def __init__(self, reader):
+        self.index = reader.read_int()
+        self.coeff = reader.read_float_array(4)
+
+        self.outSlope = self.coeff[2]
+        self.value = self.coeff[3]
+
+    def CalculateNextInSlope(self, dx: float, rhs):
+        &#34;&#34;&#34;
+        :param dx: float
+        :param rhs: StreamedCurvedKey
+        :return:
+        &#34;&#34;&#34;
+        # Stepped
+        if self.coeff[0] == 0 and self.coeff[1] == 0 and self.coeff[2] == 0:
+            return float(&#39;inf&#39;)
+
+        dx = max(dx, 0.0001)
+        dy = rhs.value - self.value
+        length = 1.0 / (dx * dx)
+        d1 = self.outSlope * dx
+        d2 = dy + dy + dy - d1 - d1 - self.coeff[1] / length
+        return d2 / dx</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="UnityPy.classes.AnimationClip.StreamedCurveKey.CalculateNextInSlope"><code class="name flex">
+<span>def <span class="ident">CalculateNextInSlope</span></span>(<span>self, dx: float, rhs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>:param dx: float
+:param rhs: StreamedCurvedKey
+:return:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def CalculateNextInSlope(self, dx: float, rhs):
+    &#34;&#34;&#34;
+    :param dx: float
+    :param rhs: StreamedCurvedKey
+    :return:
+    &#34;&#34;&#34;
+    # Stepped
+    if self.coeff[0] == 0 and self.coeff[1] == 0 and self.coeff[2] == 0:
+        return float(&#39;inf&#39;)
+
+    dx = max(dx, 0.0001)
+    dy = rhs.value - self.value
+    length = 1.0 / (dx * dx)
+    d1 = self.outSlope * dx
+    d2 = dy + dy + dy - d1 - d1 - self.coeff[1] / length
+    return d2 / dx</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.StreamedFrame"><code class="flex name class">
+<span>class <span class="ident">StreamedFrame</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StreamedFrame:
+    def __init__(self, reader):
+        self.time = reader.read_float()
+        numKeys = reader.read_int()
+        self.keyList = [StreamedCurveKey(reader) for _ in range(numKeys)]</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.ValueArrayConstant"><code class="flex name class">
+<span>class <span class="ident">ValueArrayConstant</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ValueArrayConstant:
+    def __init__(self, reader):
+        numVals = reader.read_int()
+        self.m_ValueArray = [ValueConstant(reader) for _ in range(numVals)]</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.ValueConstant"><code class="flex name class">
+<span>class <span class="ident">ValueConstant</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ValueConstant:
+    def __init__(self, reader):
+        version = reader.version
+        self.m_ID = reader.read_u_int()
+        if version &lt; (5, 5):  # 5.5 down
+            self.m_TypeID = reader.read_u_int()
+        self.m_Type = reader.read_u_int()
+        self.m_Index = reader.read_u_int()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.ValueDelta"><code class="flex name class">
+<span>class <span class="ident">ValueDelta</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ValueDelta:
+    def __init__(self, reader):
+        self.m_Start = reader.read_float()
+        self.m_Stop = reader.read_float()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.Vector3Curve"><code class="flex name class">
+<span>class <span class="ident">Vector3Curve</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Vector3Curve:
+    def __init__(self, reader):
+        self.curve = AnimationCurve(reader, reader.read_vector3)  # Vector3
+        self.path = reader.read_aligned_string()</code></pre>
+</details>
+</dd>
+<dt id="UnityPy.classes.AnimationClip.xform"><code class="flex name class">
+<span>class <span class="ident">xform</span></span>
+<span>(</span><span>reader)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class xform:
+    def __init__(self, reader):
+        version = reader.version
+        self.t = (
+            reader.read_vector3()
+            if version &gt;= (5, 4)
+            else Vector3(reader.read_vector4())
+        )  # 5.4 and up
+        self.q = reader.read_quaternion()
+        self.s = (
+            reader.read_vector3()
+            if version &gt;= (5, 4)
+            else Vector3(reader.read_vector4())
+        )  # 5.4 and up</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="UnityPy.classes" href="index.html">UnityPy.classes</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="UnityPy.classes.AnimationClip.uint" href="#UnityPy.classes.AnimationClip.uint">uint</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.AABB" href="#UnityPy.classes.AnimationClip.AABB">AABB</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.AnimationClip.AABB.save" href="#UnityPy.classes.AnimationClip.AABB.save">save</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.AnimationClip" href="#UnityPy.classes.AnimationClip.AnimationClip">AnimationClip</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.AnimationClip.AnimationClip.type_tree" href="#UnityPy.classes.AnimationClip.AnimationClip.type_tree">type_tree</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.AnimationClipBindingConstant" href="#UnityPy.classes.AnimationClip.AnimationClipBindingConstant">AnimationClipBindingConstant</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.AnimationCurve" href="#UnityPy.classes.AnimationClip.AnimationCurve">AnimationCurve</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.AnimationType" href="#UnityPy.classes.AnimationClip.AnimationType">AnimationType</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.AnimationClip.AnimationType.kGeneric" href="#UnityPy.classes.AnimationClip.AnimationType.kGeneric">kGeneric</a></code></li>
+<li><code><a title="UnityPy.classes.AnimationClip.AnimationType.kHumanoid" href="#UnityPy.classes.AnimationClip.AnimationType.kHumanoid">kHumanoid</a></code></li>
+<li><code><a title="UnityPy.classes.AnimationClip.AnimationType.kLegacy" href="#UnityPy.classes.AnimationClip.AnimationType.kLegacy">kLegacy</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.Clip" href="#UnityPy.classes.AnimationClip.Clip">Clip</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.ClipMuscleConstant" href="#UnityPy.classes.AnimationClip.ClipMuscleConstant">ClipMuscleConstant</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.CompressedAnimationCurve" href="#UnityPy.classes.AnimationClip.CompressedAnimationCurve">CompressedAnimationCurve</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.ConstantClip" href="#UnityPy.classes.AnimationClip.ConstantClip">ConstantClip</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.DenseClip" href="#UnityPy.classes.AnimationClip.DenseClip">DenseClip</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.FloatCurve" href="#UnityPy.classes.AnimationClip.FloatCurve">FloatCurve</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.GenericBinding" href="#UnityPy.classes.AnimationClip.GenericBinding">GenericBinding</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.HandPose" href="#UnityPy.classes.AnimationClip.HandPose">HandPose</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.HumanGoal" href="#UnityPy.classes.AnimationClip.HumanGoal">HumanGoal</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.HumanPose" href="#UnityPy.classes.AnimationClip.HumanPose">HumanPose</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.Keyframe" href="#UnityPy.classes.AnimationClip.Keyframe">Keyframe</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.PPtrCurve" href="#UnityPy.classes.AnimationClip.PPtrCurve">PPtrCurve</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.PPtrKeyframe" href="#UnityPy.classes.AnimationClip.PPtrKeyframe">PPtrKeyframe</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.PackedFloatVector" href="#UnityPy.classes.AnimationClip.PackedFloatVector">PackedFloatVector</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.AnimationClip.PackedFloatVector.UnpackFloats" href="#UnityPy.classes.AnimationClip.PackedFloatVector.UnpackFloats">UnpackFloats</a></code></li>
+<li><code><a title="UnityPy.classes.AnimationClip.PackedFloatVector.save" href="#UnityPy.classes.AnimationClip.PackedFloatVector.save">save</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.PackedIntVector" href="#UnityPy.classes.AnimationClip.PackedIntVector">PackedIntVector</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.AnimationClip.PackedIntVector.UnpackInts" href="#UnityPy.classes.AnimationClip.PackedIntVector.UnpackInts">UnpackInts</a></code></li>
+<li><code><a title="UnityPy.classes.AnimationClip.PackedIntVector.save" href="#UnityPy.classes.AnimationClip.PackedIntVector.save">save</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.PackedQuatVector" href="#UnityPy.classes.AnimationClip.PackedQuatVector">PackedQuatVector</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.AnimationClip.PackedQuatVector.UnpackQuats" href="#UnityPy.classes.AnimationClip.PackedQuatVector.UnpackQuats">UnpackQuats</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.QuaternionCurve" href="#UnityPy.classes.AnimationClip.QuaternionCurve">QuaternionCurve</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.StreamedClip" href="#UnityPy.classes.AnimationClip.StreamedClip">StreamedClip</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.AnimationClip.StreamedClip.ReadData" href="#UnityPy.classes.AnimationClip.StreamedClip.ReadData">ReadData</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.StreamedCurveKey" href="#UnityPy.classes.AnimationClip.StreamedCurveKey">StreamedCurveKey</a></code></h4>
+<ul class="">
+<li><code><a title="UnityPy.classes.AnimationClip.StreamedCurveKey.CalculateNextInSlope" href="#UnityPy.classes.AnimationClip.StreamedCurveKey.CalculateNextInSlope">CalculateNextInSlope</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.StreamedFrame" href="#UnityPy.classes.AnimationClip.StreamedFrame">StreamedFrame</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.ValueArrayConstant" href="#UnityPy.classes.AnimationClip.ValueArrayConstant">ValueArrayConstant</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.ValueConstant" href="#UnityPy.classes.AnimationClip.ValueConstant">ValueConstant</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.ValueDelta" href="#UnityPy.classes.AnimationClip.ValueDelta">ValueDelta</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.Vector3Curve" href="#UnityPy.classes.AnimationClip.Vector3Curve">Vector3Curve</a></code></h4>
+</li>
+<li>
+<h4><code><a title="UnityPy.classes.AnimationClip.xform" href="#UnityPy.classes.AnimationClip.xform">xform</a></code></h4>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>
