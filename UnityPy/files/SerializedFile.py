@@ -297,6 +297,8 @@ class SerializedFile(File.File):
         return self.container_
 
     def set_version(self, string_version):
+        if 'XD' in string_version:
+            string_version = string_version[0: string_version.find('XD')]
         self.unity_version = string_version
         build_type = re.findall(r"([^\d.])", string_version)
         self.build_type = BuildType(build_type[0] if build_type else "")

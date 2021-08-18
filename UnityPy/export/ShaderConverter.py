@@ -35,6 +35,7 @@ def ConvertSerializedShader(m_Shader):
 
     platformNumber = len(m_Shader.platforms)
     for i in range(platformNumber):
+        if i >= len(m_Shader.compressedLengths): break
         compressedSize = m_Shader.compressedLengths[i]
         decompressedSize = m_Shader.decompressedLengths[i]
 
@@ -146,6 +147,7 @@ def ConvertSerializedSubPrograms(m_SubPrograms, platforms, shaderPrograms):
             isTier = len(subPrograms) > 1
             for i in range(len(platforms)):
                 platform = platforms[i]
+                if i >= len(shaderPrograms): break
 
                 if CheckGpuProgramUsable(platform, programKey):
                     for subProgram in subPrograms:

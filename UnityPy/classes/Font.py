@@ -23,6 +23,7 @@ class Font(NamedObject):
             for i in range(KerningValues_size):
                 reader.Position += 8
             self.m_PixelScale = reader.read_float()
+            self.m_FontData = None
             FontData_size = reader.read_int()
             if FontData_size > 0:
                 self.m_FontData = reader.read_bytes(FontData_size)

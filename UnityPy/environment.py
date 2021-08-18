@@ -9,6 +9,15 @@ from .helpers import ImportHelper
 from .streams import EndianBinaryReader
 from .files import SerializedFile
 
+def func(that, files):
+    for f in files:
+        # print(f)
+        try:
+            file = open(f, "rb")
+        except FileNotFoundError:
+            pass
+        that.files[f[len(that.path):].lstrip("/\\")] = that.load_file(file, that)
+
 class Environment:
     files: dict
     path: str
@@ -52,9 +61,25 @@ class Environment:
 
     def load(self, files: list):
         """Loads all files into the AssetsManager."""
+        import threading
+        import multiprocessing
+        bucket_count = multiprocessing.cpu_count()
+        file_buckets = []
+        for idx in range(bucket_count):
+            file_buckets.append([])
+        idx = 0
         for f in files:
-            self.files[f[len(self.path):].lstrip(
-                "/\\")] = self.load_file(open(f, "rb"), self)
+            tid = idx % bucket_count
+            file_buckets[tid].append(f)
+            idx += 1
+
+        threads = [None] * bucket_count
+        for idx in range(bucket_count):
+            threads[idx] = threading.Thread(target=func, args=(self, file_buckets[idx],))
+            threads[idx].start()
+      
+        for idx in range(bucket_count):
+            threads[idx].join()
 
     def load_file(self, stream, parent=None):
         if not parent:

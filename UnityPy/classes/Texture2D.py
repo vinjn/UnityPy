@@ -76,6 +76,9 @@ class Texture2D(Texture):
         self.m_Width = reader.read_int()
         self.m_Height = reader.read_int()
         self.m_CompleteImageSize = reader.read_int()
+        if self.m_Width == 0 or self.m_Height == 0:
+            return
+
         if version >= (2020,):  # 2020.1 and up
             self.m_MipsStripped = reader.read_int()
         self.m_TextureFormat = TextureFormat(reader.read_int())
